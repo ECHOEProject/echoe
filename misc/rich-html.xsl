@@ -31,7 +31,7 @@
     exclude-result-prefixes="#all"
     version="2.0">
 
-	<xsl:import href="functx-1.0-doc-2007-01.xsl"/>
+<xsl:import href="https://raw.githubusercontent.com/transpect/xslt-util/master/functx/xsl/functx.xsl"/><!-- as xsltfunctions.com has gone missing -->
     <xsl:output method="html" omit-xml-declaration="yes" />
     <xsl:strip-space elements="tei:choice tei:w"/>
     

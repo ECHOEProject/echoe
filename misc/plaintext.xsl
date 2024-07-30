@@ -51,7 +51,7 @@
 <!ENTITY wavylin "&#xF1F9;">		<!-- WAVY LINE -->
 ]>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:ech="http://echoe.uni-goettingen.de/ns/1.0" xmlns:functx="http://www.functx.com">
-<xsl:import href="functx-1.0-doc-2007-01.xsl"/>
+<xsl:import href="https://raw.githubusercontent.com/transpect/xslt-util/master/functx/xsl/functx.xsl"/><!-- as xsltfunctions.com has gone missing -->
 <!-- This stylesheet was written by Paul S. Langeslag of the Medieval Studies section in the Department of English, University of Göttingen for the Electronic Corpus of Homilies in Old English (ECHOE) project. 2019–2024. -->
 
 <xsl:output method="text" encoding="utf-8"/>
