@@ -1,15 +1,13 @@
 <!DOCTYPE TEI [
-<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY lstrok "&#x0142;">		<!-- LATIN SMALL LETTER L WITH STROKE -->
-<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
-<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
-<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
-<!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): --><!ENTITY lstrok "&#x0142;">
+<!-- LATIN SMALL LETTER L WITH STROKE --><!ENTITY slongdes "&#xF127;">
+<!-- LATIN SMALL LETTER LONG S DESCENDING --><!ENTITY hstrok "&#x0127;">
+<!-- LATIN SMALL LETTER H WITH STROKE --><!ENTITY ydotacute "&#xE784;">
+<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE --><!-- AMPERSAND --><!ENTITY combmacr "&#x0304;">
+<!-- COMBINING MACRON --><!ENTITY et "&#x204A;">
+<!-- TIRONIAN SIGN ET --><!ENTITY thornbarslash "&#xF149;">
+<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
    <titleStmt>
@@ -31,8 +29,11 @@
     <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
     <idno type="echoe">182.4</idno>
     <availability>
-     <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
-      <p>CC-BY-NC 4.0 Electronic Corpus of Homilies in Old English Project</p>
+     <licence target="https://www.gnu.org/licenses/gpl-3.0.en.html">
+      <p>ECHOE: Electronic Corpus of Anonymous Homilies in Old English. Copyright (C) 2024 ECHOE Project.</p>
+      <p>This corpus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+      <p>This corpus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+      <p>You should have received a copy of the GNU General Public License along with this corpus. If not, see https://www.gnu.org/licenses/.</p>
      </licence>
     </availability>
    </publicationStmt>
@@ -42,8 +43,9 @@
       <settlement>London</settlement>
       <repository>British Library</repository>
       <collection>Cotton</collection>
-      <idno>Otho C.i vol. 2</idno>
-	  <msName>Otho C.i/2</msName>
+      <idno type="ms">Otho C.i vol. 2</idno>
+	  <idno type="siglum" xml:id="Y">Y</idno>
+      <msName>Otho C.i/2</msName>
      </msIdentifier>
      <msContents>
       <msItem n="4" defective="true">
@@ -70,11 +72,6 @@
       </msIdentifier>	
      </msPart>
     </msDesc>
-    <listWit>
-     <witness xml:id="Y">
-      <abbr type="siglum">Y</abbr>
-     </witness>
-    </listWit>
     <bibl>
      Ker item <idno type="ker">182, art. 4</idno>; 
      Gneuss–Lapidge number <idno type="gneuss">359</idno>; 
