@@ -1,0 +1,510 @@
+<!DOCTYPE TEI [
+<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY Lhighstrok "&#xA748;">		<!-- LATIN CAPITAL LETTER L WITH HIGH STROKE -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader xml:lang="en">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">St Mildred</title>
+    <respStmt>
+     <resp>Transcription by </resp>
+      <name type="person">Irina Rau</name>
+    </respStmt>
+    <respStmt>
+     <resp>Encoded by </resp>
+      <name type="person">Irina Rau</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+    <respStmt>
+     <resp>Proofread by </resp>
+      <name type="person">Sabine Ines Rauch</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+   </titleStmt>
+   <publicationStmt>
+    <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
+    <idno type="echoe">138.3</idno>
+    <availability>
+     <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+      <p>CC-BY-NC 4.0 Electronic Corpus of Homilies in Old English Project</p>
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <msDesc>
+     <msIdentifier>
+      <settlement>London</settlement>
+      <repository>British Library</repository>
+      <collection>Cotton</collection>
+      <idno>Caligula A.xiv</idno>
+      <msName>Calig A.xiv</msName>
+     </msIdentifier>
+     <msContents>
+      <msItem n="3" defective="true">
+       <locus from="121v" to="124v"/>
+       <filiation/>
+       <textLang mainLang="ang" otherLangs="la"/>
+      </msItem>
+     </msContents>
+     <physDesc>
+      <handDesc>
+       <handNote xml:id="DP0571" corresp="http://www.digipal.eu/digipal/hands/571/descriptions/"><p>Main hand. e horned, split tops of b, h, l, þ; y undotted.</p></handNote>
+      </handDesc>
+     </physDesc>
+     <history>
+	  <origin>
+	   <origDate notBefore="1038" notAfter="1062">s. xi med.</origDate>
+	   <origPlace cert="high"/>
+	  </origin>
+	  <provenance cert="high"/>
+	 </history>
+     <msPart>
+      <msIdentifier>
+       <idno/>
+      </msIdentifier>	
+     </msPart>
+    </msDesc>
+    <listWit>
+     <witness xml:id="fe">
+      <abbr type="siglum">f<hi rend="superscript">e</hi></abbr>
+     </witness>
+    </listWit>
+    <bibl>
+     Ker item <idno type="ker">138, art. 3</idno>; 
+     Gneuss–Lapidge number <idno type="gneuss">310</idno>; 
+     cf. DOE short title <idno type="doe">LS 26 (MildredCockayne)</idno>; 
+     cf. Cameron number <idno type="cameron">B3.3.26</idno>. 
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+   <textClass>
+    <keywords>
+     <term/>
+    </keywords>
+    </textClass>
+   <settingDesc>
+    <setting ana="sanctorale">
+     <p>St Mildred</p>
+    </setting>
+   </settingDesc>
+  </profileDesc>
+  <revisionDesc>
+   <change n="1.0" when="2024-07-30" who="PSL">cleared for initial release</change>
+  </revisionDesc>
+ </teiHeader>
+ <text xml:lang="ang">
+  <body>
+   <pb n="121v"/>
+    <lb n="13"/><head xml:lang="la" rend="color(red)"><num n="3"><w>III</w><pc>·</pc></num> <w><choice>
+      <abbr>ID<am>&bar;</am></abbr>
+      <expan>ID<ex>US</ex></expan>
+     </choice></w> <w>IULII</w> <pc>·</pc> <w><choice>
+      <abbr>NATL&Lhighstrok;</abbr>
+      <expan>NAT<ex>A</ex>L<ex>E</ex></expan>
+     </choice></w> <w><choice>
+      <abbr>SCA<am>&bar;</am>E</abbr>
+      <expan>S<ex>AN</ex>C<ex>T</ex>AE</expan>
+     </choice></w> <persName key="Mildred" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=3809"><w>MILDRYÐĘ</w></persName> <w><choice>
+      <abbr>UIRG<am>&bar;</am></abbr>
+      <expan>UIRG<ex>INIS</ex></expan>
+     </choice></w> <pc>·</pc></head>
+   <ab><s xml:id="s138.3.1">
+    <lb n="14"/><w><hi rend="size(2.5) color(red)">O</hi><handShift new="#DP0571"/>N</w> <w>drihtne&slongdes;</w> <w>naman</w> <w><choice>
+      <abbr>Sc<am>&bar;</am>s</abbr>
+      <expan>S<ex>an</ex>c<ex>tu</ex>s</expan>
+     </choice></w> <persName key="AugustineCanterbury"><w>auguſtinuſ</w></persName>
+    <lb n="15"/><w>gefulƿihte</w> <persName key="Æthelberht" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1109"><w>æþelbryht</w></persName> <name type="demonym" key="Kentish"><w>cantƿara</w></name> <w>cyning</w>
+    <lb n="16"/><w>&et;</w> <w>ealle</w> <w>hi&slongdes;</w> <w>ðeode</w> <pc>·</pc> </s><s xml:id="s138.3.2"><w>þonne</w> <w>ƿæ&slongdes;</w> <persName key="Eadbald" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1619"><w>eadbald</w></persName> <w>cyning</w>
+    <lb n="17"/><persName key="Æthelberht" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1109"><w>æþelbryhte&slongdes;</w></persName> <w>ſunu</w> <pc>·</pc> <w>&et;</w> <persName key="Bertha" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=10354"><w>byrhtan</w></persName> <w>hi&slongdes;</w> <w notation="accentuated">cƿene</w> <pc>·</pc>
+    <lb n="18"/><w>&et;</w> <persName key="Æthelburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1327"><w>æþelburh</w></persName> <w>heora</w> <w>dohtor</w> <pc>·</pc> </s><s xml:id="s138.3.3"><w>oðre</w> <w>naman</w>
+    <lb n="19"/><persName key="Æthelburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1327"><w notation="accentuated">tate</w></persName> <pc>·</pc> <w>forgifan</w> <persName key="Edwin" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1649"><w>eadƿine</w></persName> <name type="demonym" key="Northumbrian"><w>norðhymbra</w></name>
+    <lb n="20"/><w>cyninge</w> <w>to</w> <w notation="accentuated">cƿene</w> <pc>·</pc> </s><s xml:id="s138.3.4"><w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>&slongdes;</abbr>
+      <expan>S<ex>an</ex>c<ex>tu</ex>&slongdes;</expan>
+     </choice></w> <persName key="Paulinus" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=862"><w>paulinu&slongdes;</w></persName> <w>mid</w> <w>hire</w>
+    <lb n="21"/><w notation="accentuated">for</w> <pc>·</pc> </s><s xml:id="s138.3.5"><w>&et;</w> <w>gefullode</w> <w>ðone</w> <w>cyning</w> <persName key="Edwin" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1649"><w>eadƿine</w></persName>
+   <pb n="122r"/>
+    <lb n="1"/><w>&et;</w> <w>ealle</w> <w>hi&slongdes;</w> <w>ðeode</w> <pc>·</pc> </s><s xml:id="s138.3.6"><w>&et;</w> <w>æfter</w> <w>hi&slongdes;</w> <w notation="accentuated">life</w> <w>hio</w> <w>eft</w>
+    <lb n="2"/><placeName key="#Canterbury"><name type="demonym" key="Kentish"><w>cantƿara</w></name> <w>byrig</w></placeName> <w>ge&slongdes;ohte</w> <w>&et;</w> <w>hi&slongdes;</w> <w>broðor</w>
+    <lb n="3"/><persName key="Eadbald" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1619"><w>eadbald</w></persName> <w>þæne</w> <w>cyning</w> <pc>·</pc> </s><s xml:id="s138.3.7"><w>&et;</w> <persName key="Paulinus" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=862"><w>paulinu&slongdes;</w></persName> <w>ſe</w> <w>biſceop</w>
+    <lb n="4"/><w>eft</w> <w>mid</w> <w>hire</w> <w>com</w> <pc>·</pc> </s><s xml:id="s138.3.8"><w>&et;</w> <w>hio</w> <w>hyre</w> <w>þa</w> <w>betſtan</w>
+    <lb n="5"/><w>madma&slongdes;</w> <w>to</w> <name type="demonym" key="Kentish"><w>cantƿaran</w></name> <w>cyricean</w> <w>brohte</w>
+    <lb n="6"/><w>hire</w> <w>to</w> <w>gebedrædene</w> <pc>·</pc> <w>&et;</w> <w>þæ&slongdes;</w> <w>cyninge&slongdes;</w> <w>ſaƿle</w>
+    <lb n="7"/><w>þe</w> <w>hi</w> <w>begæt</w> <pc>·</pc> <w>ða</w> <w>man</w> <w>gyt</w> <w>þærinne</w> <w>ſceaƿian</w>
+    <lb n="8"/><w>mæg</w> <pc>·</pc> </s><s xml:id="s138.3.9"><w>&et;</w> <w>he</w> <w>ða</w> <persName key="Paulinus" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=862"><w>paulinu&slongdes;</w></persName> <w>onfeng</w> <w>þa</w> <w notation="accentuated">biſceop
+    <lb n="9"/>rice</w> <w>æt</w> <placeName key="#Rochester"><w>hrofecea&slongdes;tre</w></placeName> <w>on</w> <w>gode&slongdes;</w> <w>ƿillan</w> <pc>·</pc>
+    <lb n="10"/></s><s xml:id="s138.3.10"><w>&et;</w> <w>ðær</w> <w>hi&slongdes;</w> <w notation="accentuated">lif</w> <w>geendode</w> <pc>·</pc> <w>&et;</w> <w>gode&slongdes;</w> <w>rice</w> <w>begeat</w> <pc>·</pc>
+    <lb n="11"/></s><s xml:id="s138.3.11"><w>Ðonne</w> <w>ƿæ&slongdes;</w> <persName key="Eormenred" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2474"><w>eormenred</w></persName> <w>cyning</w> <pc>·</pc> <w>&et;</w> <persName key="Eorcenberht" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1654"><w>eorcen
+    <lb n="12"/>byrht</w></persName> <w>cyning</w> <pc>·</pc> <w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Eanswith" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=9535"><w>ean&slongdes;ƿyð</w></persName> <pc>·</pc> </s><s xml:id="s138.3.12"><w>hi</w> <w>ƿæron</w>
+    <lb n="13"/><w>ealle</w> <persName key="Eadbald" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1619"><w>eadbalde&slongdes;</w></persName> <w>bearn</w> <pc>·</pc> </s><s xml:id="s138.3.13"><w>&et;</w> <persName key="Emma" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2935"><w>imman</w></persName> <w>hi&slongdes;</w>
+    <lb n="14"/><w notation="accentuated">cƿene</w> <pc>·</pc> <w>hio</w> <w>ƿæ&slongdes;</w> <name type="demonym" key="Frankish"><w>francna</w></name> <w>cynge&slongdes;</w> <w>dohtor</w> <pc>·</pc>
+    <lb n="15"/></s><s xml:id="s138.3.14"><w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Eanswith" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=9535"><w>ean&slongdes;ƿið</w></persName> <w>reſteð</w> <w>on</w> <placeName key="#Folkestone"><w notation="accentuated">folcan&slongdes;tana</w></placeName>
+    <lb n="16"/><w>þæm</w> <w>myn&slongdes;tre</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w>&slongdes;ylf</w> <w>ge&slongdes;taðelode</w> <pc>·</pc>
+    <lb n="17"/></s><s xml:id="s138.3.15"><w>þonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <w>ƿæ&slongdes;</w> <persName key="Eormenburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2940"><w>eormenburh</w></persName> <w>&et;</w> <w>oðre</w> <w>naman</w>
+    <lb n="18"/><persName key="Eormenburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2940"><w>domne</w> <w>eafe</w></persName> <pc>·</pc> <w>&et;</w> <persName key="Eormengyth"><w>eorm<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>en</ex></expan>
+     </choice>gyð</w></persName> <pc>·</pc> <w>&et;</w> <persName key="ÆthelredKent" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=19514"><w>æðelred</w></persName> <pc>·</pc> <w>&et;</w> <persName key="ÆthelberhtEor" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=19515"><w>æðel
+    <lb n="19"/>briht</w></persName> <pc>·</pc> <w>ƿæron</w> <persName key="Eormenred" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2474"><w>eorm<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>en</ex></expan>
+     </choice>rede&slongdes;</w></persName> <w>bearn</w> <pc>·</pc> <w>&et;</w> <persName key="Oslafa" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=20738"><w>o&slongdes;lafe</w></persName>
+    <lb n="20"/><w>hi&slongdes;</w> <w notation="accentuated">cƿene</w> <pc>·</pc> </s><s xml:id="s138.3.16"><w>ðonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <w>ƿæ&slongdes;</w> <persName key="Eormenburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2940"><w>domne</w> <w>eafe</w></persName> <w>for
+    <lb n="21"/>gyfon</w> <w>to</w> <placeName key="#Mercia"><name type="demonym" key="Mercian"><w>myrcna</w></name> <w>landa</w></placeName> <persName key="Merewalh"><w>merƿalde</w></persName> <persName key="Penda" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1749"><w>pendan</w></persName>
+   <pb n="122v"/>
+    <lb n="1"/><w>ſunu</w> <w>cynge&slongdes;</w> <w>to</w> <w notation="accentuated">cƿene</w> <pc>·</pc> </s><s xml:id="s138.3.17"><w>&et;</w> <w>hi</w> <w>þær</w> <w>begeatan</w>
+    <lb n="2"/><w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=16417"><w>mildburge</w></persName> <pc>·</pc> <w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildred" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=3809"><w>mildryðe</w></persName> <pc>·</pc> <w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildgyth" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=18544"><w>mild
+    <lb n="3"/>gyðe</w></persName> <pc>·</pc> <w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Merefin"><w>merefin</w></persName> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>halige</w> <w>cild</w> <pc>·</pc> </s><s xml:id="s138.3.18"><w>&et;</w> <w>hi</w> <w>þa</w>
+    <lb n="4"/><w>æfter</w> <w>ðan</w> <w>for</w> <w>gode&slongdes;</w> <w>lufan</w> <w>&et;</w> <w>for</w> <w>þiſſe</w>
+    <lb n="5"/><w>ƿorolde</w> <w>him</w> <w>todældon</w> <pc>·</pc> </s><s xml:id="s138.3.19"><w>&et;</w> <w>hiora</w> <w>bearn</w>
+    <lb n="6"/><w>&et;</w> <w>hiora</w> <w>ƿoruldæhta</w> <w>gode</w> <w>forgeafan</w> <pc>·</pc>
+    <lb n="7"/></s><s xml:id="s138.3.20"><w>&et;</w> <w>hiora</w> <w>ylde&slongdes;te</w> <w>dohtor</w> <pc>·</pc> <w>&et;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=16417"><w>mildburh</w></persName>
+    <lb n="8"/><w>re&slongdes;teð</w> <w>æt</w> <placeName key="#MuchWenlock"><w>ƿynlucan</w></placeName> <pc>·</pc> <w>þæm</w> <w>myn&slongdes;tre</w>
+    <lb n="9"/><w>on</w> <placeName key="#Mercia"><name type="demonym" key="Mercian"><w>mercna</w></name> <w>lande</w></placeName> </s><s xml:id="s138.3.21"><w>þær</w> <w>ƿæron</w> <w>hire</w> <w>mihta</w>
+    <lb n="10"/><w>oft</w> <w>gecyðede</w> <pc>·</pc> <w>&et;</w> <w>gyt</w> <w>&slongdes;ynd</w> <pc>·</pc> </s><s xml:id="s138.3.22"><w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildred" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=3809"><w>mildryð</w></persName>
+    <lb n="11"/><w>re&slongdes;teð</w> <w>binnan</w> <placeName key="#Thanet"><w>teneð</w></placeName> <w>on</w> <w>ðæm</w> <w>iglande</w> <pc>·</pc>
+    <lb n="12"/></s><s xml:id="s138.3.23"><w>&et;</w> <w>ðær</w> <w>ƿæron</w> <w>oft</w> <w>hyre</w> <w>mihta</w> <w>gecyþede</w>
+    <lb n="13"/><w>&et;</w> <w>get</w> <w>&slongdes;ynd</w> <pc>·</pc> </s><s xml:id="s138.3.24"><w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w> <persName key="Mildgyth" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=18544"><w>mildgyð</w></persName> <w>re&slongdes;teð</w> <w>on</w> <placeName key="#Northumbria"><w>norð
+    <lb n="14"/>hembran</w></placeName> <pc>·</pc> </s><s xml:id="s138.3.25"><w>þær</w> <w>ƿæron</w> <w>hyre</w> <w>mihta</w> <w>oft</w>
+    <lb n="15"/><w>gecyðede</w> <w>&et;</w> <w>get</w> <w>&slongdes;yndon</w> <pc>·</pc> </s><s xml:id="s138.3.26"><w>þonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <w>ƿæ&slongdes;</w> <w><choice>
+      <abbr>Sc<am>&combmacr;</am>e</abbr>
+      <expan>S<ex>an</ex>c<ex>t</ex>e</expan>
+     </choice></w>
+    <lb n="16"/><persName key="Merefin"><w>merefin</w></persName> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>halige</w> <w>cild</w> <w>on</w> <w notation="accentuated">iogoð<del rend="erasure" hand="#DP0571">e</del>hade</w>
+    <lb n="17"/><w>to</w> <w>gode</w> <w>gelæd</w> <pc>·</pc> </s><s xml:id="s138.3.27"><w>þonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <w>ƿæron</w> <persName key="ÆthelredKent" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=19514"><w>æðelred</w></persName>
+    <lb n="18"/><w>&et;</w> <persName key="ÆthelberhtEor" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=19515"><w>æðelbryht</w></persName> <w>þa</w> <w>halgan</w> <w>æþelinga&slongdes;</w> <w>be
+    <lb n="19"/>fæ&slongdes;te</w> <pc>·</pc> <persName key="EcgberhtKent" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=847"><w>egcbrihte</w></persName> <w>cynge</w> <w>to</w> <w>fo&slongdes;tre</w> <w>&et;</w> <w>to</w>
+    <lb n="20"/><w notation="accentuated">lare</w> <pc>·</pc> </s><s xml:id="s138.3.28"><w>forþan</w> <w>hi</w> <w>ƿæron</w> <w>æt</w> <w>hiora</w>
+    <lb n="21"/><w>yldran</w> <w>befeallenne</w> <pc>·</pc> </s><s xml:id="s138.3.29"><w>&et;</w> <w>ƿæ&slongdes;</w> <w>he</w> <w>ſe</w> <w>cyning</w>
+   <pb n="123r"/>
+    <lb n="1"/><w>heora</w> <w>fæderan</w> <w>&slongdes;unu</w> <pc>·</pc> <persName key="Eorcenberht" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=1654"><w>eorcenbrihte&slongdes;</w></persName> <pc>·</pc>
+    <lb n="2"/><w>&et;</w> <persName key="Seaxburh"><w>Sexburh</w></persName> <w>hi&slongdes;</w> <w notation="accentuated">cƿene</w> <pc>·</pc> </s><s xml:id="s138.3.30"><w>þa</w> <w>ƿæron</w> <w>hi</w> <w>ſona</w>
+    <lb n="3"/><w>on</w> <w>geogoðe</w> <w>&slongdes;ƿyðe</w> <w>ge&slongdes;ceadƿi&slongdes;e</w> <w>&et;</w> <w>rihtƿiſe</w> <pc>·</pc>
+    <lb n="4"/><w>ſƿa</w> <w>hit</w> <w>gode&slongdes;</w> <w>ƿilla</w> <w>ƿæſ</w> <pc>·</pc> </s><s xml:id="s138.3.31"><w>Ða</w> <w>ofðuhte</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w>
+    <lb n="5"/><num n="1"><w>anum</w></num> <w>þæ&slongdes;</w> <w>cyninge&slongdes;</w> <w>geferan</w> <pc>·</pc> <w>ſe</w> <w>ƿæ&slongdes;</w>
+    <lb n="6"/><persName key="Thunor"><w>þunor</w></persName> <w>haten</w> <pc>·</pc> </s><s xml:id="s138.3.32"><w>&et;</w> <w>ƿæ&slongdes;</w> <w>him</w> <w>&slongdes;e</w> <w>leofe&slongdes;tan</w>
+    <lb n="7"/><w>ðegen</w> <w>to</w> <w>hi&slongdes;</w> <w>bearnu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>·</pc> </s><s xml:id="s138.3.33"><w>ða</w> <w>ondrædde</w> <w>he</w> <w>hi<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="8"/><w>gif</w> <w>hi</w> <w>leng</w> <w>lifedon</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hi</w> <w>ƿurdon</w> <w>þam</w>
+    <lb n="9"/><w>cynge</w> <w>leofran</w> <w>ðonne</w> <w>he</w> <pc>·</pc> </s><s xml:id="s138.3.34"><w>Ongan</w> <w>hi</w>
+    <lb n="10"/><w>þa</w> <w>hatian</w> <w>dearnunga</w> <w>&et;</w> <w>ƿregean</w> <w>to</w> <w>þa<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="11"/><w>cyninge</w> <w>&et;</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>gif</w> <w>hi</w> <w>libban</w> <w>mo&slongdes;ton</w>
+    <lb n="12"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hi</w> <w>ægðer</w> <w>ge</w> <w>hine</w> <w>ge</w> <w>hi&slongdes;</w> <w>bearn</w> <w>þæ&slongdes;</w>
+    <lb n="13"/><w>cynerice&slongdes;</w> <w>benæmde</w> <pc>·</pc> </s><s xml:id="s138.3.35"><w>Ongan</w> <w>hine</w>
+    <lb n="14"/><w>ða</w> <w>biddan</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>mo&slongdes;te</w> <w>þa</w> <w>æþelinga&slongdes;</w>
+    <lb n="15"/><w>dearnunga</w> <w>acƿellan</w> <pc>·</pc> </s><s xml:id="s138.3.36"><w>ac</w> <w>ſe</w> <w>cyning</w> <w>him</w>
+    <lb n="16"/><w>lyfan</w> <w>nolde</w> </s><s xml:id="s138.3.37"><w>forðam</w> <w>þe</w> <w>hi</w> <w>him</w> <w>leofa</w>
+    <lb n="17"/><w>ƿæron</w> <w>&et;</w> <w>ge&slongdes;ibbe</w> <pc>·</pc> </s><s xml:id="s138.3.38"><w>&et;</w> <w>þa</w> <w>git</w> <w>ſe</w> <persName key="Thunor"><w>ðunor</w></persName> <w>hine</w>
+    <lb n="18"/><w>oft</w> <w>&et;</w> <w>gelome</w> <w>bæd</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>him</w> <w>leafe</w> <w>ſealde</w>
+    <lb n="19"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>mo&slongdes;te</w> <w>don</w> <w>embe</w> <w>ða</w> <w>æþelinga&slongdes;</w>
+    <lb n="20"/><w>ſƿa</w> <w>he</w> <w>ƿolde</w> <pc>·</pc> </s><s xml:id="s138.3.39"><w>&et;</w> <w>he</w> <w>ða</w> <w>&slongdes;ona</w> <w>ſƿa</w> <w>dyde</w>
+    <lb n="21"/><w>&slongdes;ƿa</w> <w>he</w> <w>ær</w> <w>gyrnende</w> <w>ƿæſ</w> <pc>·</pc> </s><s xml:id="s138.3.40"><w>&et;</w> <w>he</w> <w>hi</w> <w>on</w> <w>niht</w>
+   <pb n="123v"/>
+    <lb n="1"/><w>ſona</w> <w>gemartirode</w> <w>innan</w> <w>ðæ&slongdes;</w> <w>cyninge&slongdes;</w>
+    <lb n="2"/><w>heah&slongdes;etle</w> <pc>·</pc> <w>ſƿa</w> <w>he</w> <w>dyrnlico&slongdes;t</w> <w>mihte</w> <pc>·</pc>
+    <lb n="3"/></s><s xml:id="s138.3.41"><w>&et;</w> <w>he</w> <w>geðoht</w> <w>hæfde</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hi</w> <w>þær</w> <w>næfre</w> <w>uppe</w>
+    <lb n="4"/><w>ne</w> <w>ƿurdan</w> <pc>·</pc> </s><s xml:id="s138.3.42"><w>ac</w> <w>ðurh</w> <w>gode&slongdes;</w> <w>mihte</w> <w>hi</w> <w>þanon</w>
+    <lb n="5"/><w>gecydde</w> <w>ƿurdon</w> <pc>·</pc> <w>emne</w> <w>&slongdes;ƿa</w> <w>ðæ&slongdes;</w> <w>leohteſ</w>
+    <lb n="6"/><w>leoma</w> <w notation="accentuated">&slongdes;tod</w> <w>up</w> <w>þurh</w> <w>þære</w> <w>healle</w> <w notation="accentuated">hrof</w>
+    <lb n="7"/><w>up</w> <w>to</w> <w>heofonu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>·</pc> </s><s xml:id="s138.3.43"><w>&et;</w> <w>he</w> <w>ða</w> <w>ſe</w> <w>cyning</w> <w>&slongdes;ylf</w> <w>embe</w>
+    <lb n="8"/><num n="1"><w>forman</w></num> <w>hancred</w> <w notation="accentuated">ut</w> <w>gangende</w> <w>ƿæ&slongdes;</w> <pc>·</pc> </s><s xml:id="s138.3.44"><w>&et;</w> <w>he</w>
+    <lb n="9"/><w>þa</w> <w>him</w> <w>&slongdes;ylf</w> <w>ge&slongdes;eonde</w> <w>ƿæ&slongdes;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿundor</w> <pc>·</pc> </s><s xml:id="s138.3.45"><w>þa</w>
+    <lb n="10"/><w>ƿearð</w> <w>he</w> <w>afyrht</w> <w>&et;</w> <w notation="accentuated">afæred</w> <pc>·</pc> </s><s xml:id="s138.3.46"><w>&et;</w> <w>het</w> <w>hi</w> <w>hræd
+    <lb n="11"/>lice</w> <w>þæne</w> <persName key="Thunor"><w>þunor</w></persName> <w>to</w> <w>feccean</w> </s><s xml:id="s138.3.47"><w>&et;</w> <w>hine</w>
+    <lb n="12"/><w>ah&slongdes;ode</w> <w>hƿær</w> <w>he</w> <w>hi&slongdes;</w> <w>mægcildu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>cumen</w>
+    <lb n="13"/><w>hæfde</w> <w>ðe</w> <w>he</w> <w>him</w> <w>for&slongdes;tolen</w> <w>hæfde</w> <pc>·</pc> </s><s xml:id="s138.3.48"><w>he</w> <w>hi<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="14"/><w>and&slongdes;ƿorode</w> <w>&et;</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>ſylf</w> <w>ƿi&slongdes;te</w> <w>&et;</w> <w>he</w> <w>him</w>
+    <lb n="15"/><w>&slongdes;ecgan</w> <w>nolde</w> <w>buton</w> <w>he</w> <w>nyde</w> <w>ſceolde</w> <pc>·</pc>
+    <lb n="16"/></s><s xml:id="s138.3.49"><w>he</w> <w>ða</w> <w>ſe</w> <w>cyning</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>be</w> <w>hi&slongdes;</w> <w>freondſcipe</w>
+    <lb n="17"/><w>hit</w> <w>ſecgan</w> <w>ſceolde</w> <pc>·</pc> </s><s xml:id="s138.3.50"><w>he</w> <w>him</w> <w>and&slongdes;ƿorode</w>
+    <lb n="18"/><w>&et;</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>hi</w> <w>innan</w> <w>hi&slongdes;</w> <w>healle</w> <w>under</w> <w>hi&slongdes;</w>
+    <lb n="19"/><w>heah&slongdes;etle</w> <w>bebyrged</w> <w>hæfde</w> <pc>·</pc> </s><s xml:id="s138.3.51"><w>&et;</w> <w>he</w> <w>þa</w>
+    <lb n="20"/><w>ſe</w> <w>cyning</w> <w>&slongdes;ƿyðe</w> <w notation="accentuated">unrot</w> <w>geƿorden</w> <w>ƿæ&slongdes;</w> <pc>·</pc>
+    <lb n="21"/><w>for</w> <w>þæ&slongdes;</w> <w>gode&slongdes;</w> <w>ƿundre</w> <pc>·</pc> <w>&et;</w> <w>for</w> <w>þære</w> <w>ge
+   <pb n="124r"/>
+    <lb n="1"/>ſihþe</w> <w>ðe</w> <w>he</w> <w>ðær</w> <w>ge&slongdes;eƿen<del rend="erasure" hand="#DP0571"><gap unit="chars" quantity="1" reason="erasure"/></del></w> <w>hæfde</w> <pc>·</pc> </s><s xml:id="s138.3.52"><w>&et;</w> <w>he</w> <w>þa</w>
+    <lb n="2"/><w>be</w> <w>ðam</w> <w>gearo</w> <w>ƿi&slongdes;te</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>gode</w> <w>abolgen</w>
+    <lb n="3"/><w>hæfde</w> <pc>·</pc> <w>&slongdes;ƿyðor</w> <w>þonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <w>hi&slongdes;</w> <w>ðearf</w> <w>ƿære</w> <pc>·</pc>
+    <lb n="4"/></s><s xml:id="s138.3.53"><w>&et;</w> <w>þa</w> <w>on</w> <w>morgen</w> <w>&slongdes;ƿyðe</w> <w>hrædlice</w> <w>him</w> <w>to</w>
+    <lb n="5"/><w>gefeccean</w> <w>het</w> <w>hi&slongdes;</w> <w>ƿitan</w> <pc>·</pc> <w>&et;</w> <w>hi&slongdes;</w> <w>þegna&slongdes;</w> <pc>·</pc>
+    <lb n="6"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hi</w> <w>him</w> <w>geræddon</w> <w>hƿæt</w> <w>him</w> <w>be</w> <w>ðam</w>
+    <lb n="7"/><w>ſelo&slongdes;t</w> <w>ðuhte</w> <pc>·</pc> <w>oððe</w> <w>to</w> <w>done</w> <w>ƿære</w> <pc>·</pc> </s><s xml:id="s138.3.54"><w>&et;</w> <w>he</w> <w>þa</w> <pc>·</pc>
+    <lb n="8"/><w>&et;</w> <w>hi</w> <w>geræddon</w> <w>mid</w> <w>ðæſ</w> <w>ærcebi&slongdes;ceope&slongdes;</w>
+    <lb n="9"/><w>fultume</w> <pc>·</pc> <handShift script="carolMinusc"/><persName key="Deusdedit" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=7792"><w>Deuſdedit</w></persName><handShift script="vernacMinusc"/> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>man</w> <w>heora</w>
+    <lb n="10"/><w>&slongdes;ƿu&slongdes;tor</w> <w>on</w> <placeName key="#Mercia"><name type="demonym" key="Mercian"><w>mercna</w></name> <w notation="accentuated">lande</w></placeName> <w>þe</w> <w>hio</w> <w>to</w>
+    <lb n="11"/><w>forgifen</w> <w>ƿæ&slongdes;</w> <w>gefeccean</w> <w notation="accentuated">het</w> <pc>·</pc> <w>to</w> <w>ðam</w>
+    <lb n="12"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w>hyre</w> <w>broðra</w> <w>ƿergild</w> <w>gecure</w> <pc>·</pc> <w>on</w>
+    <lb n="13"/><w>ſƿylcu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>þingum</w> <w>&slongdes;ƿylce</w> <w>hyre</w> <pc>·</pc> <w>&et;</w> <w>hire</w> <w>nyh
+    <lb n="14"/>&slongdes;tan</w> <w>freondum</w> <w>&slongdes;elo&slongdes;t</w> <w>licode</w> <pc>·</pc> </s><s xml:id="s138.3.55"><w>&et;</w> <w>hio</w> <w>ða</w>
+    <lb n="15"/><w>ſƿa</w> <w>dyde</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿergeld</w> <w>gecea&slongdes;</w> <w>þurh</w>
+    <lb n="16"/><w>gode&slongdes;</w> <w>fultu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>on</w> <w>ðam</w> <w>iglande</w> <w>þe</w> <placeName key="#Thanet"><w>teneð</w></placeName>
+    <lb n="17"/><w>i&slongdes;</w> <w>nemned</w> <pc>·</pc> </s><s xml:id="s138.3.56"><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>i&slongdes;</w> <w>þonn<choice>
+      <abbr><am>&combmacr;</am></abbr>
+      <expan><ex>e</ex></expan>
+     </choice></w> <num n="80"><w>hundeahtatig</w></num>
+    <lb n="18"/><w notation="accentuated">hida</w> <w>lande&slongdes;</w> <w>þe</w> <w>hio</w> <w>ðær</w> <w>æt</w> <w>þæm</w> <w>cyninge</w>
+    <lb n="19"/><w>onfeong</w> <pc>·</pc> </s><s xml:id="s138.3.57"><w>&et;</w> <w>hit</w> <w>ða</w> <w>&slongdes;ƿa</w> <w>gelamp</w> <w>þa</w> <w>&slongdes;e</w> <w>cyning</w>
+    <lb n="20"/><w>&et;</w> <w>hio</w> <persName key="Eormenburh" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=2940"><w>domne</w> <w>eafe</w></persName> <num n="1"><w>ære&slongdes;t</w></num> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>land</w> <w notation="accentuated">gecea&slongdes;</w> <pc>·</pc>
+    <lb n="21"/><w>&et;</w> <w>hi</w> <w>ofer</w> <w>þa</w> <w>ea</w> <w notation="accentuated">comon</w> <w>þa</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w>ſe</w> <w>cyning</w>
+   <pb n="124v"/>
+    <lb n="1"/><w>to</w> <w>hire</w> <pc>·</pc> <w>hƿylcne</w> <w>dæl</w> <w>þæ&slongdes;</w> <w>lande&slongdes;</w> <w>hio</w>
+    <lb n="2"/><w>onfon</w> <w>ƿolde</w> <w>hyre</w> <w>broðru<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>to</w> <w>ƿergilde</w> <supplied reason="trimming" evidence="conjecture"><pc>·</pc></supplied>
+    <lb n="3"/></s><s xml:id="s138.3.58"><w>Hio</w> <w>him</w> <w>ða</w> <w>and&slongdes;ƿorode</w> <pc>·</pc> <w>&et;</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w>hi&slongdes;</w>
+    <lb n="4"/><w>na</w> <w>maran</w> <w>ne</w> <w>gyrnde</w> <w>þonne</w> <w>hire</w> <w>hind</w>
+    <lb n="5"/><w>utan</w> <w>ymbyrnan</w> <w>ƿolde</w> <pc>·</pc> <w>þe</w> <w>hire</w> <w>ealne</w>
+    <lb n="6"/><w>ƿeg</w> <w>beforan</w> <w notation="accentuated">arn</w> <w>ðonne</w> <w>hio</w> <w>on</w> <w notation="accentuated">rade</w>
+    <lb n="7"/><w>ƿæ&slongdes;</w> <pc>·</pc> </s><s xml:id="s138.3.59"><w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hire</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>getyðed</w> <w>ƿære</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w>&slongdes;ƿa</w>
+    <lb n="8"/><w>mycele&slongdes;</w> <w>hi&slongdes;</w> <w>onfon</w> <w>&slongdes;ceolde</w> <w>&slongdes;ƿa</w> <w>&slongdes;eo</w>
+    <lb n="9"/><w>hind</w> <w>hire</w> <w>geƿi&slongdes;ede</w> <pc>·</pc> </s><s xml:id="s138.3.60"><w>He</w> <w>ða</w> <w>&slongdes;e</w> <w>cyning</w>
+    <lb n="10"/><w>hire</w> <w>geand&slongdes;ƿorode</w> <pc>·</pc> <w>&et;</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>lu&slongdes;tlice</w>
+    <lb n="11"/><w>fægnian</w> <w>ƿolde</w> <pc>·</pc> </s><s xml:id="s138.3.61"><w>&et;</w> <w>hio</w> <w>ða</w> <w>hind</w> <w>&slongdes;ƿa</w> <w>dyde</w> <pc>·</pc>
+    <lb n="12"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hio</w> <w>him</w> <w>beforan</w> <w>hleapende</w> <w>ƿæ&slongdes;</w> <pc>·</pc>
+    <lb n="13"/><w>&et;</w> <w>hi</w> <w>hyre</w> <w>æfterfiligende</w> <w>ƿæron</w> <pc>·</pc> <w>oð<choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w>
+    <lb n="14"/><w>hi</w> <w>comon</w> <w>to</w> <w>ðære</w> <w>&slongdes;toƿe</w> <w>þe</w> <w>i&slongdes;</w> <w>nu</w> <w>ge
+    <lb n="15"/>cƿedon</w> <placeName key="#ThunorsMount"><persName key="Thunor"><w>þunore&slongdes;</w></persName> <w>hlæƿe</w></placeName> <pc>·</pc> </s><s xml:id="s138.3.62"><w>&et;</w> <w>he</w> <w>ða</w> <w>ſe</w> <persName key="Thunor"><w>þunor</w></persName>
+    <lb n="16"/><w>to</w> <del rend="erasure" hand="#DP0571"><gap unit="chars" quantity="1" reason="erasure"/></del> <w>ðam</w> <w>cyninge</w> <w>aleat</w> <pc>·</pc> <w>&et;</w> <w>he</w> <w>him</w> <w>to</w> <w>cƿ<choice>
+       <am>&combmacr;</am>
+       <ex>æð</ex>
+     </choice></w> <pc>·</pc>
+    <lb n="17"/></s><s xml:id="s138.3.63"><w>leof</w> <w>hu</w> <w>lange</w> <w>ƿylt</w> <w>ðu</w> <w>hly&slongdes;tan</w> <w>þy&slongdes;&slongdes;u<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="18"/><w>dumban</w> <w>nytene</w> <w>þe</w> <w>hit</w> <w>eal</w> <w>ƿyle</w> <w>þi&slongdes;</w>
+    <lb n="19"/><w>land</w> <w>utan</w> <w>beyrnan</w> <pc>·</pc> </s><s xml:id="s138.3.64"><w>ƿylt</w> <w>ðu</w> <w>hit</w> <w>eal</w>
+    <lb n="20"/><w>ðære</w> <w>cƿenon</w> <w>&slongdes;yllan</w> <pc>·</pc> </s><s xml:id="s138.3.65"><w>&et;</w> <w>ða</w> <w>&slongdes;ona</w> <w>æfter</w>
+    <lb n="21"/><w>þy&slongdes;&slongdes;u<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>ƿordum</w> <w>&slongdes;e</w> <w>eorðe</w> <w notation="accentuated">tohlad</w></s>
+   </ab>
+  </body>
+ </text>
+ <standOff>
+  <listPlace>
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.082800</geo></location>
+   </place>
+   <place xml:id="Folkestone">
+    <placeName>Folkestone</placeName>
+    <location><geo>51.081398,1.169456</geo></location>
+   </place>
+   <place xml:id="Mercia">
+    <placeName>Mercia</placeName>
+    <location><geo>52.6,-1.6</geo></location>
+   </place>
+   <place xml:id="MuchWenlock">
+    <placeName>Much Wenlock</placeName>
+    <location><geo>52.5966,-2.558</geo></location>
+   </place>
+   <place xml:id="Northumbria">
+    <placeName>Northumbria</placeName>
+    <location><geo>55.2952324,-2.7356939</geo></location>
+   </place>
+   <place xml:id="Rochester">
+    <placeName>Rochester</placeName>
+    <location><geo>51.3810231,0.4452589</geo></location>
+   </place>
+   <place xml:id="Thanet">
+    <placeName>Thanet</placeName>
+    <location><geo>51.3533748,1.2899759</geo></location>
+   </place>
+   <place xml:id="ThunorsMount">
+    <placeName>Thunor's Mount (in <emph>Mildred</emph>)</placeName>
+    </place>
+  </listPlace>
+ </standOff>
+</TEI>

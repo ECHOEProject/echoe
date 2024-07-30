@@ -1,0 +1,122 @@
+<!DOCTYPE TEI [
+<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader xml:lang="en">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">Digby 63 Palimpsest</title>
+    <title type="alt">Fragment of a Northern Homily</title>
+    <respStmt>
+     <resp>Transcription by </resp>
+     <name type="person">Winfried Rudolf</name>
+    </respStmt><respStmt>
+     <resp>Encoded by </resp>
+      <name type="person">Winfried Rudolf</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+    <respStmt>
+     <resp>Proofread by </resp>
+      <name type="person">Esther Lemmerz</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+     </titleStmt>
+   <publicationStmt>
+    <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
+    <idno type="echoe">319.a</idno>
+    <availability>
+     <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+      <p>CC-BY-NC 4.0 Electronic Corpus of Homilies in Old English Project</p>
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <msDesc>
+     <msIdentifier>
+      <settlement>Oxford</settlement>
+      <repository>Bodleian Library</repository>
+      <collection/>
+      <idno>Digby 63</idno>
+      <msName>Digby 63</msName>
+     </msIdentifier>
+     <msContents>
+      <msItem n="a" defective="true">
+       <locus from="9r" to="9r"/>
+       <filiation/>
+       <textLang mainLang="ang"/>
+      </msItem>
+     </msContents>
+     <physDesc>
+      <handDesc>
+       <handNote xml:id="DP1264" corresp="http://www.digipal.eu/digipal/manuscripts/1264/hands/"><p>
+          A ninth-century hand (palimpsest).</p></handNote>
+      </handDesc>
+     </physDesc>
+     <history>
+	  <origin>
+	   <origDate notBefore="0844" notAfter="0867">844x867</origDate>
+	   <origPlace cert="high"/>
+	  </origin>
+	  <provenance cert="high"/>
+	 </history>
+     <msPart>
+      <msIdentifier>
+       <idno/>
+      </msIdentifier>	
+     </msPart>
+    </msDesc>
+    <listWit>
+     <witness xml:id="witnessIdPlaceholder">
+      <abbr type="siglum"/>
+     </witness>
+    </listWit>
+    <bibl>
+     Ker item <idno type="ker">319, art. a</idno>; 
+     Gneuss–Lapidge number <idno type="gneuss">611</idno>; 
+     cf. DOE short title <idno type="doe">Scrib 3.32 (Ker)</idno>; 
+     cf. Cameron number <idno type="cameron">B27.3.32</idno>.
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+   <textClass>
+    <keywords>
+     <term/>
+    </keywords>
+    </textClass>
+   <settingDesc>
+    <setting ana="other">
+     <p>Unspecified</p>
+    </setting>
+   </settingDesc>
+  </profileDesc>
+  <revisionDesc>
+   <change n="1.0" when="2024-07-30" who="PSL">cleared for initial release</change>
+  </revisionDesc>
+ </teiHeader>
+ <text xml:lang="ang">
+  <body>
+   <pb n="9r"/>
+   <ab><s xml:id="s319.a.1">
+    <lb n="1"/><unclear reason="erasure"><seg ana="audAddress"><choice>
+      <abbr>M<am>&bar;</am></abbr>
+      <expan><w>M<ex>en</ex></w> <w><ex>þa</ex></w> <w><ex>leofestan</ex></w></expan>
+     </choice></seg></unclear> <w>&slongdes;agað</w> <w>monn</w> <w>on</w> <w>ði&slongdes;&slongdes;u<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w>bo<unclear reason="erasure">c</unclear>u<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ure</w>
+    <lb n="2"/><w>he<unclear reason="erasure">a</unclear>hfederas</w> <pc>·</pc></s>
+   </ab>
+  </body>
+ </text>
+</TEI>

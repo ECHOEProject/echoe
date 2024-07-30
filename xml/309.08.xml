@@ -1,0 +1,946 @@
+<!DOCTYPE TEI [
+<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY cross "&#x271D;">		<!-- LATIN CROSS -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader xml:lang="en">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">Vercelli IX</title>
+    <respStmt>
+     <resp>Transcription by </resp>
+     <name type="person">Julia Josfeld</name>
+    </respStmt><respStmt>
+     <resp>Encoded by </resp>
+      <name type="person">Julia Josfeld</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+    <respStmt>
+     <resp>Proofread by </resp>
+      <name type="person">Melanie Vollbrecht</name>
+      <name type="person">Sabine Ines Rauch</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+     </titleStmt>
+   <publicationStmt>
+    <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
+    <idno type="echoe">309.8</idno>
+    <availability>
+     <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+      <p>CC-BY-NC 4.0 Electronic Corpus of Homilies in Old English Project</p>
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <msDesc>
+     <msIdentifier>
+      <settlement>Oxford</settlement>
+      <repository>Bodleian Library</repository>
+      <collection/>
+      <idno>Bodley 340</idno>
+      <msName>Bodley 340</msName>
+     </msIdentifier>
+     <msContents>
+      <msItem n="8" defective="false">
+       <locus from="35v" to="40v"/>
+       <filiation/>
+       <textLang mainLang="ang" otherLangs="la"/>
+      </msItem>
+     </msContents>
+     <physDesc>
+      <p>Several erasures in this homily alter 'naenig'-forms to 'naen'-forms. There are also a few additions by what may be a further hand; this hand adds 'grere' and '7 þeah' on 38r and some other things on 38r, plus possibly one 'nes' inserted on 38v. The same hand seems to add 'aenig ðinc dydon;' on 109r, and possibly makes some alterations on 111v-112r.</p>
+       <handDesc>
+       <handNote xml:id="DP0984" corresp="http://www.digipal.eu/digipal/hands/984/"><p>Main scribe of the manuscript. A square Anglo-Saxon miniscule, described by Ker as 'handsome'.</p></handNote>
+       <handNote xml:id="DP0985" corresp="http://www.digipal.eu/digipal/hands/985/"><p>This is hand of the main Rochester reviser. Ker describes the hand as 'sprawling, but firm and well-marked', with e slightly ascending and open at the top. It should be noted that Ker's palaeographical description on p. 367 erroneously states that this hand is responsible for the homily on Paulinus in 'art. 76', but in fact the added Paulinus homily is Ker's art. 75. Digipal terms this hand the 'Principal Corrector'. </p></handNote>
+       <handNote xml:id="EC0984b"><p>Emending hand, quite large and round, superficially similar to the Rochester reviser, ECHOE HandID DP0985, but lacking the long flourishes and tongues; erases and overwrites the main text, tail of g closed, favouring tall/long s. Top of the belly stroke of a often fails to cleanly connect to the top of the back stroke, which can create a sort of roofing effect.</p></handNote>
+       <handNote xml:id="EC0984c"><p>Emending hand. Rectangular in aspect with pronounced lean to the right, minims quite closely set. Final e often with an upward-curling, hair-thin decorative tongue. Often uses round s.</p></handNote>
+       <handNote xml:id="EC0984d"><p>Emending hand. Late reviser s. xii, Caroline r, could be responsible for major erasures cf. 39v.</p></handNote>
+       <handNote xml:id="EC0984a"><p>Emending hand with wider ductus, rounder in aspect.</p></handNote>
+      </handDesc>
+     </physDesc>
+     <history>
+	  <origin>
+	   <origDate notBefore="0996" notAfter="1020">s. xi in.</origDate>
+	   <origPlace cert="high"/>
+	  </origin>
+	  <provenance cert="high"/>
+	 </history>
+     <msPart>
+      <msIdentifier>
+       <idno/>
+      </msIdentifier>	
+     </msPart>
+    </msDesc>
+    <listWit>
+     <witness xml:id="E">
+      <abbr type="siglum">E</abbr>
+     </witness>
+    </listWit>
+    <bibl>
+     Ker item <idno type="ker">309, art. 8</idno>; 
+     Gneuss–Lapidge number <idno type="gneuss">569</idno>; 
+     cf. DOE short title <idno type="doe">HomS 4 (ScraggVerc 9)</idno>; 
+     cf. Cameron number <idno type="cameron">B3.2.4</idno>.
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+   <textClass>
+    <keywords>
+     <term/>
+    </keywords>
+    </textClass>
+   <settingDesc>
+    <setting ana="temporale">
+     <p>Second Sunday after Epiphany</p>
+    </setting>
+   </settingDesc>
+  </profileDesc>
+  <revisionDesc>
+   <change n="1.0" when="2024-07-30" who="PSL">cleared for initial release</change>
+  </revisionDesc>
+ </teiHeader>
+ <text xml:lang="ang">
+  <body>
+   <pb n="35v"/>
+    <lb n="9"/><head rend="color(red)" xml:lang="la"><w>DOMINICA</w> <pc>·</pc><num n="2"><w>II</w></num><pc>·</pc> <w>post</w> <w>theophania</w> <w>et</w> <w>quando</w> <w>uolueris</w> <pc>·</pc></head>
+   <ab><s xml:id="s309.8.1" n="x394.11.1">
+    <lb n="10"/><seg ana="audAddress"><handShift new="#DP0984" script="vernacMinusc"/><w>Men</w> <w>ða</w> <w>leofe&slongdes;tan</w></seg> <add type="augm" place="above" hand="uncertain"><w>uſ</w></add> <seg ana="binomial"><w>manað</w> <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></del> <w>&et;</w> <w>mynegað</w></seg> <w>þeo&slongdes;</w>
+    <lb n="11"/><w>halige</w> <w notation="accentuated">boc</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>&slongdes;yn</w> <w notation="accentuated">gemyndige</w> <w>ymbe</w> <w>ure</w> <w notation="accentuated">&slongdes;aƿ
+    <lb n="12"/>le</w> <w>þearfe</w> <pc>·</pc> </s><s xml:id="s309.8.2" n="x394.11.2"><w>&et;</w> <w notation="accentuated">eac</w> <w>&slongdes;ƿa</w> <pc>·</pc> <w notation="accentuated">ure&slongdes;</w> <w>þæ&slongdes;</w> <w notation="accentuated">neh&slongdes;tan</w> <w>dæge&slongdes;</w> <pc>·</pc> <w>&et;</w> <w part="I">þæ</w><subst>
+       <del rend="lettermod" hand="uncertain"><w part="F">r<unclear reason="erasure">e</unclear></w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w part="F">ſ</w></add>
+     </subst> <add type="augm" place="rmargin" hand="#EC0984a"><w>gedaleſ</w> <pc>·</pc></add>
+    <lb n="13"/><del rend="erasure" hand="uncertain"><subst>
+       <del rend="underlining" hand="uncertain"><w>to<unclear reason="erasure">&slongdes;ceadedny</unclear>&slongdes;&slongdes;e</w></del>
+       <add type="subst" hand="uncertain" place="above"><gap unit="chars" quantity="7" reason="erasure"/></add>
+     </subst></del> <w notation="accentuated">ura</w> <w>&slongdes;aƿla</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þonne</w> <w>heo</w> <w>of</w> <w>ðam</w> <w>lic
+    <lb n="14"/>haman</w> <w>gelædd<del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del></w> <subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="3" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>bið</w> <pc>&punctelev;</pc></add>
+     </subst></s><s xml:id="s309.8.3" n="x394.11.3"> <subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="12" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>uton</w> <w>lætan</w> <w notation="accentuated">u&slongdes;</w></add>
+     </subst> <w xml:id="alt1a"><unclear reason="erasure">&slongdes;ingallice</unclear></w> <add xml:id="alt1b" type="altern" hand="#EC0984a" place="above"><w>æfre</w></add> <w>beon</w>
+    <lb n="15"/><seg ana="binomial"><w>on</w> <w>gemynd<subst>
+       <del rend="erasure" hand="uncertain">um</del>
+       <add type="subst" place="onerasure" hand="uncertain">e</add>
+     </subst></w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>geþanc<subst>
+       <del rend="lettermod" hand="uncertain">um</del>
+       <add type="subst" place="lettermod" hand="uncertain">e</add>
+     </subst></w></seg> <w>þæ&slongdes;</w> <w notation="accentuated">ege&slongdes;<del rend="erasure" hand="uncertain">ful</del>lican</w>
+    <lb n="16"/><w>dæge&slongdes;</w> <w notation="accentuated">tocyme</w> <pc>·</pc> </s><s xml:id="s309.8.4" n="x394.11.4"><w>on</w> <w>ðam</w> <w>ƿe</w> <w>&slongdes;ceolon</w> <w>gode</w> <w>riht</w> <w>ag<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">ẏ</add>
+     </subst>
+    <lb n="17"/>fan</w> <pc>·</pc> <w>for</w> <w>ealle&slongdes;</w> <w notation="accentuated">ure&slongdes;</w> <w>life&slongdes;</w> <w notation="accentuated">dædum</w> <pc>·</pc> <w>þe</w> <w notation="accentuated">ƿe</w> <seg ana="binomial"><w notation="accentuated">&slongdes;ið</w> <pc>·</pc> <w>oððe</w>
+    <lb n="18"/><w>ær</w></seg> <w>gefremedon</w>  <pc>·</pc> <w><subst>
+       <del rend="lettermod" hand="uncertain">&slongdes;</del>
+       <add type="subst" place="lettermod" hand="uncertain">f</add>
+     </subst>ram</w> <subst>
+       <del rend="lettermod" hand="uncertain"><w>fruman</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w>frẏmðe</w></add>
+     </subst> <w>ure&slongdes;</w> <w>life&slongdes;</w> <pc>·</pc> <w>oð</w> <add type="augm" place="rmargin" hand="uncertain"><w>ðone</w></add>
+    <lb n="19"/><w>ende</w> <pc>·</pc> </s><s xml:id="s309.8.5" n="x394.11.5"><w>forðan</w> <w>þe</w> <w>ƿe</w> <w>nu</w> <w>magon</w> <w>behelian</w> <w>ure</w> <w>dæda</w> <pc>·</pc>
+    <lb n="20"/><w>ac</w> <w>hi<del rend="erasure" hand="uncertain">e</del></w> <w>beoð</w> <w>þonne</w> <seg ana="binomial"><w>opene</w> <w>&et;</w> <w notation="accentuated">unƿrigene</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.6" n="x394.11.6"><w>Forðan</w>
+    <lb n="21"/><w>ƿe</w> <w>habbað</w> <w>miccle</w> <w>nydþearfe</w> <w>þa</w> <w notation="accentuated">hƿile</w> <w>þe</w> <w>ƿe</w> <w notation="accentuated">her</w>
+    <lb n="22"/><w>&slongdes;yndon</w> <seg ana="binomial"><w>on</w> <w>ðy&slongdes;um</w> <w>lænan</w> <w>life</w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>ðy&slongdes;um</w> <w notation="accentuated">geƿi
+    <lb n="23"/>tendlicum</w></seg> <pc>·</pc> </s><s xml:id="s309.8.7" n="x394.11.7"><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>þonne</w> <w>on</w> <w>ðære</w> <w notation="accentuated">toƿeardan</w> <w>ƿorul
+    <lb n="24"/>de</w> <seg ana="binomial"><w>m<subst>
+       <del rend="lettermod" hand="uncertain">æ</del>
+       <add type="subst" place="lettermod" hand="uncertain">a</add>
+     </subst>gen</w> <w>&et;</w> <w notation="accentuated">moton</w></seg> <w>becuman</w> <w>to</w> <w notation="accentuated">life</w> <w>þæ&slongdes;</w> <w notation="accentuated">heofon
+    <lb n="25"/>cundan</w> <w>rice&slongdes;</w>  <w>&et;</w> <w>to</w> <w>ðam</w> <w>ƿuldre</w> <w>þære</w> <w notation="accentuated">ecan</w> <w notation="accentuated">eadig
+    <lb n="26"/>ny&slongdes;&slongdes;e</w> <pc>·</pc> </s><s xml:id="s309.8.8" n="x394.11.8"><w>þær</w> <w>ƿe</w> <w>moton</w> <w>&slongdes;yððan</w> <w>or&slongdes;orhlice</w> <seg ana="binomial"><w><subst>
+       <del rend="lettermod" hand="uncertain">b</del>
+       <add type="subst" place="lettermod" hand="uncertain">l</add>
+     </subst>ibban</w> <pc>·</pc>
+   <pb n="36r"/>
+    <lb n="1"/><w>&et;</w> <w>rixian</w></seg> <w>buton</w> <w>ælcere</w> <w notation="accentuated">aƿendedny&slongdes;&slongdes;e</w> <w>mid</w> <w notation="accentuated">urum</w> <w>driht
+    <lb n="2"/>ne</w> <w>hælendum</w> <persName key="Jesus"><w>cri&slongdes;te</w></persName> <pc>·</pc> <w>&et;</w> <w>mid</w> <w>eallum</w> <w>hi&slongdes;</w> <w>halgum</w> <pc>·</pc> <w>gif</w>
+    <lb n="3"/><w>ƿe</w> <w>hit</w> <undo target="#undo16" rend="erasure" hand="uncertain"/><add xml:id="undo16" type="augm" place="above" hand="uncertain"><w>n<unclear reason="erasure"/>u</w></add> <w notation="accentuated">geearnian</w> <w>ƿillað</w> <w>mid</w> <del rend="erasure underlining" hand="uncertain"><w>urum</w></del> <w notation="accentuated">godum</w> <w>dædu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>&punctvers;</pc>
+    <lb n="4"/></s><s xml:id="s309.8.9" n="x394.11.9"><w><del rend="erasure" hand="uncertain">N</del>i&slongdes;</w> <w>þonne</w> <w notation="accentuated"><del rend="erasure" hand="uncertain">n</del>ænige&slongdes;</w> <w>manne&slongdes;</w> <w xml:id="alt2a">gemet</w> <add xml:id="alt2b" type="altern" place="above" hand="#EC0984a"><w>mæð</w></add> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>mæge</w> <w>a&slongdes;ec
+    <lb n="5"/>gan</w> <w>ealle</w> <seg ana="binomial"><w>þ<redo target="#redo1" hand="uncertain"/><add xml:id="redo1" type="augm" place="above" hand="uncertain">a</add></w> <w notation="accentuated">god</w> <w>&et;</w> <w>þa</w> <w>e<add type="augm" place="above" hand="uncertain"><unclear reason="fading">a</unclear></add>ðny&slongdes;&slongdes;e</w></seg> <add type="augm" place="inline" hand="uncertain"><pc>·</pc></add> <w>þe</w> <w>god</w> <w>hafað</w> <w>gegeare
+    <lb n="6"/>ƿod</w> <w>eallum</w> <w>þam</w> <w>þe</w> <w>hine</w> <w>lufiað</w> <pc>·</pc> <w>&et;</w> <w>hi&slongdes;</w> <w>bebodu</w> <seg ana="binomial"><w>healdan</w>
+    <lb n="7"/><w>ƿillað</w> <w>&et;</w> <w notation="accentuated">gelæ&slongdes;tan</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.10" n="x394.11.10"><w>Gif</w> <w>þonne</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>bið</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>ƿillað</w> <w>ƿyr
+    <lb n="8"/>can</w> <w>hi&slongdes;</w> <w>ƿillan</w> <w>&et;</w> <w>on</w> <w>hi&slongdes;</w> <w>lufe</w> <w>þurhƿunian</w> <pc>·</pc> </s><s xml:id="s309.8.11" n="x394.11.11"><w>þonne</w> <w>ma
+    <lb n="9"/>go<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">n</add>
+     </subst></w> <w><subst>
+       <del rend="lettermod" hand="#DP0894"><unclear reason="lettermod">n</unclear></del>
+       <add type="subst" place="lettermod" hand="#DP0894">ƿ</add>
+     </subst>e</w> <w>ægðer</w> <w>ge</w> <w notation="accentuated">u&slongdes;</w> <w>heofona</w> <w>ric<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+       <add type="subst" hand="uncertain" place="onerasure">e</add>
+     </subst></w> <w notation="accentuated">geearnian</w> <pc>·</pc> <w>ge</w>
+    <lb n="10"/><del rend="erasure underlining" hand="uncertain"><w>þonne</w></del> <w notation="accentuated">eac</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>magon</w> <w>ge&slongdes;æliglice</w> <w notation="accentuated">befleon</w> <w>þa</w> <w notation="accentuated">&slongdes;to
+    <lb n="11"/>ƿe</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w>&et;</w> <w>þa</w> <w notation="accentuated">dimman</w> <w>tintregan</w> <pc>·</pc> <w>þær</w> <w>helle</w> <w>deoflu</w>
+    <lb n="12"/><w notation="accentuated">on</w> <w>&slongdes;yndon</w> <del rend="erasure underlining" hand="uncertain"><unclear reason="erasure"><w>&et;</w> <w>mid</w> <w>eallum</w> <w>hyra</w> <w>ƿeage&slongdes;iðum</w></unclear> <pc>·</pc> <w>&et;</w></del> </s><s xml:id="s309.8.12" n="x394.11.12"><w>mid</w>
+    <lb n="13"/><w>þam</w> <w notation="accentuated">&slongdes;aƿlum</w> <w>þe</w> <add type="augm" place="above" hand="#DP0985"><w>nu</w></add> <w>hi<del rend="erasure" hand="uncertain"><add type="augm" place="above" hand="uncertain"><unclear reason="erasure">o</unclear></add></del>m</w> <w>hly&slongdes;tað</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>&et;</w> <w>be</w> <w>heora</w> <w notation="accentuated">larum</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w>lib
+    <lb n="14"/>ba<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+       <add type="subst" hand="uncertain" place="onerasure">ð</add>
+     </subst></w> <pc>·</pc> <w>&et;</w> <w>to</w> <w notation="accentuated">gode</w> <w>gecyrran</w> <w>nellað</w> </s><s xml:id="s309.8.13" n="x394.11.13"><w>þurh</w> <w notation="accentuated">&slongdes;oðe</w> <w>andet
+    <lb n="15"/>ny&slongdes;&slongdes;e</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>&et;</w> <w>þurh</w> <w notation="accentuated">&slongdes;oðe</w> <w><add type="augm" place="above" hand="uncertain">dæd</add>bote</w> <del rend="erasure" hand="uncertain"><add type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="4" reason="erasure"/></add></del> <w notation="accentuated">&slongdes;ƿa</w> <w>&slongdes;e</w> <w>halga</w> <w>lareoƿ</w> <add type="augm" place="above" hand="#DP0985"><persName key="David"><w>dauid</w></persName></add> <w>cƿæð</w> <pc>&punctvers;</pc>
+    <lb n="16"/></s><s xml:id="s309.8.14" n="x394.11.14"><w notation="accentuated">Ƿa</w> <del rend="erasure" hand="uncertain"><w>la</w></del> <w>þam</w> <w>mannum</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þe</w> <w>&slongdes;ceolon</w> <w>mid</w> <w>deoflum</w> <w>hab
+    <lb n="17"/>ban</w> <w notation="accentuated">eardung&slongdes;toƿe</w> <pc>·</pc> </s><seg ana="enumeration"><s xml:id="s309.8.15" n="x394.11.15"><w>forðan</w> <w>þær</w> <w>i&slongdes;</w> <w notation="accentuated">&slongdes;ar</w> <w notation="accentuated">buton</w> <w>fro
+    <lb n="18"/>fre</w> <pc>·</pc> <w>&et;</w> <w>þær</w> <w>i&slongdes;</w> <w>yrmð</w> <w>buton</w> <w notation="accentuated">are</w> <pc>·</pc> </s><s xml:id="s309.8.16" n="x394.11.16"><w>&et;</w> <w>þær</w> <w>i&slongdes;</w> <w notation="accentuated">ƿ<del rend="erasure underlining" hand="uncertain">e</del>anunge</w>
+    <lb n="19"/><w notation="accentuated">ma</w> <w>þonne</w> <w>hit</w> <w notation="accentuated">ænig</w> <w>man</w> <w>ƿite</w> <w>to</w> <w>a&slongdes;ecgenne</w> <pc>·</pc> </s></seg><s xml:id="s309.8.17" n="x394.11.17"><w>&slongdes;ƿa</w>
+    <lb n="20"/><w>hit</w> <w>on</w> <w>ðam</w> <w>&slongdes;ealme</w> <w>aƿriten</w> <subst>
+       <del rend="lettermod erasure" hand="#EC0984b"><w>&slongdes;tandað</w></del>
+       <add type="subst" place="lettermod" hand="#EC0984b"><w>&slongdes;tænt</w></add>
+     </subst> <pc>&punctvers;</pc> </s><s xml:id="s309.8.18" n="x394.11.18"><w>he</w> <w>cƿæð</w>
+    <lb n="21"/><w notation="accentuated">&slongdes;e</w> <w>&slongdes;ealm<del rend="erasure" hand="uncertain">g<choice>
+       <am>&combmacr;</am>
+       <ex>e</ex>
+     </choice></del>&slongdes;ceop</w> <add type="augm" place="above" hand="#DP0985"><persName key="David"><w>dauid</w></persName> <pc>·</pc></add> <pc>·</pc> <w>þurh</w> <w>drihtne&slongdes;</w> <w>gife</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> <quote source="ps6.6"><w>hƿilc</w> <w>man</w>
+    <lb n="22"/><w>i&slongdes;</w> <w>on</w> <w>deaðe</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w notation="accentuated">&slongdes;y</w> <w>drihtne&slongdes;</w> <w notation="accentuated">gemyndig</w> <pc>·</pc> <w>oððe</w> <w>hƿylc</w>
+    <lb n="23"/><w>i&slongdes;</w> <pc>·</pc> <subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="3" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>þe</w></add>
+     </subst> <w>hine</w> <w>on</w> <w>helle</w> <subst>
+       <del rend="strikethrough" hand="#EC0984a"><w>andette</w></del>
+       <add type="subst" place="above" hand="#EC0984a"><w>næmnie</w></add>
+     </subst> <pc>&punctvers;</pc> </quote></s><s xml:id="s309.8.19" n="x394.11.19"><del rend="erasure" hand="uncertain"><w>&et;</w></del> <w>&slongdes;e</w> <w>&slongdes;ealm&slongdes;cop</w>
+    <lb n="24"/><w>u&slongdes;</w> <w notation="accentuated">&slongdes;ang</w> <w>þi&slongdes;</w> <w>be</w> <w>deaðe&slongdes;</w> <w><subst>
+       <del rend="erasure" hand="#EC0984d"><supplied reason="erasure" evidence="conjecture">a</supplied><unclear reason="erasure">n</unclear></del>
+       <add type="subst" place="onerasure" hand="#EC0984d">ge</add>
+     </subst>licny&slongdes;&slongdes;e</w> <pc>·</pc> <w>&et;</w> <w>be</w> <w>hellegryre</w> <pc>&punctvers;</pc>
+    <lb n="25"/></s><seg ana="enumeration" part="I"><s xml:id="s309.8.20" n="x394.11.20"><w>Þonne</w> <w>&slongdes;yndon</w> <num n="3"><w>þr<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">ẏ</add>
+     </subst></w></num> <w>deaða&slongdes;</w> <subst>
+       <del rend="erasure" hand="#EC0984b"><w>geð<gap unit="chars" quantity="5" reason="erasure"/></w> <w>on</w></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>geræd</w></add>
+     </subst> <w>on</w> <w notation="accentuated">bocum</w> <pc>·</pc>
+    <lb n="26"/></s><s xml:id="s309.8.21" n="x394.11.21"><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>i&slongdes;</w> <w>þonne</w> <w>&slongdes;e</w> <num n="1"><w notation="accentuated">ære&slongdes;ta</w></num> <w>deað</w> <pc>·</pc> <w notation="accentuated">her</w> <w>on</w> <w>ƿorulde</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;e</w>
+   <pb n="36v"/>
+    <lb n="1"/><w>man</w> <w>mid</w> <w notation="accentuated">manegum</w> <w notation="accentuated">&slongdes;ynnum</w> <add type="augm" place="above" hand="#EC0984b"><w>bið</w></add> <subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="12" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>forƿorht</w> <w>ƿið</w> <w>god</w> <pc>&punctvers;</pc></add>
+     </subst> </s><s xml:id="s309.8.22" n="x394.11.22"><w><choice>
+      <abbr>Þo<am>&combmacr;</am>n</abbr>
+      <expan>Þon<ex>ne</ex></expan>
+     </choice></w>
+    <lb n="2"/><w>i&slongdes;</w> <w>&slongdes;e</w> <num n="2"><w notation="accentuated">æftera</w></num> <w>deað</w> <pc>·</pc> <w>þære</w> <w notation="accentuated">&slongdes;aƿle</w> <subst>
+       <del rend="erasure" hand="uncertain"><w>þa</w> <w>&slongdes;aƿle</w></del>
+       <add type="subst" place="above onerasure" hand="uncertain"><w>gedal</w></add>
+     </subst> <w>gedal</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>&et;</w> <w>þæ&slongdes;</w> <w notation="accentuated">lichaman</w> <pc>&punctvers;</pc>
+    <lb n="3"/></s><s xml:id="s309.8.23" n="x394.11.23"><w>þonne</w> <w>i&slongdes;</w> <w>&slongdes;e</w> <num n="3"><w>þridda</w></num> <w>deað</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w notation="accentuated">þa</w> <w notation="accentuated">&slongdes;aƿla</w> <w>&slongdes;ceolon</w> <w notation="accentuated">eardian</w>
+    <lb n="4"/><w>on</w> <w>helle</w> <pc>·</pc> </s></seg></ab><ab><s xml:id="s309.8.24" n="x394.11.24"><w>þær</w> <w>ni&slongdes;</w> <subst>
+       <del rend="lettermod erasure" hand="uncertain"><w>nænig</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w>nan</w></add>
+     </subst> <w>man</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>mæge</w> <w>hi&slongdes;</w> <w>&slongdes;cyppend</w>
+    <lb n="5"/><w>herian</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>for</w> <w>ðam</w> <w notation="accentuated">&slongdes;are</w> <w>þe</w> <w>him</w> <w>on&slongdes;it<del rend="erasure" hand="uncertain"><supplied reason="erasure" evidence="conjecture">e</supplied><unclear reason="erasure">ð</unclear></del></w> <pc>·</pc> </s><seg ana="enumeration"><s xml:id="s309.8.25" n="x394.11.25"><w notation="accentuated">Emne</w> <undo hand="uncertain" target="#undo3" rend="erasure"/><add xml:id="undo3" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="7" reason="erasure"/></add> <w>&slongdes;ƿa</w> <num n="3"><w>þr<subst>
+       <del rend="erasure" hand="uncertain">e<supplied reason="erasure" evidence="internal">o</supplied></del>
+       <add type="subst" place="lettermod onerasure" hand="uncertain">y</add>
+     </subst></w></num>
+    <lb n="6"/><w>deaða&slongdes;</w> <w>&slongdes;yndon</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><gap unit="chars" quantity="9" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><w>ſenfullum</w> <w>mannu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w></add>
+     </subst> <undo hand="uncertain" rend="erasure" target="#undo4"/><add xml:id="undo4" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="5" reason="erasure"/></add> <pc>·</pc> <w notation="accentuated">&slongdes;ƿa</w> <w><subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="6" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">eac</add>
+     </subst></w> <w>&slongdes;yndon</w> <num n="3"><w>þreo</w></num>
+    <lb n="7"/><w>lif</w> <del rend="erasure" hand="uncertain"><w><unclear reason="erasure">þo</unclear></w></del> <w>ðam</w> <w notation="accentuated">&slongdes;oðfæ&slongdes;tum</w> <subst>
+       <del rend="lettermod" hand="uncertain"><pc>·</pc></del>
+       <add type="subst" place="lettermod" hand="uncertain"><pc>&punctvers;</pc></add>
+     </subst> </s><s xml:id="s309.8.26" n="x394.11.26"><num n="1"><w>an</w></num> <w>lif</w> <w>i&slongdes;</w> <w>þonne</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>bið</w> <w>on</w> <w>flæ
+    <lb n="8"/>&slongdes;ce</w> <pc>·</pc> </s><s xml:id="s309.8.27" n="x394.11.27"><w>þonne</w> <w>i&slongdes;</w> <num n="2"><w>oðer</w></num> <w>lif</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>bið</w> <w>on</w> <w>gode&slongdes;</w> <w>ƿeorce</w> <pc>·</pc> </s><s xml:id="s309.8.28" n="x394.11.28"><w>&et;</w>
+    <lb n="9"/><num n="3"><w>þridde</w></num> <w>lif</w> <w>i&slongdes;</w> <w>on</w> <w>ðære</w> <w notation="accentuated">toƿeardan</w> <w notation="accentuated">ƿorulde</w> <w>mid</w> <w>eal
+    <lb n="10"/>lum</w> <w>halgum</w> <pc>&punctvers;</pc> </s></seg><s xml:id="s309.8.29" n="x394.11.29"><w>&et;</w> <w>&slongdes;e</w> <w notation="accentuated">deað</w> <w>i&slongdes;</w> <w>to</w> <w>ondrædenne</w> <pc>·</pc> <w>for
+    <lb n="11"/>ðan</w> <w>hine</w> <w>ne</w> <w>mæg</w> <w notation="accentuated">nan</w> <w>mann</w> <w notation="accentuated">forfleon</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.30" n="x394.11.30"><del rend="erasure" hand="uncertain"><unclear reason="erasure"><w>&et;</w></unclear></del> <w notation="accentuated">&slongdes;e</w> <w notation="accentuated">deað</w>
+    <lb n="12"/><w>i&slongdes;</w> <w>niðerlic</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> <w>he</w> <w>i&slongdes;</w> <w>forðan</w> <w>niðerlic</w> <w>&slongdes;e</w> <w>deað</w> <pc>·</pc> <w>þeah</w> <w>&slongdes;e</w>
+    <lb n="13"/><w>man</w> <w notation="accentuated">geƿite</w> <w>on</w> <w>ða</w> <undo hand="uncertain" rend="erasure" target="#undo5"/><add xml:id="undo5" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="3" reason="erasure"/></add> <w notation="accentuated">neoƿele&slongdes;tan</w> <w>&slongdes;cræfu</w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>ða</w> <w>deop
+    <lb n="14"/>pe&slongdes;tan</w> <w><subst>
+       <del rend="lettermod" hand="uncertain">dæne</del>
+       <add type="subst" place="lettermod" hand="uncertain">dene</add>
+     </subst></w> <pc>·</pc> <w>þe</w> <w>on</w> <w>middanearde</w> <w>&slongdes;y</w> <pc>·</pc> <w>he</w> <w>&slongdes;ceal</w> <w>þeah
+    <lb n="15"/>hƿæðere</w> <w notation="accentuated">deaðe</w> <w>&slongdes;ƿeltan</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.31" n="x394.11.31"><w>&et;</w> <w>&slongdes;e</w> <w notation="accentuated">deað</w> <w>i&slongdes;</w> <w>forðan</w> <w>upplic</w> <pc>·</pc>
+    <lb n="16"/><w>þeah</w> <w>&slongdes;e</w> <w notation="accentuated">man</w> <w notation="accentuated">a&slongdes;tige</w> <w>ofer</w> <w>þone</w> <w>yfeme&slongdes;tan</w> <w>dæl</w> <w>þæ&slongdes;</w>
+    <lb n="17"/><w>holte&slongdes;</w> <pc>·</pc> <w>&slongdes;ƿaþeahhƿæðere</w> <w>hine</w> <w>&slongdes;e</w> <w>deað</w> <w notation="accentuated">ge&slongdes;ecð</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.32" n="x394.11.32"><w>&et;</w> <w>&slongdes;e</w> <w>deað</w>
+    <lb n="18"/><w>i&slongdes;</w> <w>&slongdes;ƿiðe</w> <seg ana="binomial"><w>mænigfealdlic</w> <pc>·</pc> <w>&et;</w> <w>ege&slongdes;lic</w></seg> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.33" n="x394.11.33"><w>&et;</w> <w>he</w> <w>i&slongdes;</w> <w>forðan</w> <w>mæ
+    <lb n="19"/>nigfealdlic</w> <pc>·</pc> <w>þeah</w> <w>&slongdes;e</w> <w>man</w> <w notation="accentuated">eardige</w> <w>on</w> <w>middum</w> <w>burgu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="20"/><w>&et;</w> <w>on</w> <w>middere</w> <w>hi&slongdes;</w> <w>mægðe</w> <pc>·</pc> <w>&et;</w> <w>betƿux</w> <num n="1000"><w>þu&slongdes;end</w></num> <w>manna</w> <pc>·</pc>
+    <lb n="21"/><w>þonne</w> <w>&slongdes;ceal</w> <w>he</w> <w>hƿæðere</w> <w>deaðe</w> <w notation="accentuated">&slongdes;ƿeltan</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.34" n="x394.11.34"><w>&et;</w> <w>&slongdes;e</w> <w>deað</w>
+    <lb n="22"/><w>i&slongdes;</w> <w>forðan</w> <w notation="accentuated">ege&slongdes;lic</w> <pc><subst>
+       <del rend="erasure" hand="uncertain">&et;</del>
+       <add type="subst" place="onerasure" hand="uncertain">·</add>
+     </subst></pc> <add type="augm" place="above" hand="uncertain"><w>forðan</w> <w>þe</w></add> <w><subst>
+       <del rend="lettermod erasure" hand="uncertain">nænig</del>
+       <add type="subst" place="lettermod" hand="uncertain">nan</add>
+     </subst></w> <w>mann</w> <w>&slongdes;ƿa</w> <w>feor</w> <w>ne</w> <w notation="accentuated">ge
+    <lb n="23"/>ƿit<del rend="erasure" hand="uncertain">eð</del></w> <w notation="accentuated">ut</w> <w>on</w> <w>ƿe&slongdes;ten</w> <pc>·</pc> <w notation="accentuated">&slongdes;ƿaþeah</w> <w>he</w> <w>ne</w> <w>mæg</w> <w>þone</w> <w>deað</w>
+    <lb n="24"/><w notation="accentuated">forfleon</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.35" n="x394.11.35"><w>Se</w> <w>deað</w> <w>i&slongdes;</w> <w notation="accentuated">geo<del rend="erasure" hand="uncertain">r</del>nlic</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" hand="uncertain" place="lettermod">&punctelev;</add>
+     </subst></pc> <w>forðan</w> <w>þe</w> <seg ana="binomial"><w notation="accentuated">cild</w> <w>cƿe
+    <lb n="25"/>lað</w> <w>&et;</w> <w notation="accentuated">unmagon</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.36" n="x394.11.36"><w>&et;</w> <w>&slongdes;e</w> <w>deað</w> <w>i&slongdes;</w> <seg ana="binomial"><w notation="accentuated">freolic</w> <w>&et;</w> <choice><sic><w notation="accentuated">deoplic</w></sic><corr><w>ðeoƿlic</w></corr></choice></seg> <pc>·</pc> <w>for
+    <lb n="26"/>ðan</w> <w>cyninga&slongdes;</w> <w notation="accentuated">&slongdes;ƿeltað</w> <w>&et;</w> <w>eac</w> <w notation="accentuated">þeoƿe</w> <w>menn</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" hand="uncertain" place="lettermod">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.37" n="x394.11.37"><w>&et;</w> <w>&slongdes;e</w>
+   <pb n="37r"/>
+    <lb n="1"/><w>deað</w> <w>i&slongdes;</w> <seg ana="binomial"><w>þri&slongdes;tlic</w> <pc>·</pc> <w>&et;</w> <w><add type="augm" place="above" hand="#EC0984b">un</add>&slongdes;notorlic</w></seg> <pc>·</pc> <w>forðan</w> <w>ðe</w> <seg ana="binomial"><w>dy&slongdes;ige</w> <w>&slongdes;ƿel
+    <lb n="2"/>tað</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">uðƿitan</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.38" n="x394.11.38"><restore hand="uncertain" rend="erasure"><del rend="underlining" hand="uncertain"><w>Forðan</w></del></restore>
+       <w>&slongdes;e</w> <w>deað</w> <w>i&slongdes;</w> <seg ana="binomial"><w notation="accentuated">unrotlic</w> <pc>·</pc> <w>&et;</w> <w>blið
+    <lb n="3"/>lic</w></seg> <pc>·</pc> <w>forðan</w> <seg ana="binomial"><w>&slongdes;ynfulle</w> <w>&slongdes;ƿeltað</w> <pc>·</pc> <w>&et;</w> <w>eac</w> <w notation="accentuated">halige</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.39" n="x394.11.39"><w>Þy</w> <add type="augm" place="above" hand="#EC0984c"><w>he</w></add> <w>bið</w>
+    <lb n="4"/><w>ƿel</w> <w>ƿyrðe</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;e</w> <w>deað</w> <w notation="accentuated">&slongdes;y</w> <w notation="accentuated">un&slongdes;notorlic</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><w><unclear reason="erasure">f</unclear><gap unit="chars" quantity="10" reason="erasure"/></w></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><w>ſenfullum</w></add>
+     </subst>
+    <lb n="5"/><w>mannum</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.40" n="x394.11.40"><w>Forðan</w> <w>i&slongdes;</w> <w>&slongdes;e</w> <w>deað</w> <w>to</w> <w notation="accentuated">ondrædenne</w> <pc>·</pc> <w>for
+    <lb n="6"/>ðan</w> <w>he</w> <w>ne</w> <del rend="erasure" hand="unclear"><w><unclear reason="erasure">ge</unclear></w></del> <w notation="accentuated">myrnð</w> <seg ana="binomial"><w notation="accentuated">geongum</w> <add type="augm" place="above" hand="#EC0984c"><w>mannu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w></add> <w>ne</w> <w notation="accentuated">ealdum</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s309.8.41" n="x394.11.41"><w>Forðan</w>
+    <lb n="7"/><w>ƿe</w> <w>&slongdes;ceolon</w> <w notation="accentuated">ure</w> <w notation="accentuated">&slongdes;aƿle</w> <w notation="accentuated">georne</w> <w>tilian</w> <pc>·</pc> <w>&et;</w> <w>hio</w> <w notation="accentuated">geornlice</w>
+    <lb n="8"/><w notation="accentuated">gegearƿian</w> <w>to</w> <w>gode&slongdes;</w> <w>ƿillan</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.42" n="x394.11.42"><w>Ne</w> <w>mæg</w> <w>þonne</w> <w>eal</w>
+    <lb n="9"/><w>manncynn</w> <w>mid</w> <w>heora</w> <w notation="accentuated">ƿordum</w> <w>ariman</w> <w>þa</w> <w notation="accentuated">god</w>
+    <lb n="10"/><w>þe</w> <w>god</w> <w>hafað</w> <w notation="accentuated">&slongdes;oðfæ&slongdes;tum</w> <w notation="accentuated">&slongdes;aƿlum</w> <w>gegeareƿod</w> <w>to
+    <lb n="11"/>geane&slongdes;</w> <undo target="#undo17" rend="erasure" hand="uncertain"/><add xml:id="undo17" type="altern" place="rmargin" hand="uncertain"><w>to</w> <w><unclear reason="erasure">þear</unclear>f<unclear reason="erasure">e</unclear></w></add> <pc>·</pc> <w>for</w> <w>heora</w> <w notation="accentuated">ga&slongdes;tlicum</w> <w notation="accentuated">ƿeorcum</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.43" n="x394.11.43"><w>&et;</w> <w>&slongdes;e</w> <w>deað</w>
+    <lb n="12"/><w>i&slongdes;</w> <w>forðan</w> <w>to</w> <w notation="accentuated">ondrædende</w> <pc>·</pc> <w>forðan</w> <w>ealle</w> <w>þa</w> <w notation="accentuated">&slongdes;aƿla</w>
+    <lb n="13"/><w>he</w> <w>todæleð</w> <pc>·</pc> </s><s xml:id="s309.8.44" n="x394.11.44"><w>&et;</w> <w>þonne</w> <w>bið</w> <w>eallum</w> <w notation="accentuated"><supplied evidence="external internal" reason="omitted">un</supplied>cuð</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;eo</w> <w>&slongdes;aƿul</w> <w>ge<del rend="erasure" hand="uncertain"><add type="augm" hand="uncertain" place="rmargin">d<gap unit="chars" quantity="1" reason="erasure"/></add></del>
+    <lb n="14"/>deð</w> <w>beforan</w> <w>hire</w> <pc>&punctvers;</pc> <w>&et;</w> <w>þonne</w> <del rend="erasure underlining" hand="uncertain"><w>hƿæðere</w></del> <w>bið</w> <w>beforan</w>
+    <lb n="15"/><w>hire</w> <seg ana="binomial"><w>&slongdes;ƿa</w> <w notation="accentuated">god</w> <add type="augm" place="inline" hand="uncertain"><w>&et;</w></add> <w>&slongdes;ƿa</w> <w>yfel</w></seg> <pc>·</pc> <w>&slongdes;ƿa</w> <w>heo</w> <w>geearnod</w> <w><subst>
+       <del rend="erasure lettermod" hand="uncertain">hæfde</del>
+       <add type="subst" place="onerasure" hand="uncertain">hæfð</add>
+     </subst></w> <pc>&punctvers;</pc>
+    <lb n="16"/></s><s xml:id="s309.8.45" n="x394.11.45"><w>I&slongdes;</w> <w notation="accentuated">u&slongdes;</w> <w>þonne</w> <seg ana="binomial"><w>to</w> <w>behealdenne</w> <add type="augm" place="above rmargin" hand="#DP0985"><w>&et;</w> <w>to</w> <w notation="accentuated">ƿarnienne</w></add></seg> <w><subst>
+       <del rend="erasure" hand="#EC0984c"><gap unit="chars" quantity="2" reason="erasure"/></del>
+       <add type="subst" place="above" hand="#EC0984c"><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></add>
+     </subst></w> <seg ana="binomial"><w>þæra</w> <w>yfela</w> <pc>·</pc> <w>&et;</w> <w>þæra</w>
+    <lb n="17"/><w notation="accentuated">unrihta</w></seg> <pc>·</pc> <w>ne</w> <w>&slongdes;y</w> <w>ealle&slongdes;</w> <w>to</w> <w>fela</w> <add type="augm" place="above" hand="#EC0984c"><w>myd</w> <subst>
+       <del rend="erasure" hand="#EC0984c"><gap unit="chars" quantity="6" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984c"><w>us</w></add>
+     </subst></add> <pc>&punctvers;</pc> </s><seg ana="enumeration"><s xml:id="s309.8.46" n="x394.11.46"><w>Forðan</w> <w>i&slongdes;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <num n="1"><w>ære&slongdes;te</w></num>
+    <lb n="18"/><w notation="accentuated">gedal</w> <w>ƿið</w> <w>eallum</w> <w>hi&slongdes;</w> <w>freondum</w> <pc>·</pc> <w>forðan</w> <w>him</w> <subst>
+       <del rend="lettermod erasure" hand="uncertain"><w>nænig</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w>nan</w></add>
+     </subst>
+    <lb n="19"/><w>mann</w> <w>to</w> <w>ðan</w> <w notation="accentuated">&slongdes;ƿiðe</w> <w>ne</w> <w notation="accentuated">ondræ<subst>
+       <del rend="erasure expunction" hand="uncertain">deð</del>
+       <add type="subst" place="onerasure" hand="uncertain">t</add>
+     </subst></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>him</w> <w notation="accentuated">to</w> <w>ne</w>
+    <lb n="20"/><w>cume</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.47" n="x394.11.47"><w>Æghƿylcre</w> <w notation="accentuated">&slongdes;aƿle</w> <w>bið</w> <w>on</w> <w>&slongdes;undrum</w> <subst>
+       <del rend="erasure" hand="uncertain"><unclear reason="erasure"><w xml:id="alt3a">to&slongdes;cyred</w></unclear> <add xml:id="alt3b" type="altern" hand="#EC0984a" place="above"><w>gedemed</w></add></del>
+       <add type="subst" place="above" hand="uncertain"><w>gedemed</w></add>
+     </subst>
+    <lb n="21"/><w>&et;</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><gap unit="chars" quantity="7" reason="erasure"/> <w><unclear reason="erasure">dæ</unclear>g</w></del>
+       <add type="subst" hand="#EC0984d" place="onerasure above"><w>ſe</w> <w>dom</w></add>
+     </subst> <w>bið</w> <w>&slongdes;ƿylce</w> <w>heo</w> <w>hire</w> <w>&slongdes;ylf</w> <w>ær</w> <w>geƿorh
+    <lb n="22"/>te</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><!-- second parting omitted in all witnesses --><s xml:id="s309.8.48" n="x394.11.49"><w>&et;</w> <w>þonne</w> <w>i&slongdes;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <num n="3"><w>þridde</w></num> <w>gedal</w> <w>ƿið</w> <w>eallum</w> <w>eorðƿa
+    <lb n="23"/>rum</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>forðan</w> <w>he</w> <w>næfre</w> <w>eft</w> <w>to</w> <w notation="accentuated">eorðƿarum</w> <w>ne</w> <w>ge
+    <lb n="24"/>hƿyrf<del rend="erasure" hand="uncertain">eð</del></w> <pc>&punctvers;</pc> <w>Ne</w> <w>bið</w> <w>þær</w> <w notation="accentuated">funden</w> <w>beforan</w> <w>him</w> <w>ne</w> <w>huru</w>
+    <lb n="25"/><w>æfter</w> <w>geboren</w> <w notation="accentuated">nan</w> <w notation="accentuated">god</w> <w>buton</w> <w>he</w> <w>hi&slongdes;</w> <w>ga&slongdes;t</w> <w>mid</w> <w notation="accentuated">godu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="26"/><w notation="accentuated">ƿeorcum</w> <w>gefræteƿod</w> <w>hæfde</w> <undo hand="uncertain" rend="erasure" target="#undo7"/><add xml:id="undo7" type="augm" place="above" hand="uncertain"><unclear reason="erasure"><w>ær</w></unclear></add> <w>þa</w> <w notation="accentuated">hƿile</w> <w>þe</w> <w>he</w> <w>ƿære</w>
+   <pb n="37v"/>
+    <lb n="1"/><w>mid</w> <w>mannum</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.49" n="x394.11.50"><w>þonne</w> <w>bið</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <num n="4"><w notation="accentuated">feorðe</w></num> <w notation="accentuated">gedal</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hine</w> <w>man</w>
+    <lb n="2"/><w notation="accentuated">gedæle</w> <w>ƿið</w> <w>þy&slongdes;um</w> <w notation="accentuated">eorðlicum</w> <w notation="accentuated">þrymme</w> <w>&et;</w> <w>plegan</w>
+    <lb n="3"/><w>&et;</w> <w>bli&slongdes;&slongdes;e</w> <del rend="erasure" hand="uncertain"><w>&et;</w> <w>him</w> <w>for</w> <w>þy&slongdes;&slongdes;a</w> <w>nænegum</w> <w>ne</w> <w>bið</w> <w>gleng</w> <w>ƿi<lb n="4"/>tod</w></del> <pc>&punctvers;</pc> </s></seg><s xml:id="s309.8.50" n="x394.11.51"><w>þonne</w> <w>hit</w> <w>bið</w> <w>&slongdes;ƿa</w> <w>ege&slongdes;lic</w> <w>for</w> <w>ðære</w> <w>biterny&slongdes;<add type="augm" hand="uncertain" place="rmargin">se</add></w>
+    <lb n="5"/><del rend="erasure" hand="uncertain"><w>&slongdes;e</w></del> <w>þe</w> <w>on</w> <w>him</w> <w>bið</w> <w notation="accentuated">gecyðed</w> <pc>·</pc> <w>forðan</w> <w>he</w> <w notation="accentuated">betynð</w> <seg ana="enumeration"><w>þa</w>
+    <lb n="6"/><w notation="accentuated">eagan</w> <w>fram</w> <w>ge&slongdes;ihðe</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w notation="accentuated">earan</w> <w>fram</w> <w notation="accentuated">gehyr
+    <lb n="7"/>ny&slongdes;&slongdes;e</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w>ƿelera&slongdes;</w> <w>fram</w> <w>&slongdes;præce</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w notation="accentuated">fet</w> <w>fra<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="8"/><w notation="accentuated">gange</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w notation="accentuated">handa</w> <w>fram</w> <w>ƿeorce</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w notation="accentuated">næ&slongdes;þyrlo</w>
+    <lb n="9"/><w>fram</w> <w notation="accentuated">&slongdes;tence</w></seg> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.51" n="x394.11.52"><w>þonne</w> <w>æfter</w> <w>þan</w> <subst>
+       <del rend="lettermod erasure" hand="uncertain"><w notation="accentuated">betyneð</w></del>
+       <add type="subst" place="lettermod onerasure" hand="uncertain"><w>gedæt</w></add>
+     </subst> <w>he</w> <w>þa</w>
+    <lb n="10"/><w notation="accentuated">&slongdes;cyldigan</w> <w notation="accentuated">&slongdes;aƿle</w> <w>on</w> <w>helle</w> <pc>&punctvers;</pc> </s><seg ana="enumeration" part="I"><s xml:id="s309.8.52" n="x394.11.54"><w>þonne</w> <w>i&slongdes;</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>g<gap unit="chars" quantity="1" reason="erasure"/>ð<gap unit="chars" quantity="7" reason="erasure"/>e</w></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><w>g<handShift script="hybrid"/>ered<handShift script="vernacMinusc"/></w></add>
+     </subst> <w>on</w>
+    <lb n="11"/><w notation="accentuated">bocum</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>on</w> <w>ðy&slongdes;&slongdes;e</w> <w>ƿorulde</w> <w>&slongdes;yn</w> <num n="5"><w>fif</w></num> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>onlicny&slongdes;&slongdes;e</w></del>
+       <add type="subst" place="above onerasure" hand="#EC0984d"><w>gelicny&slongdes;&slongdes;e</w></add>
+     </subst>
+    <lb n="12"/><w>be</w> <w>hellegryre</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.53" n="x394.11.55"><w>Seo</w> <num n="1"><w>ære&slongdes;te</w></num> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>onlicny&slongdes;</w> <w>i&slongdes;</w></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><w>gelicny&slongdes;</w></add>
+     </subst> <w>i&slongdes;</w> <w><add type="augm" place="above" hand="#DP0985">ge</add>nemned</w>
+    <lb n="13"/><w>ƿær<surplus><undo hand="uncertain" target="#undo8" rend="erasure"/><add xml:id="undo8" type="augm" place="above" hand="uncertain">i</add></surplus>c</w> <pc>·</pc> <w>forðan</w> <w>&slongdes;e</w> <w>ƿær<undo hand="uncertain" target="#undo9" rend="erasure"/><add xml:id="undo9" type="augm" place="above" hand="uncertain">i<surplus>c</surplus></add>c</w> <w>bið</w> <w>micele&slongdes;</w> <w notation="accentuated">cƿealme&slongdes;</w> <w>ælcu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="14"/><w>þæra</w> <w>þe</w> <w>he</w> <w notation="accentuated">to</w> <w>cymð</w> <pc>·</pc> </s><s xml:id="s309.8.54" n="x394.11.56"><w>forðan</w> <w>hine</w> <w>&slongdes;ona</w> <w>ne</w> <w>ly&slongdes;t<del rend="erasure" hand="uncertain">eð</del></w>
+    <lb n="15"/><seg ana="binomial"><w notation="accentuated">mete&slongdes;</w> <pc>·</pc> <w>ne</w> <w>drynce&slongdes;</w></seg> <pc>·</pc> <w>ne</w> <w>him</w> <w>ne</w> <w>bið</w> <add type="augm" place="above" hand="uncertain"><w>to</w></add> <w><add type="augm" place="above" hand="uncertain">ge</add>læten</w> <add type="augm" place="above" hand="#EC0984c"><w>ne</w></add> <seg ana="binomial"><w notation="accentuated">gold</w> <w>ne</w>
+    <lb n="16"/><w>&slongdes;eolfor</w></seg> <pc>·</pc> <w>ne</w> <w>þær</w> <w>ne</w> <w>bið</w> <subst>
+       <del rend="erasure" hand="uncertain"><w>ænig</w></del>
+       <add type="subst" place="onerasure" hand="uncertain"><w>nan</w></add>
+     </subst> <w>ƿu<subst>
+       <del rend="erasure" hand="uncertain"><gap reason="erasure" unit="chars" quantity="1"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">l</add>
+     </subst>dor</w> <w>mid</w> <w>him</w> <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+    <lb n="17"/><subst>
+       <del rend="lettermod" hand="uncertain"><w>he</w></del>
+       <add type="subst" hand="uncertain" place="lettermod"><w>ne</w></add>
+     </subst> <subst>
+       <del rend="erasure" hand="uncertain"><w>fore</w></del>
+       <add type="subst" place="onerasure" hand="uncertain"><w>nan</w></add>
+     </subst> <w notation="accentuated">ƿ<subst>
+       <del rend="erasure" hand="uncertain">y</del>
+       <add type="subst" place="onerasure" hand="uncertain">æ</add>
+     </subst>n&slongdes;umn<subst>
+       <del rend="erasure" hand="uncertain"><unclear reason="erasure">y</unclear></del>
+       <add type="subst" place="onerasure" hand="uncertain">e</add>
+     </subst>&slongdes;</w> <w>þeah</w> <w>him</w> <w>&slongdes;yn</w> <w>ealle</w> <w notation="accentuated">ƿoruld
+    <lb n="18"/>dreama&slongdes;</w> <w>to</w> <w>gelædde</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s></seg></ab><ab><seg ana="enumeration" part="M"><s xml:id="s309.8.55" n="x394.11.57"><w>Þonne</w> <w>i&slongdes;</w> <w>þære</w> <num n="2"><w>æfteran</w></num>
+    <lb n="19"/><w>helle</w> <w><subst>
+       <del rend="erasure" hand="#EC0984d">onlicny&slongdes;</del>
+       <add type="subst" place="onerasure" hand="#EC0984d">gelicny&slongdes;</add>
+     </subst></w> <w>genemned</w> <w notation="accentuated">oferyld</w> <pc>·</pc> <w>forðan</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w>him</w>
+    <lb n="20"/><w>amol&slongdes;niað</w> <w>þa</w> <w notation="accentuated">eagan</w> <w>for</w> <w>ðære</w> <w notation="accentuated">oferylde</w> <pc>·</pc> <w notation="accentuated">þa</w> <w>ƿæ
+    <lb n="21"/>ron</w> <w>gleaƿe</w> <w>on</w> <w>ge&slongdes;ihðe</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.56" n="x394.11.58"><w>&et;</w> <w>þa</w> <w notation="accentuated">earan</w> <w notation="accentuated">a<undo target="#undo1" hand="uncertain" rend="lettermod"/><subst xml:id="undo1">
+       <del rend="lettermod" hand="uncertain">d</del>
+       <add type="subst" hand="uncertain" place="lettermod">ð</add>
+     </subst>immiað</w>
+    <lb n="22"/><w>þa</w> <w>ðe</w> <w notation="accentuated">ær</w> <w>mihton</w> <w notation="accentuated">gehyran</w> <w>fægere</w> <w>&slongdes;ange&slongdes;</w> <pc>·</pc> </s><s xml:id="s309.8.57" n="x394.11.59"><w>&et;</w> <w>&slongdes;y<add type="augm" place="rmargin" hand="uncertain">o</add></w>
+    <lb n="23"/><w>tunge</w> <w>aƿy&slongdes;tlað</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þe</w> <w notation="accentuated">ær</w> <w>hæfde</w> <w notation="accentuated">gerade</w> <w>&slongdes;præce</w> <pc>&punctvers;</pc>
+    <lb n="24"/></s><s xml:id="s309.8.58" n="x394.11.61"><w>&et;</w> <w>þa</w> <w>handa</w> <w notation="accentuated">aƿindað</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þe</w> <w notation="accentuated">ær</w> <w>hæfdon</w> <w>full</w> <w>hƿate</w>
+    <lb n="25"/><w>fingra&slongdes;</w> <pc>·</pc> </s><s xml:id="s309.8.59" n="x394.11.62"><w>&et;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>fex</w> <w>afeall<del rend="erasure" hand="uncertain">e</del>ð</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þe</w> <w notation="accentuated">ær</w> <w>ƿæ&slongdes;</w> <w>on</w> <w>fulre</w>
+    <lb n="26"/><w>ƿæ&slongdes;tme</w> <pc>·</pc> </s><s xml:id="s309.8.60" n="x394.11.63"><w>&et;</w> <w>þa</w> <w>teð</w> <w>ageolƿiað</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>þa</w> <w>ðe</w> <w notation="accentuated">ær</w> <w notation="accentuated">ƿæron</w>
+   <pb n="38r"/>
+    <lb n="1"/><w notation="accentuated">hƿite</w> <w>on</w> <w notation="accentuated">hiƿe</w> <pc>·</pc> </s><s xml:id="s309.8.61" n="x394.11.64"><w>&et;</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>þe</w></del>
+       <add type="subst" place="above" hand="#EC0984d"><w>ſe</w></add>
+     </subst> <w>orað</w> <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del> <w>afulað</w> <w>þe</w> <w>ær</w> <w>ƿæ&slongdes;</w> <del rend="lettermod" hand="uncertain"><w>h</w></del> <w notation="accentuated">&slongdes;ƿete</w> <w>on</w>
+    <lb n="2"/><w notation="accentuated">&slongdes;tence</w> <pc><subst>
+       <del rend="erasure" hand="uncertain">·</del>
+       <add type="subst" place="onerasure" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.62" n="x394.11.65"><w>þonne</w> <w>i&slongdes;</w> <w>þære</w> <num n="3"><w>þriddan</w></num> <w>helle</w> <w><subst>
+       <del rend="erasure" hand="#EC0984d">onlicny&slongdes;</del>
+       <add type="subst" place="onerasure" hand="#EC0984d">gelicny&slongdes;</add>
+     </subst></w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>her</w>
+    <lb n="3"/><w>on</w> <w>ƿorulde</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w notation="accentuated">deað</w> <w>genemned</w> <pc>·</pc> <w>forðan</w> <w>þonne</w> <w>&slongdes;e</w> <w>man</w>
+    <lb n="4"/><w>&slongdes;ceal</w> <w notation="accentuated">&slongdes;ƿeltan</w> <pc>·</pc> <w>þonne</w> <w notation="accentuated">ge&slongdes;ƿyrc<del rend="erasure underlining" hand="uncertain">e</del>ð</w> <w>him</w> <w>fram</w> <w>þæ&slongdes;</w>
+    <lb n="5"/><w notation="accentuated">hu&slongdes;e&slongdes;</w> <w notation="accentuated">hrofe</w> <w>þe</w> <w>he</w> <w notation="accentuated">inne</w> <w>bið</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.63" n="x394.11.66"><w>þonne</w> <w>ni&slongdes;</w> <subst>
+       <del rend="lettermod erasure" hand="uncertain"><w>nænig</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w>nan</w></add>
+     </subst> <w>&slongdes;treng
+    <lb n="6"/><del rend="erasure" hand="uncertain">ðo</del></w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>hine</w> <w notation="accentuated">arære</w> <pc>·</pc> </s><s xml:id="s309.8.64" n="x394.11.67"><w>forðan</w> <w>he</w> <w>ne</w> <w>bið</w> <w>gelu&slongdes;tfullad</w>
+    <lb n="7"/><w>mete&slongdes;</w> <pc>·</pc> </s><s xml:id="s309.8.65" n="x394.11.68"><w>ne</w> <w>he</w> <w>ne</w> <w notation="accentuated">gymð</w> <w>þy&slongdes;e&slongdes;</w> <w notation="accentuated">eorðlican</w> <w notation="accentuated">rice&slongdes;</w> <w>to</w>
+    <lb n="8"/><w notation="accentuated">brucenne</w> <pc>&punctvers;</pc> </s></seg></ab><ab><seg ana="enumeration" part="M"><s xml:id="s309.8.66" n="x394.11.69"><w>þonne</w> <w>i&slongdes;</w> <add type="augm" place="above" hand="#DP0985"><w>þære</w></add> <num n="4"><w>feorðan</w></num> <w>helle</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>onlicny&slongdes;</w></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><w>gelicny&slongdes;</w></add>
+     </subst> <w>byri
+    <lb n="9"/>gen</w> <w><add type="augm" place="above" hand="#DP0985">ge</add>nemned</w> <pc>·</pc> </s><s xml:id="s309.8.67" n="x394.11.70"><w>forðan</w> <w>þæ&slongdes;</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w notation="accentuated">hu&slongdes;e&slongdes;</w> <w>hrof</w> <w>bið</w> <w>gehne<surplus><add type="augm" hand="uncertain" place="inline">c</add></surplus>
+    <lb n="10"/><surplus><add type="augm" hand="uncertain" place="inline">c</add></surplus>ged</w> <w>þe</w> <w>him</w> <w notation="accentuated">onufan</w> <w>þam</w> <w>breo&slongdes;tum</w> <w>&slongdes;it<del rend="erasure" hand="uncertain">eð</del></w> <pc>·</pc> </s><s xml:id="s309.8.68" n="x394.11.71"><w>&et;</w> <w>him</w>
+    <lb n="11"/><del rend="erasure" hand="uncertain"><w>þe</w></del> <w>m<subst><del rend="lettermod" hand="uncertain">a<gap unit="chars" quantity="2" reason="erasure"/></del><add type="subst" hand="uncertain" place="lettermod">æ</add>
+     </subst></w> <w>þonne</w> <add type="augm" place="above" hand="uncertain"><w>of</w></add> <w>hi&slongdes;</w> <w notation="accentuated">ge&slongdes;treona</w> <w>þone</w> <w>ƿyr&slongdes;e&slongdes;ta<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="1" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">n</add>
+     </subst></w> <w>dæl</w>
+    <lb n="12"/><w notation="accentuated"><add type="augm" place="lmargin" hand="uncertain">ge</add>myn<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">t</add>
+     </subst></w> <add type="augm" place="lmargin" hand="uncertain"><pc>·</pc></add> </s><s xml:id="s309.8.69" n="x394.11.72"><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>i&slongdes;</w> <w>þonne</w> <w notation="accentuated">greot</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">moldan</w> <w>&et;</w> <w notation="accentuated">ƿyrma&slongdes;</w> <pc>&punctvers;</pc>
+    <lb n="13"/></s></seg></ab><ab><seg ana="enumeration" part="F"><s xml:id="s309.8.70" n="x394.11.73"><w>Þonne</w> <w>i&slongdes;</w> <w>þære</w> <num n="5"><w>fiftan</w></num> <w>helle</w> <w><subst>
+       <del rend="erasure" hand="#EC0984d">onlicny&slongdes;</del>
+       <add type="subst" place="onerasure" hand="#EC0984d">gelicny&slongdes;</add>
+     </subst></w> <pc>·</pc> <w notation="accentuated">tintrega</w>
+    <lb n="14"/><w>genemned</w> <pc>·</pc> </s><s xml:id="s309.8.71" n="x394.11.74"><w>forðan</w> <del rend="strikethrough" hand="#DP0984"><w>þonne</w></del> <subst>
+       <del rend="lettermod" hand="#DP0984"><gap reason="erasure" unit="chars" quantity="3"/></del>
+       <add type="subst" hand="#DP0984" place="lettermod"><w>ni&slongdes;</w></add>
+     </subst> <w notation="accentuated">nan</w> <w>mann</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>m<subst>
+       <del rend="lettermod" hand="uncertain">æ</del>
+       <add type="subst" place="lettermod" hand="uncertain">a</add>
+     </subst>ge</w>
+    <lb n="15"/><w>mid</w> <w>hi&slongdes;</w> <w notation="accentuated">ƿordum</w> <w>a&slongdes;ecgan</w> <pc>·</pc> <w>hu</w> <w>micel</w> <del rend="erasure" hand="uncertain"><pc>·</pc></del> <w>þære</w> <num n="5"><w>fiftan</w></num>
+    <lb n="16"/><w>helle</w> <w notation="accentuated">&slongdes;ar</w> <w>i&slongdes;</w> <pc>·</pc> </s><s xml:id="s309.8.72" n="x394.11.75"><w>&et;</w> <w>þeah</w> <num n="7"><w>&slongdes;eofan</w></num> <add type="augm" place="above" hand="#EC0984a"><w>men</w></add> <w>&slongdes;yn</w> <w>&et;</w> <w>þara</w> <w>ælc</w> <w>hæbbe</w> <pc>·</pc>
+    <lb n="17"/><num n="72"><w>Lxxii</w><pc>·</pc></num> <w notation="accentuated">gereorda</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w>&slongdes;ƿa</w> <w>fela</w> <w>&slongdes;yndon</w> <w>ealle&slongdes;</w> <w>þy&slongdes;e&slongdes;</w>
+    <lb n="18"/><w>middanearde&slongdes;</w> <w notation="accentuated">gereorda</w> <pc>·</pc> </s><s xml:id="s309.8.73" n="x394.11.76"><w>&et;</w> <w>þonne</w> <w>&slongdes;y</w> <w>þæra</w>
+    <lb n="19"/><num n="7"><w>&slongdes;eofan</w></num> <w>manna</w> <w>æghƿylc</w> <w notation="accentuated">a</w> <w>to</w> <w>life</w> <w>ge&slongdes;ceapen</w> <pc>·</pc> </s><s xml:id="s309.8.74" n="x394.11.77"><w>&et;</w>
+    <lb n="20"/><w>heora</w> <w>hæbbe</w> <w>æghƿylc</w> <num n="7"><w notation="accentuated">&slongdes;eofan</w></num> <w notation="accentuated">tungan</w> <pc>·</pc> <w>&et;</w> <w>þæra</w>
+    <lb n="21"/><w>tungena</w> <w>ælc</w> <w>hæbbe</w> <subst>
+       <del rend="erasure lettermod" hand="uncertain"><w>i&slongdes;ene</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><num n="1"><w>ane</w></num></add>
+     </subst> <w notation="accentuated">&slongdes;temne</w> <pc>·</pc> </s><s xml:id="s309.8.75" n="x394.11.78"><w>&et;</w> <w>þ<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="6" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">eah</add>
+     </subst>
+    <lb n="22"/>hƿæðere</w> <del rend="erasure" hand="uncertain"><w notation="accentuated">þa</w></del> <w>ealle</w> <w>ne</w> <w>magon</w> <w notation="accentuated">ariman</w> <w notation="accentuated">helleƿitu</w> <pc>&punctvers;</pc> <add type="augm" place="rmargin" hand="uncertain"><w>grere</w></add>
+    <lb n="23"/></s></seg><s xml:id="s309.8.76" n="x394.11.79"><w>þonne</w> <w>i&slongdes;</w> <subst>
+       <del rend="lettermod" hand="uncertain"><w>geleornod</w></del>
+       <add type="subst" place="lettermod" hand="uncertain"><w>gered</w></add>
+     </subst> <w>on</w> <w notation="accentuated">halgum</w> <w>bocum</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;ƿa</w> <w>mi
+    <lb n="24"/>cel</w> <w>&slongdes;ƿa</w> <w>fram</w> <w>heofone&slongdes;</w> <w notation="accentuated">hrofe</w> <w>i&slongdes;</w> <w>to</w> <w>ðy&slongdes;&slongdes;e</w> <w>eor
+    <lb n="25"/>ðan</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;eo</w> <w>hell</w> <w>&slongdes;y</w> <w>&slongdes;ƿylce</w> <num n="2"><w notation="accentuated">tƿa</w></num> <w>deop</w> <pc>·</pc> <w>&et;</w> <w>ni&slongdes;</w> <add type="augm" place="above" hand="uncertain"><w>hy</w></add> <w>na</w> <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/> <pc>·</pc></del>
+    <lb n="26"/><w notation="accentuated">unƿiddre</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.77" n="x394.11.80"><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w notation="accentuated">hu&slongdes;</w> <w>i&slongdes;</w> <w>mid</w> <w notation="accentuated">&slongdes;ƿiðe</w> <w><subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="11" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b">egeſlican</add>
+     </subst></w> <w>fyre</w>
+   <pb n="38v"/>
+    <lb n="1"/><w>afylled</w> <pc>&punctvers;</pc> <w>&et;</w> <w notation="accentuated">hellehu&slongdes;</w> <w>hafað</w> <w notation="accentuated">forcla&slongdes;</w> <w>miccle</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" hand="uncertain" place="lettermod">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.78" n="x394.11.81"><w>&slongdes;e</w> <w>nama</w>
+    <lb n="2"/><w>i&slongdes;</w> <w>to</w> <w>geþ<subst>
+       <del rend="lettermod" hand="uncertain">æ</del>
+       <add type="subst" place="lettermod" hand="uncertain">e</add>
+     </subst>ncenne</w> <w notation="accentuated">ælcum</w> <w>menn</w> <pc>·</pc> <w notation="accentuated">buton</w> <w>h<subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="4" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">y&slongdes;</add>
+     </subst></w> <w>heorte</w>
+    <lb n="3"/><w>mid</w> <w>deofle&slongdes;</w> <w notation="accentuated">&slongdes;træle</w> <w>&slongdes;eo</w> <w notation="accentuated">þurhƿrecen</w> <pc>·</pc> </s><s xml:id="s309.8.79" n="x394.11.82"><w>forðan</w> <w>ni&slongdes;</w>
+    <lb n="4"/><w notation="accentuated">nan</w> <w>mann</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>þanon</w> <del rend="erasure" hand="uncertain"><w>aƿeg</w></del> <w>hine</w> <w>a&slongdes;tyrian</w> <w>mæge</w> <pc>&punctvers;</pc>
+    <lb n="5"/></s><s xml:id="s309.8.80" n="x394.11.83"><w>&et;</w> <w>forðan</w> <w>i&slongdes;</w> <w>micel</w> <w>þearf</w> <w>æghƿylcum</w> <w>menn</w> <w>to</w> <w notation="accentuated">ƿar
+    <lb n="6"/>nianne</w> <pc>·</pc> <w>þam</w> <w>þe</w> <w>ænig</w> <w>andgit</w> <w>hæbbe</w> <w>oððe</w> <w>ƿi&slongdes;domes</w>
+    <lb n="7"/><w>ænigne</w> <w notation="accentuated">dæl</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>þi&slongdes;</w> <w>&slongdes;ymle</w> <w>hæbbe</w> <w>on</w> <w notation="accentuated">gemynd<subst>
+       <del rend="lettermod" hand="uncertain"><subst>
+       <del rend="lettermod" hand="uncertain">um</del>
+       <add type="subst" hand="uncertain" place="lettermod">i</add>
+     </subst></del>
+       <add type="subst" hand="uncertain" place="lettermod">e</add>
+     </subst></w>
+    <lb n="8"/><w>þære</w> <w>ege&slongdes;fullan</w> <w notation="accentuated">&slongdes;toƿe</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.81" n="x394.11.84"><w>forðan</w> <w>gif</w> <w>hƿylc</w> <w>mann</w>
+    <lb n="9"/><w>bið</w> <w>on</w> <w>helle</w> <num n="1"><w>ane</w></num> <w>niht</w> <pc>·</pc> <w>þonne</w> <w>bið</w> <w>him</w> <w notation="accentuated">leofre</w> <w>gif</w>
+    <lb n="10"/><w>he</w> <w>þanon</w> <w notation="accentuated">mot</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>hangie</w> <num n="7000"><pc>·</pc><w>vii</w><pc>·</pc> <w>þu&slongdes;end</w></num> <w>ƿintra</w> <w>on</w>
+    <lb n="11"/><w>ðam</w> <w>lenge&slongdes;tan</w> <w>treoƿe</w> <w>ufeƿeardum</w> <w>þe</w> <w>ofer</w> <w notation="accentuated">&slongdes;æ</w>
+    <lb n="12"/><subst>
+       <del rend="lettermod" hand="#EC0984b"><w>&slongdes;tand<unclear reason="erasure">æ</unclear>ð</w></del>
+       <add type="subst" place="lettermod above" hand="#EC0984b"><w>&slongdes;tænt</w></add>
+     </subst> <w>&et;</w> <w>on</w> <w>ðam</w> <w>heh&slongdes;tan</w> <w notation="accentuated">&slongdes;æclyfe</w> <pc>·</pc> </s><s xml:id="s309.8.82" n="x332.34.69"><w>&et;</w> <w>&slongdes;yn</w> <w>þa</w> <w notation="accentuated">fet</w>
+    <lb n="13"/><w>gebundene</w> <w>to</w> <w>ðam</w> <w>heh&slongdes;tan</w> <w>telgan</w> <pc>·</pc> </s><s xml:id="s309.8.83" n="x332.34.70"><w>&et;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>heafod</w> <w>han
+    <lb n="14"/>gige</w> <w notation="accentuated">ofdunrihte</w> <w>&et;</w> <w>þa</w> <w notation="accentuated">fet</w> <w>uprihte</w> <pc>·</pc> <w>&et;</w> <w>him</w> <w notation="accentuated">&slongdes;ige</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w>
+    <lb n="15"/><w>blod</w> <w notation="accentuated">ut</w> <w>þurh</w> <w>þone</w> <w>muð</w> <pc>·</pc> </s><s xml:id="s309.8.84" n="x331.34.70"><w>&et;</w> <w>hine</w> <w notation="accentuated">þonne</w> <w notation="accentuated">ge<subst>
+       <del rend="unmarked" hand="#DP0984">c</del>
+       <add type="subst" hand="#DP0984" place="overwriting">&slongdes;</add>
+     </subst>ece</w> <w>ælc</w>
+    <lb n="16"/><w>þæra</w> <w>yfela</w> <w>þe</w> <w>æfre</w> <w>on</w> <w>helle</w> <w notation="accentuated">&slongdes;y</w> </s><s xml:id="s309.8.85" n="x331.34.71"><w>&et;</w> <w>hine</w> <w>ælc</w> <w notation="accentuated">yð</w> <w notation="accentuated">ge
+    <lb n="17"/>&slongdes;ece</w> <w>mid</w> <w>þam</w> <w>heh&slongdes;tan</w> <w>þe</w> <w>&slongdes;eo</w> <w notation="accentuated">&slongdes;æ</w> <w notation="accentuated">forðbrin<subst>
+       <del rend="lettermod" hand="#DP0984">c</del>
+       <add type="subst" hand="#DP0984" place="lettermod">g</add>
+     </subst>ð</w> <pc>·</pc>
+    <lb n="18"/></s><s xml:id="s309.8.86"><w>&et;</w> <w>þeah</w> <w>hine</w> <w>ælc</w> <w>tor</w> <add type="augm" hand="uncertain" place="inline"><pc>·</pc></add> <w notation="accentuated">ge&slongdes;ece</w> <w>þe</w> <w>on</w> <w>eallum</w> <w>clyfu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="19"/><w>&slongdes;yndon</w> <pc>·</pc> </s><s xml:id="s309.8.87" n="x332.34.73"><w>þonne</w> <w>ƿile</w> <w>he</w> <w>eall</w> <w>þi&slongdes;</w> <del rend="erasure" hand="uncertain"><w>luflice</w></del> <w notation="accentuated">þroƿian</w>
+    <lb n="20"/></s><s xml:id="s309.8.88" n="x332.34.76"><w>ƿið</w> <w>ðan</w> <w>þe</w> <w>he</w> <w notation="accentuated">næfre</w> <w>eft</w> <w>helle</w> <w>ne</w> <w notation="accentuated">ge&slongdes;ece</w> <pc>&punctvers;</pc> </s></ab>
+   <ab><note type="marker" hand="uncertain" place="lmargin"><pc>&cross;</pc></note><s xml:id="s309.8.89" n="x332.34.77"><w>Ƿa</w> <del rend="erasure" hand="uncertain"><w><unclear reason="erasure">bið</unclear></w></del>
+    <lb n="21"/><w>þam</w> <w>mannum</w> <w>þe</w> <w>beoð</w> <w xml:id="alt5a">geteohhode</w> <add xml:id="alt5b" type="subst" hand="#EC0984a" place="above"><w>getealde</w></add> <w>to</w> <w>ðære</w> <w>&slongdes;toƿe</w> <pc>·</pc>
+    <lb n="22"/></s><seg ana="enumeration"><s xml:id="s309.8.90" n="x332.34.79"><w>forðan</w> <w>þær</w> <w>i&slongdes;</w> <w notation="accentuated">ƿop</w> <w>buton</w> <w notation="accentuated">frofre</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">hreoƿ<add type="augm" place="above" hand="uncertain">neſ</add></w> <w>buton</w>
+    <lb n="23"/><w>re&slongdes;te</w> <pc>·</pc> </s><s xml:id="s309.8.91" n="x332.34.80"><w>&et;</w> <w>þær</w> <w>bið</w> <w notation="accentuated">þeoƿdom</w> <w>buton</w> <w notation="accentuated">freodome</w> <pc>·</pc> <w>&et;</w>
+    <lb n="24"/><w>þær</w> <w>bið</w> <w notation="accentuated">unrotny&slongdes;</w> <w notation="accentuated">buton</w> <w notation="accentuated">gefean</w> <pc>·</pc> </s><s xml:id="s309.8.92"><w>&et;</w> <w>þær</w> <w>bið</w> <w>bi
+    <lb n="25"/>terny&slongdes;</w> <w>buton</w> <w notation="accentuated">&slongdes;ƿetny&slongdes;&slongdes;e</w> <pc>·</pc> </s><s xml:id="s309.8.93"><w>&et;</w> <w>þær</w> <w>bið</w> <seg ana="binomial"><w notation="accentuated">hungor</w> <w>&et;</w>
+    <lb n="26"/><w>þur&slongdes;t</w></seg> <pc>·</pc> </s><s xml:id="s309.8.94"><w>&et;</w> <w>þær</w> <w>bið</w> <seg ana="binomial"><w notation="accentuated">granung</w> <w>&et;</w> <w notation="accentuated">geomrung</w></seg> <pc>·</pc> <w>&et;</w> <w>micel</w>
+   <pb n="39r"/>
+    <lb n="1"/><w>ƿroht</w> <pc>·</pc> </s></seg><s xml:id="s309.8.95"><w>&et;</w> <w>hi</w> <w notation="accentuated">ƿepað</w> <w>heora</w> <w>&slongdes;ynna</w> <w>&slongdes;ƿiðe</w> <w>biterlicum</w> <w>tea
+    <lb n="2"/>rum</w> <pc>·</pc> </s><s xml:id="s309.8.96"><w>&et;</w> <w>on</w> <w>heom</w> <w>&slongdes;ylfum</w> <w>beoð</w> <w>ealle</w> <w>heora</w> <w>&slongdes;ynna</w>
+    <lb n="3"/><w notation="accentuated">ge&slongdes;ene</w> <pc>·</pc> <w>þa</w> <w>ðe</w> <w>hi</w> <w notation="accentuated">ær</w> <w>geƿorhton</w> </s><s xml:id="s309.8.97" n="x331.23.104"><w>&et;</w> <w>ne</w> <w>mæg</w> <w notation="accentuated">nan</w> <w>oðre&slongdes;</w>
+    <lb n="4"/><w>gehelpan</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.98"><w>Ac</w> <w>hi</w> <w>þonne</w> <w>onginnað</w> <w>&slongdes;inga<subst>
+       <del rend="erasure" hand="uncertain">ð</del>
+       <add type="subst" place="onerasure" hand="uncertain">n</add>
+     </subst></w> <w>&slongdes;ƿiðe</w> <w>&slongdes;orh
+    <lb n="5"/>fulne</w> <w>&slongdes;ang</w> <pc>·</pc> <w>&et;</w> <w>&slongdes;ƿiðe</w> <w notation="accentuated">ƿependre</w> <w>&slongdes;temne</w> <undo target="#undo10" rend="erasure" hand="uncertain"/><add xml:id="undo10" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></add> <pc>&punctvers;</pc> <w>Nu</w> <undo target="#undo11" rend="erasure" hand="uncertain"/><seg xml:id="undo11"><add type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="4" reason="erasure"/></add> <add type="augm" place="rmargin" hand="uncertain"><gap reason="erasure" unit="chars" quantity="7"/></add></seg> </s><s xml:id="s309.8.99"><w>ƿe</w> <w>ma
+    <lb n="6"/>gon</w> <w notation="accentuated">&slongdes;ceaƿian</w> <w>ealle</w> <w notation="accentuated">ure</w> <w>&slongdes;ynna</w> <w>beforan</w> <w>ealre</w> <w>þy&slongdes;&slongdes;e</w>
+    <lb n="7"/><w>mænigo</w> <pc>·</pc> <w>þeah</w> <w notation="accentuated">ƿe</w> <w>h<subst>
+       <del rend="erasure" hand="uncertain">e</del>
+       <add type="subst" place="onerasure" hand="uncertain">y</add>
+     </subst>o</w> <w>ealle</w> <w notation="accentuated">ær</w> <w>geƿorhton</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.100" n="x332.34.81"><w>Ne</w> <w>bið</w>
+    <lb n="8"/><w>þær</w> <w>ge&slongdes;ibbe&slongdes;</w> <w>lufu</w> <w notation="accentuated">to</w> <w>oðrum</w> <pc>·</pc> </s><s xml:id="s309.8.101" n="x394.11.18"><del rend="erasure" hand="uncertain"><w>&et;</w></del> <w>n<subst>
+       <del rend="lettermod" hand="uncertain"><gap unit="chars" quantity="1" reason="lettermod unfinished"/></del>
+       <add type="subst" hand="uncertain" place="lettermod">i</add>
+     </subst>&slongdes;</w> <w>þær</w> <subst>
+       <del rend="lettermod" hand="uncertain"><w>nænig</w></del>
+       <add type="subst" place="lettermod inline" hand="uncertain"><w>nan</w></add>
+     </subst> <w>man</w>
+    <lb n="9"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>þær</w> <w notation="accentuated">&slongdes;y</w> <w>hi&slongdes;</w> <w>&slongdes;cyppende&slongdes;</w> <w>gemyndig</w> <w>for</w> <w>ðam</w> <w notation="accentuated">&slongdes;are</w>
+    <lb n="10"/><w>þe</w> <w>him</w> <w>on&slongdes;ite<subst>
+       <del rend="expunction" hand="#EC0984b">ð</del>
+       <add type="subst" place="above" hand="#EC0984b">t</add>
+     </subst></w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.102" n="x332.34.89"><w>&et;</w> <w>þær</w> <w>beoð</w> <w>þa</w> <w notation="accentuated">&slongdes;aƿl<undo target="#undo2" hand="uncertain" rend="erasure"/><subst xml:id="undo2">
+       <del rend="expunction" hand="uncertain">e</del>
+       <add type="subst" hand="uncertain" place="above"><unclear reason="erasure">a</unclear></add>
+     </subst></w> <w>forgytene</w> <w>eal
+    <lb n="11"/>ra</w> <w>þæra</w> <add type="augm" place="above" hand="#EC0984c"><w>þynce</w></add> <w>þe</w> <w>hi</w> <w notation="accentuated">ær</w> <w>on</w> <w notation="accentuated">eorðan</w> <w>gemetton</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.103" n="x332.34.90"><del rend="erasure" hand="uncertain"><del rend="underlining" hand="uncertain"><w notation="accentuated">Sæg<del rend="expunction" hand="uncertain">e</del>ð</w></del></del> <w>hit</w> <undo target="#undo12" rend="erasure" hand="uncertain"/><add xml:id="undo12" type="subst" place="rmargin" hand="uncertain"><gap unit="chars" quantity="5" reason="erasure"/></add>
+    <lb n="12"/><w notation="accentuated">eac</w> <w>on</w> <w notation="accentuated">bocum</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>&slongdes;um</w> <w>deofle&slongdes;</w> <w>ga&slongdes;t</w> <w>&slongdes;æde</w> <num n="1"><w notation="accentuated">anum</w></num> <w notation="accentuated">an
+    <lb n="13"/>cran</w> <w>ealle</w> <w>helle</w> <w>gereord<del rend="erasure" hand="uncertain">e</del></w> <pc>·</pc> <w>&et;</w> <w>þara</w> <w notation="accentuated">&slongdes;aƿla</w> <w notation="accentuated">tintrega</w> <add type="augm" place="inline" hand="uncertain"><pc>&punctvers;</pc></add>
+    <lb n="14"/></s><s xml:id="s309.8.104" n="x332.34.92"><w>&et;</w> <w>he</w> <subst>
+       <del rend="erasure" hand="#EC0984d"><w>ƿæ&slongdes;</w> <w>cƿeðende</w></del>
+       <add type="subst" place="onerasure" hand="#EC0984d"><handShift script="carolMinusc"/><w>ſæde</w><handShift script="vernacMinusc"/></add>
+     </subst> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>eall</w> <w notation="accentuated">þe&slongdes;</w> <w>middaneard</w> <w>nære</w>
+    <lb n="15"/><w>þe</w> <w notation="accentuated">mare</w> <w>dryge&slongdes;</w> <w>lande&slongdes;</w> <w>ofer</w> <w>þone</w> <w>micclan</w> <w>gar
+    <lb n="16"/>&slongdes;egc</w> <pc>·</pc> <w>þe</w> <w>man</w> <num n="1"><w notation="accentuated">ænne</w></num> <w>prican</w> <w>aprycce</w> <w>on</w> <num n="1"><w notation="accentuated">anum</w></num> <w>bre
+    <lb n="17"/>de</w> <pc>·</pc> </s><s xml:id="s309.8.105" n="x332.34.91"><w>&et;</w> <w>ni&slongdes;</w> <w notation="accentuated">þe&slongdes;</w> <w>middaneard</w> <w>&slongdes;ƿilce</w> <w>&slongdes;e</w> <num n="0.14"><w>&slongdes;eofoða</w></num> <w notation="accentuated">dæl</w>
+    <lb n="18"/><w>ofer</w> <w>þone</w> <w>micclan</w> <w>gar&slongdes;ecg</w> <pc>·</pc> <w>&slongdes;e</w> <undo target="#undo13" rend="erasure" hand="uncertain"/><add xml:id="undo13" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></add> <w>mid</w> <w>micclum</w> <w notation="accentuated">or
+    <lb n="19"/>mætny&slongdes;&slongdes;um</w> <w>ealle</w> <w>þa&slongdes;</w> <w>eorðan</w> <w notation="accentuated">utan</w> <w notation="accentuated">ymbligeð</w> <pc>·</pc>
+    <lb n="20"/></s><s xml:id="s309.8.106"><w>&et;</w> <w>lytel</w> <w>dæl</w> <w>i&slongdes;</w> <w>under</w> <w notation="accentuated">heofonum</w> <w>dryge&slongdes;</w> <w>lande&slongdes;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w>
+    <lb n="21"/><w>hit</w> <w>ne</w> <w>&slongdes;y</w> <w>mid</w> <w>gar&slongdes;ecge</w> <w>oferurnen</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.107" n="x332.34.108"><w notation="accentuated">Ƿa</w> <w>bið</w> <w>þa<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="22"/><w notation="accentuated">&slongdes;aƿlum</w> <w>þe</w> <w>on</w> <w>helle</w> <w>beon</w> <w>&slongdes;ceolon</w> </s><s xml:id="s309.8.108"><w>forðan</w> <w>þe</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>helle
+    <lb n="23"/>hu&slongdes;</w> <w>i&slongdes;</w> <w>mid</w> <w notation="accentuated">&slongdes;ƿiðe</w> <w notation="accentuated">laðlicum</w> <w notation="accentuated">ga&slongdes;tum</w> <w>afylled</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.109" n="x394.11.85"><del rend="erasure" hand="uncertain"><w>Ac</w></del>
+    <lb n="24"/><w>uton</w> <w>ƿe</w> <seg ana="audAddress"><w>men</w> <w>ða</w> <w>leofe&slongdes;tan</w></seg> <w notation="accentuated">nu</w> <w>ƿe</w> <w>&slongdes;yndon</w> <w>gegade
+    <lb n="25"/>rode</w> <w>on</w> <w>ðy&slongdes;ne</w> <w>drihtenlican</w> <w>dæg</w> <w><subst>
+       <del rend="erasure" hand="#EC0984a">æ</del>
+       <add type="subst" place="onerasure" hand="#EC0984a"><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></add>
+     </subst></w> <w>ƿe</w> <subst>
+       <del rend="erasure" hand="#EC0984a"><w>ƿæ&slongdes;</w></del>
+       <add type="subst" place="above" hand="#EC0984a"><w>hogian</w> <w>georne</w></add>
+     </subst> <w>for</w>
+    <lb n="26"/><w>gode&slongdes;</w> <w>lufan</w> <del rend="erasure" hand="uncertain"><w>on</w> <w>georny&slongdes;&slongdes;e</w> <w>&slongdes;yn</w></del> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w notation="accentuated">ƿe</w> <w>befleon</w> <w>þa</w>
+   <pb n="39v"/>
+    <lb n="1"/><w>helleƿitu</w> <pc>·</pc> </s><s xml:id="s309.8.110" n="x394.11.86"><w>forðan</w> <w>hit</w> <w>i&slongdes;</w> <w>þærinne</w> <w>&slongdes;ƿiðe</w> <seg ana="binomial"><w>&slongdes;arlic</w> <add type="augm" place="above" hand="#EC0984a"><w>&et;</w> <w>ſorhlic</w></add></seg> <w>to</w>
+    <lb n="2"/><w>ƿunienne</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.111" n="x394.11.87"><del rend="erasure" hand="uncertain"><w>Ac</w></del> <w>uton</w> <w notation="accentuated">gegearƿian</w> <w notation="accentuated">u&slongdes;</w> <w>nu</w> <del rend="erasure" hand="uncertain"><w>ða</w></del> <w>mid</w> <del rend="erasure" hand="uncertain"><w>in
+    <lb n="3"/>ƿeardum</w></del> <w>gebedum</w> <w>&et;</w> <w>mid</w> <w>ga&slongdes;tlic<subst>
+       <del rend="erasure" hand="#EC0984b">e</del>
+       <add type="subst" place="onerasure" hand="#EC0984b">u<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></add>
+     </subst></w> <w><subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="5" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b">dædu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></add>
+     </subst></w> <undo target="#undo14" rend="erasure" hand="uncertain"/><add xml:id="undo14" type="augm" place="above" hand="uncertain"><gap unit="chars" quantity="5" reason="erasure"/></add> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>ne</w>
+    <lb n="4"/><w notation="accentuated">ƿurðan</w> <subst>
+       <del rend="erasure" hand="#EC0984b"><w>a<gap unit="chars" quantity="7" reason="erasure"/></w></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>a&slongdes;cofenne</w></add>
+     </subst> <w>in</w> <w>ða</w> <del rend="erasure" hand="uncertain"><w>fyrenfullan</w></del> <w>þy&slongdes;tro</w> <subst>
+       <del rend="lettermod" hand="uncertain"><w>&thornbarslash;</w></del>
+       <add type="subst" place="lettermod inline" hand="uncertain"><w>þe</w></add>
+     </subst>
+    <lb n="5"/><w>&slongdes;ynfullum</w> <w>&slongdes;aƿlu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <redo target="#redo3" hand="#EC0984b"/><subst xml:id="redo3">
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="4" reason="erasure"/></del>
+       <add type="subst" place="above" hand="#EC0984b"><w>&slongdes;yn</w></add>
+     </subst> <w>gegeareƿod<add type="augm" place="above" hand="uncertain">e</add></w> <w>on</w> <w>helle</w> <w>to
+    <lb n="6"/>geane&slongdes;</w> <pc>&punctvers;</pc> </s><s xml:id="s309.8.112" n="x394.11.88"><del rend="erasure" hand="uncertain"><w>Ac</w></del> <w>uton</w> <w>ƿæ</w> <add type="augm" place="inline above" hand="uncertain"><w>nu</w></add> <w>þeodan</w> <w>to</w> <w>ðam</w> <w>uplican</w> <w notation="accentuated">rice</w> <pc>·</pc>
+    <lb n="7"/><w>forðan</w> <w>þe</w> <w>þær</w> <w>i&slongdes;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿuldor</w> <w><subst>
+       <del rend="lettermod" hand="uncertain">&thornbarslash;</del>
+       <add type="subst" place="lettermod above" hand="uncertain">þe</add>
+     </subst></w> <w>nan</w> <w>mann</w> <w>ne</w> <w>mæg</w>
+    <lb n="8"/><w>mid</w> <w>hi&slongdes;</w> <w notation="accentuated">ƿordum</w> <w>a&slongdes;ecgan</w> <w>þa</w> <w notation="accentuated">ƿyn&slongdes;umny&slongdes;&slongdes;e</w> <w>þæ&slongdes;</w>
+    <lb n="9"/><w notation="accentuated">heofoncundan</w> <w>life&slongdes;</w> <pc><subst>
+       <del rend="lettermod" hand="uncertain">·</del>
+       <add type="subst" place="lettermod" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><seg ana="enumeration"><s xml:id="s309.8.113" n="x394.11.89"><w>þær</w> <w>bið</w> <w>lif</w> <w>butan</w> <w>deaðe</w> <pc>·</pc> <w>&et;</w>
+    <lb n="10"/><w notation="accentuated">god</w> <w>buton</w> <w notation="accentuated">ende</w> <pc>·</pc> <w>yld</w> <w>buton</w> <w>&slongdes;are</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">dæg</w> <w>buton</w> <w>nih
+    <lb n="11"/>te</w> <pc>·</pc> </s><s xml:id="s309.8.114" n="x394.11.90"><w>&et;</w> <w>þær</w> <w>bið</w> <w notation="accentuated">gefea</w> <w>buton</w> <w notation="accentuated">unrotny&slongdes;&slongdes;e</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">rice</w> <w notation="accentuated">bu
+    <lb n="12"/>ton</w> <w notation="accentuated">onƿendedny&slongdes;&slongdes;e</w> <pc>·</pc> </s></seg><s xml:id="s309.8.115" n="x394.11.91"><w>&et;</w> <w>ne</w> <w>beþearf</w> <del rend="erasure" hand="uncertain"><w>man</w></del> <w>þær</w> <w notation="accentuated">næfre</w>
+    <lb n="13"/><subst>
+       <del rend="lettermod" hand="uncertain"><w>mæran</w></del>
+       <add type="subst" hand="uncertain" place="lettermod"><w>mannu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w></add>
+     </subst> <del rend="erasure" hand="uncertain"><w><unclear reason="erasure">leohte&slongdes;</unclear></w> <gap reason="erasure" unit="chars" quantity="3"/></del> <undo target="#undo15" hand="uncertain" rend="erasure"/><add xml:id="undo15" type="augm" place="above" hand="uncertain"><w><gap unit="chars" quantity="4" reason="erasure"/>enſ</w></add> <pc>·</pc> <del rend="erasure" hand="uncertain"><w>ne</w></del> <w notation="accentuated">nane&slongdes;</w> <w>eorðlice&slongdes;</w> <w>leohte&slongdes;</w> <pc>·</pc> </s><s xml:id="s309.8.116" n="x394.11.92"><w>forðan</w>
+    <lb n="14"/><w>þær</w> <w>i&slongdes;</w> <w>&slongdes;e</w> <w>ælmihtiga</w> <w>drihten</w> <seg ana="binomial"><subst>
+       <del rend="erasure" hand="#EC0984b"><gap unit="chars" quantity="10" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984b"><w>beorhtra</w> <pc>·</pc> <w>&et;</w></add>
+     </subst> <w>leohtra</w></seg>
+    <lb n="15"/><w>þonne</w> <w>ealle</w> <w>oðre</w> <w>leoht</w> <pc>·</pc> </s><s xml:id="s309.8.117" n="x394.11.93"><w>&et;</w> <w>þær</w> <w>næfre</w> <w>ne</w> <w><choice>
+      <sic>a<del rend="erasure" hand="uncertain">b</del>linnað</sic>
+      <corr>ablinnað</corr>
+     </choice></w>
+    <lb n="16"/><w>þa</w> <w notation="accentuated">ƿundorlican</w> <w>dreama&slongdes;</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w>þrymlican</w> <w>&slongdes;anga&slongdes;</w>
+    <lb n="17"/><w>þam</w> <w>þe</w> <w>on</w> <w>heora</w> <w><subst>
+       <del rend="erasure" hand="#EC0984a"><gap unit="chars" quantity="6" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984a">mẏrhðe</add>
+     </subst></w> <w notation="accentuated">geƿurðan</w> <w notation="accentuated">mot</w> <pc>&punctvers;</pc> </s><seg ana="enumeration"><s xml:id="s309.8.118" n="x394.11.94"><w>þær</w> <w>bið</w>
+    <lb n="18"/><w>&slongdes;e</w> <w notation="accentuated">&slongdes;ƿete</w> <w notation="accentuated">&slongdes;tenc</w> <pc>·</pc> <w>&et;</w> <w>&slongdes;eo</w> <w>&slongdes;ingale</w> <w>lufu</w> <pc>·</pc> <w>&et;</w> <w>&slongdes;eo</w> <w notation="accentuated">ƿyn&slongdes;um
+    <lb n="19"/>ny&slongdes;</w> <w>buton</w> <w>ælcere</w> <w notation="accentuated">unƿyn&slongdes;umny&slongdes;&slongdes;e</w> <pc>·</pc> </s></seg><seg ana="enumeration"><s xml:id="s309.8.119" n="x394.11.95"><w>ne</w> <w>þær</w> <w>ne</w>
+    <lb n="20"/><w>bið</w> <seg ana="binomial"><w>hunger</w> <w>ne</w> <w>ður&slongdes;t</w></seg> <pc>·</pc> <w>ne</w> <seg ana="binomial"><w>cyle</w> <pc>·</pc> <w>ne</w> <w>bryne</w></seg> <pc>·</pc> <w>ne</w> <w>nænig</w>
+    <lb n="21"/><w>unƿyn&slongdes;umny&slongdes;</w> <w notation="accentuated">gemet</w> <pc>&punctvers;</pc> </s></seg><s xml:id="s309.8.120" n="x394.11.106"><w>Þær</w> <w>ne</w> <w>bið</w> <w>nane&slongdes;</w> <w>gefean</w>
+    <lb n="22"/><w>to</w> <w>lytel</w> <w>forðan</w> <w>he</w> <w>þær</w> <w notation="accentuated">a</w> <w>libban</w> <w>mot</w> <pc>·</pc> <seg ana="binomial"><w>on</w> <w>ƿlite</w> <w>&et;</w>
+    <lb n="23"/><w>on</w> <w>ƿuldre</w></seg> <pc>·</pc> <w>&et;</w> <w notation="accentuated">a</w> <w>on</w> <w>ƿurðunge</w> <w>buton</w> <w>ælcere</w> <w>onƿæn
+    <lb n="24"/>dedny&slongdes;&slongdes;e</w> <pc>·</pc> <w>mid</w> <subst>
+       <del rend="erasure" hand="uncertain"><w>þ<supplied reason="erasure" evidence="external">ara</supplied></w> <supplied reason="erasure" evidence="external"><num n="9"><w>nigon</w></num></supplied> <unclear reason="erasure"><w>endebyrdne&slongdes;&slongdes;a</w></unclear> <w>engla</w>
+    <lb n="25"/><supplied reason="erasure" evidence="external"><w>&et;</w> <w>heahengla</w> <w>þe</w> <w>þær</w> <w>ƿæron</w></supplied> <unclear reason="erasure"><w>gode</w> <w>gecƿeme</w></unclear> <pc>&punctvers;</pc> </del>
+       <add type="subst" hand="#EC0984d" place="onerasure"><w>urum</w> <w>drihtene</w></add>
+     </subst> </s><s xml:id="s309.8.121" n="x394.11.107"><del rend="erasure" hand="uncertain"><w>Þær</w>
+    <lb n="26"/><supplied reason="erasure" evidence="external"><w>bið</w> <w>eallum</w> <w>halgum</w> <w>alif</w> <w>&slongdes;ceapen</w></supplied></del> <seg ana="enumeration"><w>betƿux</w> <w>englum</w>
+   <pb n="40r"/>
+    <lb n="1"/><w>&et;</w> <w notation="accentuated">heahenglum</w> <pc>·</pc> <w>&et;</w> <w>heahfæderum</w> <pc>·</pc> <w>&et;</w> <w>ƿitegum</w> <pc>·</pc> <w>&et;</w> <w>apo&slongdes;tolu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>·</pc>
+    <lb n="2"/><w>&et;</w> <w>mid</w> <w>martyrum</w></seg> <pc><subst>
+       <del rend="erasure" hand="uncertain"><unclear reason="erasure">·</unclear></del>
+       <add type="subst" place="onerasure" hand="uncertain">&punctvers;</add>
+     </subst></pc> </s><s xml:id="s309.8.122" n="x394.11.108"><subst>
+       <del rend="erasure" hand="#EC0984b"><w>&et;</w></del>
+       <add type="subst" place="above" hand="#EC0984b"><w>utan</w></add>
+     </subst> <w>þ<subst>
+       <del rend="lettermod" hand="uncertain">æ</del>
+       <add type="subst" place="lettermod" hand="uncertain">e</add>
+     </subst>ncen</w> <subst>
+       <del rend="erasure" hand="#EC0984a"><gap unit="chars" quantity="3" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="#EC0984a"><w>ſƿẏðe</w></add>
+     </subst> <w notation="accentuated">togeane&slongdes;</w> <w>hi&slongdes;</w> <w notation="accentuated">tocyme</w> <pc>·</pc>
+    <lb n="3"/><w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>i&slongdes;</w> <w>on</w> <w>ðam</w> <w>ege&slongdes;fullican</w> <w>dome&slongdes;dæge</w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w notation="accentuated"><subst>
+       <del rend="erasure" hand="uncertain"><gap unit="chars" quantity="2" reason="erasure"/></del>
+       <add type="subst" place="onerasure" hand="uncertain">u&slongdes;</add></subst></w> <w>þonne</w> <w>ne</w> <w>ður
+    <lb n="4"/>fe</w> <w>&slongdes;ceamian</w> <w>þonne</w> <w>he</w> <w notation="accentuated">u&slongdes;</w> <w notation="accentuated">genealæc<del rend="erasure" hand="uncertain"><unclear reason="erasure">e</unclear></del>ð</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w notation="accentuated">u&slongdes;</w> <w>ge&slongdes;eon</w>
+    <lb n="5"/><w>ƿile</w> <pc>·</pc> </s><s xml:id="s309.8.123" n="x394.11.109"><w>forðan</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>bið</w> <w>micel</w> <w>&slongdes;ceamu</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>man</w> <w>hi&slongdes;</w> <w>&slongdes;ylfe&slongdes;</w> <w notation="accentuated">&slongdes;cea
+    <lb n="6"/>mige</w> <w>on</w> <w>ðam</w> <w>micclan</w> <w notation="accentuated">gemote</w> <pc>&punctvers;</pc> </s></ab><ab><s xml:id="s309.8.124" n="x394.11.110"><w>Hƿæt</w> <w>ƿe</w> <w>nu</w> <w>gehyrdon</w>
+    <lb n="7"/><w>&slongdes;ecgan</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>ura</w> <w>&slongdes;ynna</w> <w>ge&slongdes;ƿican</w> <w>&slongdes;ceolon</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">þa</w> <w>betan</w>
+    <lb n="8"/><seg ana="binomial"><w>dæge&slongdes;</w> <w>&et;</w> <w>nihte&slongdes;</w></seg> <pc>·</pc> </s><s xml:id="s309.8.125" n="x394.11.111"><w>&et;</w> <w>þurh</w> <w>þa</w> <w>ilcan</w> <w>þing</w> <w>ƿe</w> <w>magon</w> <w>þe</w> <w notation="accentuated">eð</w>
+    <lb n="9"/><w notation="accentuated">gedon</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w notation="accentuated">eorðlice</w> <w>men</w> <w>magon</w> <w>geƿeorðan</w> <w>heofonlice</w>
+    <lb n="10"/><w>gif</w> <w>hi</w> <w>ƿillað</w> <w>eadmodlice</w> <w>gode</w> <seg ana="binomial"><w>þeoƿian</w> <w>&et;</w> <w notation="accentuated">heran</w></seg> <pc>&punctvers;</pc> </s><del rend="expunction" ana="optional" hand="uncertain"><s xml:id="s309.8.126" n="x394.11.112"><w>Eala</w>
+    <lb n="11"/><w>micel</w> <w>i&slongdes;</w> <w>on</w> <w>bocu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <w><choice>
+      <sic>gele<del rend="erasure" hand="uncertain">o</del>r<del rend="erasure" hand="uncertain">nod</del></sic>
+      <corr>geleornod</corr>
+     </choice></w> <w>&et;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>i&slongdes;</w> <w>&slongdes;oðlice</w> <w>eall</w> <w>ge&slongdes;eƿen</w> <pc>&punctvers;</pc>
+    <lb n="12"/></s><s xml:id="s309.8.127" n="x394.11.113"><w>Sægð</w> <w>hit</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>on</w> <w>helle</w> <w notation="accentuated">&slongdes;y</w> <num n="1"><w>an</w></num> <w notation="accentuated">hund</w> <pc>·</pc> </s><s xml:id="s309.8.128" n="x394.11.114"><w>ne</w> <w>mihte</w> <w>hit</w> <w>&slongdes;e</w> <w>deofol</w>
+    <lb n="13"/><w>þam</w> <w>ancran</w> <w>eall</w> <w>a&slongdes;ecgan</w> <w>hu</w> <w>miccle</w> <w>þære</w> <w>&slongdes;aƿle</w> <w notation="accentuated">ƿito</w>
+    <lb n="14"/><w>beoð</w> <w>þe</w> <add type="augm" place="above" hand="#DP0984"><w>to</w></add> <w>him</w> <w>beoð</w> <w>ge&slongdes;cyrede</w> <pc>·</pc> </s><s xml:id="s309.8.129" n="x394.11.115"><w>&et;</w> <w>he</w> <w>hafað</w> <num n="100"><pc>·</pc><w>c</w><pc>·</pc></num> <w>heafda</w> <pc>·</pc> <w>&et;</w>
+    <lb n="15"/><w>he</w> <w>hafað</w> <w>on</w> <w>ælcum</w> <w>þæra</w> <w>heafde</w> <num n="100"><pc>·</pc><w>c</w><pc>·</pc></num> <w>eagena</w> <pc>·</pc> <w>&et;</w> <w>ælc</w> <w>þæ
+    <lb n="16"/>ra</w> <w>eagena</w> <w>i&slongdes;</w> <w>fyre</w> <w>hattre</w> <pc>·</pc> </s><s xml:id="s309.8.130" n="x394.11.116"><w>&et;</w> <w>he</w> <w>hafað</w> <num n="100"><pc>·</pc><w>c</w><pc>·</pc></num> <w>handa</w> <pc>·</pc> <w>&et;</w>
+    <lb n="17"/><w>on</w> <w>ælcere</w> <w>handa</w> <num n="100"><pc>·</pc><w>c</w><pc>·</pc></num> <w>fingra</w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>ælcum</w> <w>fingre</w> <num n="100"><pc>·</pc><w>c</w><pc>·</pc></num>
+    <lb n="18"/><w>nægla</w> <pc>·</pc> <w>&et;</w> <w>heora</w> <w>i&slongdes;</w> <w>ælc</w> <w>on</w> <w>næddran</w> <w>ƿi&slongdes;an</w> <w>a&slongdes;cyrped</w> <pc>&punctvers;</pc>
+    <lb n="19"/></s><s xml:id="s309.8.131" n="x394.11.117"><w>Eala</w> <w>min</w> <w>drihten</w> <w>laðlic</w> <w>i&slongdes;</w> <w>hit</w> <w>forði</w> <w>on</w> <w>helle</w> <w>to</w> <w>beo
+    <lb n="20"/>ne</w> <pc>·</pc> </s><s xml:id="s309.8.132" n="x394.11.118"><w notation="accentuated">ƿa</w> <w>ðam</w> <w notation="accentuated">&slongdes;aƿlum</w> <w>þe</w> <w>þær</w> <w notation="accentuated">beon</w> <w>&slongdes;ceolon</w> <pc>&punctvers;</pc> </s></del></ab><ab><s xml:id="s309.8.133" n="x394.11.119"><w>Hƿæt</w> <w>ƿe</w>
+    <lb n="21"/><w>nu</w> <w>gehyrdon</w> <w>&slongdes;ecgan</w> <w>hƿilc</w> <w>hit</w> <w>i&slongdes;</w> <w>on</w> <w>helle</w> <w>to</w> <w>beone</w> <pc>&punctvers;</pc>
+    <lb n="22"/></s><s xml:id="s309.8.134" n="x394.11.120"><w>Forðam</w> <w>ƿe</w> <w>&slongdes;ceolon</w> <w notation="accentuated">ge&slongdes;ƿican</w> <w>ure</w> <w>&slongdes;ynna</w> <w>&et;</w> <w>gode</w>
+    <lb n="23"/><w>eadmode</w> <w>beon</w> <seg ana="enumeration"><w>mid</w> <w>ælme&slongdes;&slongdes;um</w> <w>&et;</w> <w>mid</w> <w>fæ&slongdes;tenum</w>
+    <lb n="24"/><w>&et;</w> <w>mid</w> <w notation="accentuated">godum</w> <w>ƿeorcum</w></seg> </s><s xml:id="s309.8.135" n="x394.11.121"><w>&et;</w> <w notation="accentuated">&slongdes;ecan</w> <w>ƿe</w> <w>ure</w> <w>cyrcan</w> <w>mid</w>
+    <lb n="25"/><w>clænny&slongdes;&slongdes;e</w> <w>&et;</w> <w>mid</w> <w>hluttrum</w> <w notation="accentuated">mode</w> <pc>·</pc> </s><s xml:id="s309.8.136" n="x394.11.122"><w>&et;</w> <w>bidden</w> <w>ƿe</w> <w>ead
+    <lb n="26"/>modlicere</w> <w>bene</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>ƿe</w> <w>ne</w> <w notation="accentuated">ƿeorðan</w> <w xml:id="alt6a">geteohhode</w> <add xml:id="alt6b" type="altern" place="above" hand="#EC0984a"><w>geſcofene</w></add> <w>on</w> <w>ða</w>
+   <pb n="40v"/>
+    <lb n="1"/><w notation="accentuated">helleƿitu</w> <pc>·</pc> </s><s xml:id="s309.8.137" n="x394.11.123"><w>gif</w> <w>ƿe</w> <w>þonne</w> <w>&slongdes;ƿa</w> <w notation="accentuated">don</w> <w>ƿillað</w> <w>&slongdes;ƿa</w> <w notation="accentuated">u&slongdes;</w> <w>drihten</w>
+    <lb n="2"/><w>beboden</w> <w>hafað</w> <pc>·</pc> <w>þonne</w> <w notation="accentuated">moton</w> <w>ƿe</w> <w>mid</w> <w>him</w> <w>&et;</w> <w>mid</w> <w>hi&slongdes;</w> <w>þa<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="3"/><w>halegum</w> <w>ga&slongdes;te</w> <w>ƿunian</w> <w>in</w> <w>ealra</w> <w>ƿorulda</w> <w>ƿoruld</w> <w>a</w> <w>bu
+    <lb n="4"/>ton</w> <w>ende</w> <w>on</w> <w>ecny&slongdes;&slongdes;e</w> <pc>·</pc> <w><choice>
+			<orig><seg type="romanizedGreek">AMHN</seg></orig>
+			<reg>AMEN</reg>
+     </choice></w> <pc>·</pc><pc>&punctvers;</pc></s>
+   </ab>
+  </body>
+ </text>
+ <standOff>
+  <altGrp>
+   <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
+   <alt target="#alt2a #alt2b" mode="excl" weights="0.5 0.5"/>
+   <alt target="#alt5a #alt5b" mode="excl" weights="0.5 0.5"/>
+   <alt target="#alt6a #alt6b" mode="excl" weights="0.5 0.5"/>
+  </altGrp>
+ </standOff>
+</TEI>

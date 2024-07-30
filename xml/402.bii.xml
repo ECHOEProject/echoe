@@ -1,0 +1,205 @@
+<!DOCTYPE TEI [
+<!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
+<!ENTITY rum "&#xA75D;">		<!-- LATIN SMALL LETTER RUM ROTUNDA -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY osup "&#x0366;">		<!-- COMBINING LATIN SMALL LETTER O -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <teiHeader xml:lang="en">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">Napier LX</title>
+    <title type="alt">Napier homily LX</title>
+    <respStmt>
+     <resp>Transcription by </resp>
+     <name type="person">Winfried Rudolf</name>
+    </respStmt><respStmt>
+     <resp>Encoded by </resp>
+      <name type="person">Winfried Rudolf</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+    <respStmt>
+     <resp>Proofread by </resp>
+      <name type="person">Sabine Ines Rauch</name>
+      <name type="person">P. S. Langeslag</name>
+    </respStmt>
+     </titleStmt>
+   <publicationStmt>
+    <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
+    <idno type="echoe">402.bii</idno>
+    <availability>
+     <licence target="http://creativecommons.org/licenses/by-nc/4.0/">
+      <p>CC-BY-NC 4.0 Electronic Corpus of Homilies in Old English Project</p>
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <msDesc>
+     <msIdentifier>
+      <settlement>York</settlement>
+      <repository>Minster Library</repository>
+      <collection/>
+      <idno>Additional 1</idno>
+      <msName>York, Add. 1</msName>
+     </msIdentifier>
+     <msContents>
+      <msItem n="bii" defective="false">
+       <locus from="159r" to="159r"/>
+       <filiation/>
+	   <textLang mainLang="ang"/>
+      </msItem>
+     </msContents>
+     <physDesc>
+      <handDesc>
+       <handNote xml:id="DP1134"><p>
+        Main hand: upstrokes of d and ð seriffed at the top; e occasionally raised, esp. in æ; long tongue of f; mixed s-forms, though long-s more frequent occasionally split and short dotted ẏ, frequent punctus elevatus</p></handNote>
+       <handNote xml:id="DP0548"><p>
+        Revisions: The hand of Archbishop Wulfstan of York (d. 1023). Forward-sloping ductus; long ascenders; curving upstroke of d; prefers þ in initial position and almost exclusively long ſ, probably to avoid confusion with his s-shaped r. </p></handNote>
+      </handDesc>
+     </physDesc>
+     <history>
+	  <origin>
+	   <origDate notBefore="1002" notAfter="1023">1002x1023</origDate>
+	   <origPlace cert="high"/>
+	  </origin>
+	  <provenance cert="high"/>
+	 </history>
+     <msPart>
+      <msIdentifier>
+       <idno/>
+      </msIdentifier>	
+     </msPart>
+    </msDesc>
+    <listWit>
+     <witness xml:id="witnessIdPlaceholder">
+      <abbr type="siglum"/>
+     </witness>
+    </listWit>
+    <bibl>
+     Ker item <idno type="ker">402, art. bii</idno>; 
+     Gneuss–Lapidge number <idno type="gneuss">774</idno>; 
+     cf. DOE short title <idno type="doe">HomU 49 (Nap 60)</idno>; 
+     cf. Cameron number <idno type="cameron">B3.4.49</idno>. 
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+   <textClass>
+    <keywords>
+     <term/>
+    </keywords>
+    </textClass>
+   <settingDesc>
+    <setting ana="other">
+     <p>Unspecified</p>
+    </setting>
+   </settingDesc>
+  </profileDesc>
+  <revisionDesc>
+   <change n="1.0" when="2024-07-30" who="PSL">cleared for initial release</change>
+  </revisionDesc>
+ </teiHeader>
+ <text xml:lang="ang">
+  <body>
+   <pb n="159r"/>
+    <lb n="1"/><head><hi rend="color(black-red)"><w>BE</w> <w>HÆÐENDOME</w> <pc>&colmidcomposit;</pc></hi></head>
+    <ab><s xml:id="s402.bii.1">
+    <lb n="2"/><handShift new="#DP1134"/><handShift script="carolMinusc"/><seg xml:id="alt1a"><w><hi rend="color(black-red) size(2)">N</hi>emo</w> <w><choice>
+      <abbr><seg type="romanizedGreek">xp<am>&combmacr;</am></seg>iano&rum;</abbr>
+      <expan>chr<ex>iſt</ex>ianor<ex>um</ex></expan>
+     </choice></w></seg> <add xml:id="alt1b" type="altern" place="above" hand="#DP0548"><w>nulluſ</w> <w><choice>
+      <abbr><seg type="romanizedGreek">xp<am>&combmacr;</am></seg>ianuſ</abbr>
+      <expan>chr<ex>iſt</ex>ianuſ</expan>
+     </choice></w> <pc>·</pc></add> <w>paganaſ</w> <w><choice>
+      <abbr>ſu&pbardes;ſtitioneſ</abbr>
+      <expan>ſup<ex>er</ex>ſtitioneſ</expan>
+     </choice></w> <w>intendat</w> <pc>&punctelev;</pc> <w>ſed</w> <w>gentiliu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w>
+    <lb n="3"/><w>inquinamenta</w> <w><choice>
+      <abbr>om<am>&combmacr;</am>ia</abbr>
+      <expan>om<ex>n</ex>ia</expan>
+     </choice></w> <pc>&punctelev;</pc> <w>omnim<choice>
+       <am>&osup;</am>
+       <ex>odo</ex>
+     </choice></w> <w><choice>
+      <abbr>conte<am>&combmacr;</am>nat</abbr>
+      <expan>conte<ex>m</ex>nat</expan>
+     </choice></w> <pc>&punctvers;</pc>
+    <lb n="4"/></s></ab><ab><s xml:id="s402.bii.2"><handShift script="vernacMinusc"/><w><hi rend="color(black-red)">E</hi>ala</w> <w>mẏcel</w> <w>iſ</w> <w>nẏdþearf</w> <w>manna</w> <w>gehƿẏlcu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>·</pc> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>ƿið</w> <w>deofleſ</w> <w>larſƿice</w> <pc>·</pc>
+    <lb n="5"/><w>ƿarnige</w> <w>ſẏmle</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.3"><w>&et;</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>he</w> <w>hæðenſcẏpe</w> <w>georne</w> <pc>·</pc> <w>æfre</w> <w>forbuge</w> <pc>·</pc> <w>þæſ</w> <w>þe</w> <w>he</w>
+    <lb n="6"/><w>gedon</w> <w>mæge</w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.4"><w><hi rend="color(black-red)">&ET;</hi></w> <w>gẏf</w> <w>hit</w> <w>geƿeorðe</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w><choice>
+      <abbr><seg type="romanizedGreek">xp<am>&combmacr;</am></seg>enman</abbr>
+      <expan>cr<ex>iſt</ex>enman</expan>
+     </choice></w> <w>æfre</w> <pc>·</pc> <w>heonanforð</w>
+    <lb n="7"/><w>ahƿar</w> <pc>·</pc> <w>heðendom</w> <w>begange</w> <pc>·</pc> <w>oððon</w> <w>ahƿar</w> <w>on</w> <w>lande</w> <pc>·</pc> <w>idola</w> <w>ƿeorðige</w> <pc>&punctelev;</pc>
+    <lb n="8"/><w>gebete</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>deope</w> <w>for</w> <w>gode</w> <pc>·</pc> <w>&et;</w> <w>for</w> <w>ƿorolde</w> <pc>&punctelev;</pc> </s><del rend="bracketing" ana="optional" hand="#DP0548"><s xml:id="s402.bii.5"><w>&et;</w> <w>ſe</w> <w>ðe</w> <w>to</w> <w>gelome</w> <w><choice>
+      <abbr>&thornbarslash;</abbr>
+      <expan>þ<ex>æt</ex></expan>
+     </choice></w> <w>unriht</w>
+    <lb n="9"/><w>begange</w> <pc>·</pc> <w>gẏlde</w> <w>mid</w> <w>englu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>·</pc> <w>ſƿa</w> <w>ƿer</w> <w>ſƿa</w> <w>ƿite</w> <pc>·</pc> </s><s xml:id="s402.bii.6"><w>&et;</w> <w>on</w> <name type="demonym" key="Danish"><w>dena</w></name> <w>lage</w> <w>lahſlite</w> <pc>·</pc>
+    <lb n="10"/><w>be</w> <w>ðam</w> <w>þe</w> <w>ſeo</w> <w>dæd</w> <w>ſẏ</w> <pc>&punctvers;</pc> </s></del><s xml:id="s402.bii.7"><w><hi rend="color(black-red)">&ET;</hi></w> <w>gẏf</w> <w>ƿiccean</w> <w>oððe</w> <w>ƿige<subst>
+       <del rend="lettermod" hand="#DP1134">t</del>
+       <add type="subst" place="lettermod" hand="#DP1134">l</add>
+     </subst>eara&slongdes;</w> <pc>·</pc> <w>horinga&slongdes;</w>
+    <lb n="11"/><w>oððe</w> <w>horcƿenan</w> <pc>·</pc> <w>morðƿẏrhtan</w> <pc>·</pc> <w>oððe</w> <w notation="accentuated">manſƿoran</w> <pc>·</pc> <w>innan</w> <w>þẏſan</w>
+    <lb n="12"/><w>earde</w> <w>ƿeorðan</w> <w>agẏtene</w> <pc>&punctelev;</pc> <w>fẏſe</w> <w>hẏ</w> <w>man</w> <w>georne</w> <w>ut</w> <w>of</w> <w>þẏſan</w> <w>earde</w> <pc>·</pc>
+    <lb n="13"/><w>&et;</w> <w>clænſige</w> <w>þa&slongdes;</w> <w>þeode</w> <pc>&punctelev;</pc> <w>oððon</w> <w>on</w> <w>earde</w> <w>forfare</w> <w>hẏ</w> <w>mid</w> <w>ealle</w> <pc>·</pc>
+    <lb n="14"/></s><s xml:id="s402.bii.8"><w>butan</w> <w>he</w> <w>geſƿicon</w> <pc>·</pc> <w>&et;</w> <w>þe</w> <w>deoppor</w> <w>gebetan</w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.9"><hi rend="color(black-red)"><w>&ET;</w></hi> <w>do</w> <w>man</w> <w>ſƿa</w> <w>hit</w> <w>þearf</w> <w>iſ</w> <pc>·</pc>
+    <lb n="15"/></s><s xml:id="s402.bii.10"><w notation="accentuated">manfulra</w> <w>dæda</w> <pc>·</pc> <w>on</w> <w>æghƿẏlcan</w> <w>ende</w> <w>ſtẏre</w> <w>man</w> <w>ſƿẏðe</w> <pc>&punctvers;</pc>
+    <lb n="16"/></s></ab><ab><s xml:id="s402.bii.11"><w><hi rend="color(black-red)">H</hi>er</w> <w>ſẏndan</w> <w>on</w> <w>earde</w> <pc>&punctelev;</pc> <w>godcundneſſæ</w> <w>ƿiðerſacan</w> <pc>·</pc> <w>&et;</w> <w>gode&slongdes;</w> <w>lage</w> <w>ofer
+    <lb n="17"/>hogan</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.12"><w>manſlagan</w> <pc>·</pc> <w>&et;</w> <w>mægſlagan</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.13"><w>cẏrichatan</w> <pc>&punctelev;</pc> <w>&et;</w> <w>ſacerdbanan</w> <pc>&punctelev;</pc>
+    <lb n="18"/></s><s xml:id="s402.bii.14"><w>hadbrecan</w> <pc>·</pc> <w>&et;</w> <w>æƿbrecan</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.15"><w>mẏlteſtran</w> <pc>·</pc> <w>&et;</w> <w>bearnmẏrðran</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.16"><w>þeofaſ</w>
+    <lb n="19"/><w>&et;</w> <w>þeodſcaðan</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.17"><w>rẏperaſ</w> <pc>·</pc> <w>&et;</w> <w>rea<subst>
+       <del rend="lettermod" hand="uncertain">p</del>
+       <add type="subst" place="lettermod" hand="uncertain">f</add>
+     </subst>era&slongdes;</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.18"><w>leogeraſ</w> <pc>·</pc> <w>&et;</w> <w>licetera&slongdes;</w> <subst>
+       <del rend="overwriting" hand="uncertain"><pc>·</pc></del>
+       <add type="subst" place="overwriting" hand="uncertain"><w>&et;</w></add>
+     </subst> <w>leodhatan</w> <pc>·</pc>
+    <lb n="20"/></s><s xml:id="s402.bii.19"><w>hetele</w> <pc>·</pc> <w>ealle&slongdes;</w> <w>to</w> <w notation="accentuated">manege</w> <pc>·</pc> <w>þe</w> <w>ðurh</w> <w>manſẏlene</w> <pc>·</pc> <w>bariað</w> <w>þaſ</w> <w>þeode</w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.20"><w>&et;</w> <w>ƿed
+    <lb n="21"/>logan</w> <pc>·</pc> <w>&et;</w> <w>ƿærlogan</w> <pc>&punctelev;</pc> </s><s xml:id="s402.bii.21"><w>&et;</w> <w>lẏtle</w> <w>getrẏƿða</w> <w>to</w> <w>ƿide</w> <w>mid</w> <w>mannu<choice>
+       <am>&combmacr;</am>
+       <ex>m</ex>
+     </choice></w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.22" n="x49B.35.46"><hi rend="color(black-red)"><w>&ET;</w></hi> <w>ne</w> <w>bẏrhð</w>
+    <lb n="22"/><w>ſe</w> <w>geſibba</w> <w>hƿilan</w> <w>geſibban</w> <pc>·</pc> <w>þe</w> <w>ma</w> <w>þe</w> <w>ðam</w> <w>fremdan</w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.23" n="x49B.35.47 x331.23.104"><w><hi rend="color(black-red)">N</hi>e</w> <w>broðor</w> <w>hiſ</w>
+    <lb n="23"/><surplus><w>hi&slongdes;</w></surplus> <w>breðer</w> <pc>&punctelev;</pc> <w>oþre</w> <w>hƿile</w> <pc>&punctvers;</pc> <w><hi rend="color(black-red)">N</hi>e</w> <w>bearn</w> <w>foroft</w> <pc>&punctelev;</pc> <w>hi&slongdes;</w> <w>fæder</w> <w>ne</w> <w>meder</w> <pc>&punctvers;</pc>
+    <lb n="24"/></s><s xml:id="s402.bii.24"><w><hi rend="color(black-red)">N</hi>e</w> <w>na</w> <w>fela</w> <w>manna</w> <w>ne</w> <w>healt</w> <w>hiſ</w> <w>getrẏƿða</w> <w>ſƿa</w> <w>ƿel</w> <w>ſƿa</w> <w>he</w> <w>ſcolde</w> <pc>·</pc> <del rend="erasure" hand="uncertain"><w>&et;</w> <unclear reason="erasure"><w>ſƿa</w> <w>he</w></unclear></del>
+    <lb n="25"/><w>for</w> <w>gode</w> <w>&et;</w> <w>for</w> <w>ƿorolde</w> <pc>&punctvers;</pc> </s><s xml:id="s402.bii.25"><w><hi rend="color(black-red)">A</hi>c</w> <w>do</w> <w>man</w> <w>ſƿa</w> <w>hit</w> <w>þearf</w> <w>iſ</w> <pc>·</pc> </s><s xml:id="s402.bii.26"><w>gebete</w> <w>hit</w> <w>georne</w> <pc>·</pc>
+    <lb n="26"/><w>&et;</w> <w>clænſige</w> <w>þa&slongdes;</w> <w>þeode</w> <pc>&punctelev;</pc> <w>gẏf</w> <w>man</w> <w>gode&slongdes;</w> <w>miltſe</w> <w>geearnian</w> <w>ƿẏlle</w> <pc>&punctvers;</pc></s>
+    </ab>
+  </body>
+ </text>
+ <standOff>
+  <altGrp>
+   <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
+  </altGrp>
+ </standOff>
+</TEI>
