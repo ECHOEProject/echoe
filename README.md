@@ -6,13 +6,13 @@ ECHOE is a text corpus encoding all extant witnesses to Old English homiletic an
 
 ## Repository Structure
 
---------------	------------------------------------------------------------------
-`data`			JSON data used by [ECHOE Online](https://echoe.uni-goettingen.de)
-`doc`			Corpus user guide
-`ebook`			EPUB release
-`misc`			Project ODD
-`plaintext`		Complimentary plaintext transformation
-`xml`			XML corpus
---------------	------------------------------------------------------------------
+| Folder	  |	Description														   |
+| -----------	------------------------------------------------------------------ |
+| `data`	  |	JSON data used by [ECHOE Online](https://echoe.uni-goettingen.de)  |
+| `doc`		  |	Corpus user guide												   |
+| `ebook`	  |	EPUB release													   |
+| `misc`	  |	Project ODD														   |
+| `plaintext` |	Complimentary plaintext transformation							   |
+| `xml`		  |	XML corpus														   |
 
 The included plaintext corpus represents a normalized transformation that accepts the most recent scribal revision as well as all editorial emendations.
