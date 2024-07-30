@@ -2,7 +2,7 @@
 
 ## About
 
-ECHOE is a text corpus encoding all extant witnesses to Old English homiletic and long-format hagiographic prose predating c. 1200 in TEI P5 XML. It forms the basis of [ECHOE Online](https://echoe.uni-goettingen.de). For detail, consult the [documentation](doc/documentation.pdf).
+ECHOE is a text corpus encoding all extant witnesses to anonymous and Wulfstanian Old English homiletic and long-format hagiographic prose predating c. 1200 in TEI P5 XML. It forms the basis of [ECHOE Online](https://echoe.uni-goettingen.de). For detail, consult the [documentation](doc/documentation.pdf).
 
 ## Repository Structure
 
