@@ -118,7 +118,7 @@ Multiple instances of `fileDesc/titleStmt/title`{.xslt} encode a range of receiv
 
 ## Scribal Hands
 
-`fileDesc/sourceDesc/msDesc/physDesc/handDesc`{.xslt} identifies the scribal hands distinguished in the version using instances of `<handNote>`{.xml}, each of which provides (as a value of `@xml:id`) an identifier to which the transcription refers as different hands intervene, as well as a prose description of the hand in question. Where available, hand identifiers follow [DigiPal](https://digipal.eu/) (recognizable from identifiers beginning with `DP`), or else Scragg's _Conspectus of Scribal Hands Writing English, 960--1100_ (using the prefix `SC`); new identifiers may be recognized by the prefix `EC` (followed by a number refencing an adjacent DigiPal hand as well as an alphabetical suffix). Where DigiPal assigns a hand to a scribe, we have additionally supplied the attribute `@scribe` and used not DigiPal's scribal identifier intended for human processing but instead their database identifier: thus rather than give a value `G.108`, we supply `DP0078`, which may be transformed into <https://digital.eu/digipal/scribes/78/> to redirect to DigiPal's scribal entry for scribe G.108. If a scribe's name is known, we encode it as a value of `@ana`.<!-- not so as of June 2024! --> In the running text, the attribute `@hand` is most notably found on the elements `<add>`{.xml} and `<del>`{.xml}. Uncertain hands are there marked `uncertain`, and lack header entries.
+`fileDesc/sourceDesc/msDesc/physDesc/handDesc`{.xslt} identifies the scribal hands distinguished in the version using instances of `<handNote>`{.xml}, each of which provides (as a value of `@xml:id`) an identifier to which the transcription refers as different hands intervene, as well as a prose description of the hand in question. Where available, hand identifiers follow [DigiPal](https://digipal.eu/) (recognizable from identifiers beginning with `DP`), or else Scragg's _Conspectus of Scribal Hands Writing English, 960--1100_ (using the prefix `SC`); new identifiers may be recognized by the prefix `EC` (followed by a number refencing an adjacent DigiPal hand as well as an alphabetical suffix). Where DigiPal assigns a hand to a scribe, we have additionally supplied the attribute `@scribe` and used not DigiPal's scribal identifier intended for human processing but instead their database identifier: thus rather than give a value `G.108`, we supply `DP0078`, which may be transformed into <https://digital.eu/digipal/scribes/78/> to redirect to DigiPal's scribal entry for scribe G.108. If a scribe's name is known, we encode it as a value of `@ana`. In the running text, the attribute `@hand` is most notably found on the elements `<add>`{.xml} and `<del>`{.xml}. Uncertain hands are there marked `uncertain`, and lack header entries.
 
 Any notes not on a specific hand are recorded as a `<p>`{.xml} node directly within `<physDesc>`{.xml}. As TEI does not permit such a paragraph to follow the `<handDesc>`{.xml} node, it precedes the descriptions of specific hands in the document tree.
 
@@ -126,7 +126,7 @@ Any notes not on a specific hand are recorded as a `<p>`{.xml} node directly wit
 
 Manuscript dating as recorded under `fileDesc/sourceDesc/msDesc/history/origin/`{.xslt} `origDate`{.xslt} follows Ker, unless a more accurate estimation has come to the editors' attention. To allow sorting by date of manuscript composition, attributes `@notBefore` and `@notAfter` have been populated on the basis of Francis Leneghan's analysis of Ker's dating system.[@leneghan] We recommend using the mean between the two values as the basis for chronological comparison between manuscripts.
 
-Fields `origPlace`{.xslt} and `provenance`{.xslt} have likewise been provided as descendants of `fileDesc/sourceDesc/msDesc/history`{.xslt}, and have been populated on the basis of __XXX__.<!-- information missing; these fields remain empty as of late July 2024! -->
+Fields `origPlace`{.xslt} and `provenance`{.xslt} have likewise been provided as descendants of `fileDesc/sourceDesc/msDesc/history`{.xslt}.
 
 ## Sigla
 
@@ -489,7 +489,7 @@ Since our scribes may use majuscules or large minuscules in unexpected places, a
 
 # Transcription and Metadata
 
-ECHOE adheres to a comparatively diplomatic standard of transcription. Included are the following palaeographical and codicological data and metadata:<!-- this includes named entities, which is not palaeographical; but it excludes thematic markup. Make up your mind! -->
+ECHOE adheres to a comparatively diplomatic standard of transcription. Included are the following palaeographical and interpretive data and metadata:
 
 ------------------------------------------------------------------------------------------
 Aspect						Specification
@@ -536,6 +536,9 @@ Named entities				Identified using `<name>`{.xml}, `<persName>`{.xml},
 							[PASE](https://pase.ac.uk) where applicable.
 
 Numerals					Identified using `<num>`{.xml}.
+
+Rhetorics					Encoded as `<seg>`{.xml} with a categorization as a value
+							of `@ana` (`audAddress`, `binomial`, or `enumeration`).
 
 Rubrics						Encoded using `<head>`{.xml} and, more rarely,
 							`<trailer>`{.xml}.
