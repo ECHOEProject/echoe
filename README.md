@@ -11,8 +11,8 @@ ECHOE is a text corpus encoding all extant witnesses to anonymous and Wulfstania
 | Folder      |	Description						   						           |
 | ----------- |	------------------------------------------------------------------ |
 | `data`      |	JSON data used by [ECHOE Online](https://echoe.uni-goettingen.de)  |
-| `doc`	      |	User manual												           |
-| `ebook`     |	EPUB release							   						   |
+| `doc`	      |	[User manual](doc/documentation/pdf)					           |
+| `ebook`     |	[EPUB release](ebook/echoe.epub)		   						   |
 | `misc`      |	Project ODD; sample transformation stylesheets					   |
 | `plaintext` |	A plaintext rendering of the corpus					               |
 | `xml`	      |	XML corpus							                               |
