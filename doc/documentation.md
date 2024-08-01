@@ -497,7 +497,8 @@ Aspect						Specification
 Letter-forms				æ, , ð, ę, œ, ꝛ, ſ, , þ, , ƿ, ẏ, \yf, &amp;; other
 							characters normalized (but not ⁊ or punctuation, which see below).
 
-Manuscript leaves			`<pb/>`{.xml} (page beginning)<!--, including manifest reference-->.
+Manuscript leaves			`<pb/>`{.xml} (page beginning), including manifest reference
+							and canvas index.
 
 Manuscript columns			`<cb/>`{.xml} (column beginning).
 
@@ -698,8 +699,8 @@ Element					Usage in ECHOE
 						parallel with `<reg>`{.xml} in a `<choice>`{.xml}
 						environment.
 
-`<pb/>`{.xml}			Marks the start of a folio side, and links to the relevant
-						IIIF manifest using `@ref`.<!-- not at present -->
+`<pb/>`{.xml}			Marks the start of a folio side, and gives the relevant
+						IIIF manifest and canvas index as a value of `@ref`.
 
 `<pc>`{.xml}			Marks punctuation except where _punctus_ have been encoded as
 						abbreviation markers, as TEI does not permit `<pc>`{.xml}
