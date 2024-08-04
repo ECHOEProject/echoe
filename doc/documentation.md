@@ -37,7 +37,15 @@ linkcolor: burgundy
 
 # License
 
-[ECHOE: Electronic Corpus of Anonymous Homilies in Old English](https://github.com/ECHOEProject/echoe/) is licensed [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) Winfried Rudolf et al. You may reuse, process, and rerelease the data in any way you see fit provided you acknowledge the authors and do not seek to profit commercially. Read the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/) for further details.
+[ECHOE: Electronic Corpus of Anonymous Homilies in Old English](https://github.com/ECHOEProject/echoe/). Copyright (C) 2024 ECHOE Project.
+
+This corpus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This corpus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this corpus. If not, see <https://www.gnu.org/licenses/>.
+
+The typeface used in this user manual, in the included CSS stylesheet, and for much of [ECHOE Online](https://echoe.uni-goettingen.de), is Junicode by Peter S. Baker, available at <https://github.com/psb1558/Junicode-font> and licensed under the [SIL Open Font License v. 1.1](https://openfontlicense.org/open-font-license-official-text/).
 
 # Corpus Definition and Taxonomy
 
