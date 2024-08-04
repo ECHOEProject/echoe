@@ -104,6 +104,19 @@ We recommend that the distributed corpus (i.e. the XML source code repository ac
 
 These data fields may yield a citation like the footnote citation here embedded.[@echoe-repo] See the Works Cited at the end of this document for a bibliographical reference following the same Chicago Manual of Style conventions.
 
+# Repository Contents
+
+The ECHOE repository at <https://github.com/ECHOEProject/echoe> hosts the following components:
+
+- The XML corpus
+- A flattened, plaintext transformation
+- An ebook of the corpus based on the same transformation settings
+- This user manual
+- A handful of metadata files extracted from the corpus and used for [ECHOE Online](https://echoe.uni-goettingen.de)
+- A `misc/` folder with (1) the ODD containing ECHOE's TEI schema and documentation; (2) several sample XSLT transformation stylesheets to assist users with their own transformation efforts; and (3) a CSS stylesheet allowing users to use the XML corpus as a reading corpus locally in their web browsers, with a fair selection of features.
+
+Please observe that neither the plaintext corpus nor the ebook retains the richness of the XML corpus, as these attempt to render only the readings intended by the most recent scribal revisor prior to c.\ 1200, but also silently emend readings following the editors' understanding of the text. Punctuation, capitalization, and virtually all metadata are absent from these output formats. The rendering produced by our CSS stylesheet similarly is just one possible way of representing a somewhat wider selection of the data, and limited somewhat by the capabilities of CSS; users may find that spacing in particular is occasionally imperfectly rendered as CSS has no direct way of disregarding internode spacing.
+
 # Character Encoding
 
 For its entity declarations, ECHOE relies on [MUFI](https://mufi.info) recommendations. Insofar as these extend beyond the standard unicode character set into the Private Use Area, particularly in the realm of punctuation, nonnormalized transformations of the corpus should only be undertaken with MUFI-compliant typefaces such as [Junicode](https://github.com/psb1558/Junicode-font). In addition, we encode one letter-shape not currently in MUFI: _f_-shaped _y_ &lt;\yf&gt; as it occurs in the Vercelli Book, and more rarely in CCCC 41, Hatton 115, and Blickling. This letter-form has been available in Junicode 2 since June 2023, but only as an OpenType character variant (`cv50:3` if counting from 1). Accordingly, we have encoded it inline using `<g>`{.xml} from TEI's `gaiji` module and defined it in the TEI header using `<charDecl>`{.xml}. For it to be rendered mimicking its manuscript form, a stylesheet will have to refer it back to the appropriate stylistic variant (`font-feature-settings: 'cv50' 3`). For most purposes, it may be rendered simply &lt;y&gt; (i.e. `<g>`{.xml} may be rendered or transformed without further instructions).
@@ -486,6 +499,10 @@ In view of issues with category boundaries outlined [above](#named-entities), fo
 ## Capitalization
 
 Since our scribes may use majuscules or large minuscules in unexpected places, and we have attempted, insofar this may be consistently done, to mimic this practice using capitalization, many applications will benefit from lowercasing all letters as part of the normalization routine.
+
+## Style
+
+We have elected to refer our XML documents to a sample CSS stylesheet as a way of accommodating users desiring to use ECHOE as a reading corpus locally in a web browser. This stylesheet declaration should not be seen as a canonical part of the corpus, and may be disregarded in processing.
 
 # Transcription and Metadata
 

@@ -1,0 +1,456 @@
+@namespace url(http://www.tei-c.org/ns/1.0);
+@namespace xml url(http://www.w3.org/XML/1998/namespace);
+
+@font-face {
+    font-family: 'Junicode VF';
+/*	src: local('Junicode VF'),
+	src: local('Junicode'), */
+    src: url('https://cdn.jsdelivr.net/gh/psb1558/Junicode-font/webfiles/JunicodeTwoBetaVF-Roman.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh//psb1558/Junicode-font/webfiles/JunicodeTwoBetaVF-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+TEI {
+	font-family: "Junicode VF", serif;
+	font-size: 1em;
+}
+
+title, respStmt, authority, idno, availability, msName, physDesc, history, bibl, msPart, profileDesc, revisionDesc, encodingDesc {
+	display: none;
+}
+
+msDesc {
+	display: block;
+	margin: 0.4em 3em 0.4em;
+}
+
+title[type='main'] {
+	display: block;
+	margin: 0.4em 3em 0.4em;
+	font-weight: 800;
+	font-size: 1em;
+}
+
+idno[type='echoe'] {
+	display: block;
+	margin: 0.4em 3em 0.4em;
+	font-weight: 800;
+}
+
+teiHeader idno[type='echoe']::before {
+	content: 'ECHOE ';
+}
+
+settlement::after, repository::after {
+	content: ', '
+}
+
+idno[type='ms'] {
+	display: inline;
+}
+
+idno[type='ms']::after {
+	content: ', ';
+}
+
+locus::before {
+	content: attr(from)'–'attr(to);
+}
+
+text {
+	width:100%;
+	counter-reset: sentence;
+}
+
+head, trailer {
+	display:block;
+	font-size: 1em;
+	font-weight:800;
+	margin: 0.4em 3em 0.4em;
+}
+
+body > pb:first-child, body > div > pb:first-child {
+	display: none;
+}
+
+pb::after, cb::after {
+	content: '/'attr(n)'/';
+	display: inline;
+	color: #228232;
+	font-weight: 400;
+}
+
+pc {
+	display: inline;
+	color: #C17c02;
+}
+
+s {
+	background-color: inherit;
+	display: block;
+	margin: 8px 16px;
+	clear: both;
+	padding-left: 2em;
+	text-indent: -2em;
+}
+
+s::before {
+	counter-increment: sentence;
+	content: counter(sentence);
+	display: block;
+	float:left;
+	width: 2em;
+	color: #c17c02;
+}
+
+abbr, am {
+	display: none;
+}
+
+/* Dirty hack to avoid having to remove all whitespace and line breaks from the XML document: */
+choice, subst {
+	font-size:0;
+}
+
+choice ex, choice expan, choice sic, choice corr, choice reg, subst add, subst del {
+	font-size:16px;
+}
+
+choice expan {
+	margin-right: 2px;
+	display: inline;
+}
+
+ex {
+	font-style: italic;
+	display: inline;
+}
+
+w {
+	text-decoration: inherit;
+	background-color: inherit;
+	display: inline;
+}
+
+w lb {
+	margin:0 -2px;
+}
+
+w pb, w cb {
+	margin-left: -4px;
+	margin-right: -1px;
+}
+
+g[ref='#yf'] {
+	font-feature-settings: 'cv50' 3
+}
+
+[type='transpose']::before {
+	color: orange;
+	content: '[[';
+}
+
+[type='transpose']::after {
+	color: orange;
+	content: ']]';
+}
+
+[type="transpose"]:hover::after {
+	color: orange;
+	content: ']] (marked for transposition)';
+	font-weight: normal;
+}
+
+corr {
+	color: gray;	
+	font-style: italic;
+}
+
+corr::before {
+	content: ' (for ';
+	font-style: normal;
+}
+
+corr::after {
+	content: ')';
+	font-style: normal;
+}
+
+persName, placeName, name {
+	color: #9E0D8D;
+}
+
+persName:hover::after, placeName:hover::after, name:hover::after {
+	content: attr(key);
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+	margin: 0 3px;
+    padding: 0 6px;
+    font-size: 90%;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.15em;
+	font-weight: normal;
+}
+
+num {
+	color: #2702C1;
+}
+
+num:hover::after {
+	content: attr(n);
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+	margin: 0 3px;
+    padding: 0 3px;
+    min-width: 10px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.06em;
+	font-weight: normal;
+}
+
+gap::before {
+	color: gray;
+	content: '[…]';
+}
+
+gap:hover::after {
+	content: attr(quantity)' ' attr(unit);
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+    padding: 0 8px;
+    min-width: 10px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.15em;
+	font-weight: normal;
+}
+
+add {
+	text-decoration: inherit;
+	color: #2C9724;
+}
+
+add::before {
+	content: '\\';
+}
+
+add::after {
+	content: '/';
+}
+
+add:hover::after, del:hover::after {
+	content: attr(hand);
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+	margin: 0 3px;
+    padding: 0 6px;
+    font-size: 90%;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.15em;
+	font-weight: normal;
+}
+
+/* can I get this space on the outside of the pseudo-elements somehow? */
+subst w {
+	margin: 0 2px;
+}
+
+w:has(subst), w:has(choice) {
+	margin-right:4px;
+}
+
+subst:has(w), choice:has(w) {
+	margin-right:4px;
+}
+
+undo subst add, undo add {
+	text-decoration: line-through;
+	color: #2C9724;
+}
+
+sic {
+	margin-right:4px;
+}
+
+del {
+	text-decoration: line-through;
+	color: red;
+}
+
+s > del {
+	margin-right:4px;
+}
+
+supplied {
+	text-decoration: inherit;
+	color: gray;
+}
+
+supplied::before {
+	content: '[';
+}
+
+supplied::after {
+	content: ']';
+}
+
+supplied:hover::after {
+	content: '(supplied by editor)';
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+	margin: 0 3px;
+    padding: 0 6px;
+    font-size: 90%;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.15em;
+	font-weight: normal;
+}
+
+surplus {
+	text-decoration: inherit;
+	color: gray;
+}
+
+surplus:hover::after {
+	content: '(omit)';
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+	margin: 0 3px;
+    padding: 0 6px;
+    font-size: 90%;
+    min-width: 30px;
+    text-align: center;
+    border-radius: 4px;
+	text-indent: 0.15em;
+	font-weight: normal;
+}
+
+restore {
+	text-decoration: inherit;
+	color: black;
+}
+
+restore:hover::after {
+	content: '(restored by scribe)';
+	display: inline-block;
+    position: relative;
+	top: 100%;
+    background: #000;
+    color: #fff;
+    padding: 0 8px;
+    min-width: 10px;
+    text-align: center;
+    border-radius: 4px;
+	font-weight: normal;
+}
+
+surplus::before {
+	content: '{';
+}
+
+surplus::after {
+	content: '}';
+}
+
+unclear {
+	color: gray;
+	border-bottom: 1px dotted gray;
+	padding-bottom: 4px;
+	text-decoration: inherit;
+}
+
+fw {
+	display: none;
+}
+
+hi {
+	text-decoration: inherit;
+}
+
+foreign {
+	font-weight: bold;
+}
+
+orig {
+	display: none;
+}
+
+note {
+	display: block;
+	float: left;
+	font-weight: bold;
+	margin: 0 2em 0.1em 3em;
+	border: 2px solid #c17c02;
+	padding: 1px 4px;
+}
+
+s note {
+	display: inline;
+	float: none;
+	margin: 0 0.1em;
+	text-indent: 0.05em;
+}
+
+ab {
+	display: block;
+	margin: 2em 0;
+}
+
+a:link, a:visited {
+	color: #D8AA5F;
+}
+
+a:hover, a:active {
+	color: inherit;
+}
+
+[xml|id^='alt'][xml|id$='a']::before {
+	content: '(';
+	color: red;
+}
+
+[xml|id^='alt'][xml|id$='a']::after {
+	content: ')';
+	color: red;
+}
+
+undo subst del::before {
+	content: '>>';
+	color: blue;
+}
+
+undo subst del::after {
+	content: '<<';
+	color: blue;
+}
+
+standOff {
+	display: none;
+}
