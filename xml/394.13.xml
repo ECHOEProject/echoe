@@ -1,13 +1,12 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -65,9 +64,9 @@
      <history>
       <origin>
        <origDate notBefore="0963" notAfter="0987">s. x<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Kent">Kent</origPlace>
       </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
      </history>
     </msDesc>
     <bibl>
@@ -432,7 +431,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Jerusalem">
     <placeName>Jerusalem</placeName>
     <location><geo>31.776667,35.234167</geo></location>
@@ -440,6 +439,12 @@
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Kent">
+    <placeName>Kent</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

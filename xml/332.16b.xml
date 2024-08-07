@@ -1,14 +1,13 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -66,9 +65,9 @@
      <history>
       <origin>
        <origDate notBefore="1063" notAfter="1087">s. xi<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
       </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="high" corresp="#Worcester">Worcester</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -291,5 +290,11 @@
   <altGrp>
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
+  <listPlace type="origin">
+   <place xml:id="Worcester">
+    <placeName>Worcester</placeName>
+    <location><geo>52.188895,-2.2232631</geo></location>
+   </place>
+  </listPlace>
  </standOff>
 </TEI>

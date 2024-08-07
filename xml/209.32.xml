@@ -1,16 +1,15 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
-<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
+<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
+<!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -72,9 +71,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1138" notAfter="1162">s. xii med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -293,7 +292,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Equitania">
     <placeName>Equitania (in <emph>Vindicta Salvatoris</emph>)</placeName>
     </place>
@@ -320,6 +319,12 @@
    <place xml:id="Rome">
     <placeName>Rome</placeName>
     <location><geo>41.9038163,12.4494809</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
    </place>
   </listPlace>
  </standOff>

@@ -1,4 +1,4 @@
-% ECHOE Corpus Documentation
+% ECHOE Documentation
 % Paul Langeslag
 % revision of \today
 
@@ -35,7 +35,9 @@ urlcolor: burgundy
 linkcolor: burgundy
 ---
 
-# License
+# Front Matter
+
+## License
 
 [ECHOE: Electronic Corpus of Anonymous Homilies in Old English](https://github.com/ECHOEProject/echoe/). Copyright (C) 2024 ECHOE Project.
 
@@ -45,9 +47,13 @@ This corpus is distributed in the hope that it will be useful, but WITHOUT ANY W
 
 You should have received a copy of the GNU General Public License along with this corpus. If not, see <https://www.gnu.org/licenses/>.
 
-The typeface used in this user manual, in the included CSS stylesheet, and for much of [ECHOE Online](https://echoe.uni-goettingen.de), is Junicode by Peter S. Baker, available at <https://github.com/psb1558/Junicode-font> and licensed under the [SIL Open Font License v. 1.1](https://openfontlicense.org/open-font-license-official-text/).
+## Acknowledgements
 
-# Corpus Definition and Taxonomy
+Please consult [ECHOE Online](https://echoe.uni-goettingen.de) for comprehensive acknowledgements of intellectual and financial support received.
+
+The typeface used in this user manual and sourced in the included CSS stylesheet is Junicode by Peter S. Baker, available at <https://github.com/psb1558/Junicode-font> and licensed under the [SIL Open Font License v. 1.1](https://openfontlicense.org/open-font-license-official-text/).
+
+## Corpus Definition and Taxonomy
 
 ECHOE: Electronic Corpus of Anonymous Homilies in Old English is a text corpus, native to TEI P5-conformant XML but here additionally supplied in a flattened plaintext transformation, containing manual transcriptions, newly produced for ECHOE, of all extant witnesses of anonymous and Wulfstanian prose homilies predating c. 1200 (excluding the late collections known as the Lambeth and Trinity homilies) and whose dominant language is Old English, as well as long-format anonymous Old English prose saints' lives from the same period. Defined another way, it transcribes all manuscript copies of all non-Ælfrician Old English prose homilies and saints' lives. Following the initial release of its XML source code in October 2024, the corpus is subject to revision on a rolling release basis. Corrections and technical queries may be directed to [Paul Langeslag](mailto:planges@uni-goettingen.de), while [Winfried Rudolf](winfried.rudolf@phil.uni-goettingen.de) as the principal investigator is the project's contact person for strategic matters and press requests.
 
@@ -61,7 +67,7 @@ ECHOE __file names__ use leading zeroes for both manuscript and article levels i
 
 At the time of initial release, acceptable images of London, British Library Cotton Otho A.\ viii, B.\ x, and Vitellius D.\ xvii were not available to us, so that the twelve Old English homiletic and hagiographical items therein contained are not at present included in ECHOE. Service disruptions at the British Library in 2020–2024 additionally prevented some final proofing of further London transcriptions.<!-- update as required -->
 
-# Citing ECHOE
+## Citing ECHOE
 
 Although any representation of an ECHOE version is derived from the underlying XML transcription, most users will want to cite the online edition. Please keep in mind that (1) the data are subject to rolling updates, lending relevance to the date of access; and (2) any one transcription may be rendered with different display settings, so that one and the same version or extract may be quoted in a range of realizations. We recommend users feed their citation managers the following values:
 
@@ -112,7 +118,7 @@ We recommend that the distributed corpus (i.e. the XML source code repository ac
 
 These data fields may yield a citation like the footnote citation here embedded.[@echoe-repo] See the Works Cited at the end of this document for a bibliographical reference following the same Chicago Manual of Style conventions.
 
-# Repository Contents
+## Repository Contents
 
 The ECHOE repository at <https://github.com/ECHOEProject/echoe> hosts the following components:
 
@@ -125,9 +131,17 @@ The ECHOE repository at <https://github.com/ECHOEProject/echoe> hosts the follow
 
 Please observe that neither the plaintext corpus nor the ebook retains the richness of the XML corpus, as these attempt to render only the readings intended by the most recent scribal revisor prior to c.\ 1200, but also silently emend readings following the editors' understanding of the text. Punctuation, capitalization, and virtually all metadata are absent from these output formats. The rendering produced by our CSS stylesheet similarly is just one possible way of representing a somewhat wider selection of the data, and limited somewhat by the capabilities of CSS; users may find that spacing in particular is occasionally imperfectly rendered as CSS has no direct way of disregarding internode spacing.
 
-# Character Encoding
+# Methods
 
-For its entity declarations, ECHOE relies on [MUFI](https://mufi.info) recommendations. Insofar as these extend beyond the standard unicode character set into the Private Use Area, particularly in the realm of punctuation, nonnormalized transformations of the corpus should only be undertaken with MUFI-compliant typefaces such as [Junicode](https://github.com/psb1558/Junicode-font). In addition, we encode one letter-shape not currently in MUFI: _f_-shaped _y_ &lt;\yf&gt; as it occurs in the Vercelli Book, and more rarely in CCCC 41, Hatton 115, and Blickling. This letter-form has been available in Junicode 2 since June 2023, but only as an OpenType character variant (`cv50:3` if counting from 1). Accordingly, we have encoded it inline using `<g>`{.xml} from TEI's `gaiji` module and defined it in the TEI header using `<charDecl>`{.xml}. For it to be rendered mimicking its manuscript form, a stylesheet will have to refer it back to the appropriate stylistic variant (`font-feature-settings: 'cv50' 3`). For most purposes, it may be rendered simply &lt;y&gt; (i.e. `<g>`{.xml} may be rendered or transformed without further instructions).
+☞ ECHOE users may benefit from understanding how the corpus was created. This section offers a brief account of the approach used.
+
+The text itself was transcribed directly into XML by human transcribers, along with much of the basic markup: script color and size, abbreviations, scribal interventions, and some emendations and biblical source references. A template of the TEI header was also manually populated at this time. Transcribers typically worked in teams of two proofreading each other's transcriptions. Transcriptions were subsequently proofread by a revision team consisting of a junior revising editior and a senior revising editor. In most cases, both revisers proofread the whole of the raw XML directly against the manuscript images again, so that the vast majority of transcriptions were subjected to a minimum of three proofreading stages. The final form of the transcriptions reflects the single-pair-of-eyes principle, with the senior revising editor, who has been involved in every decision on transcription and encoding alike since the start of the project, attempting to subject all transcriptions to the same formatting standard at the end of the revision process. This also involved adding further emendations and rejecting some emendations previously encoded, as well as adding and rejecting perceived scribal interventions. Illness prevented the senior revising editor from subjecting a modest proportion of the corpus to a final check ahead of the initial release, but this is expected to be redressed in the near future.
+
+Sentence segmentation and the cross-referencing of cognate clusters of sentences was likewise carried out manually by the senior revising editor in collaboration with the principal investigator. This work predates the development of our "echo<!-- surely this cannot be called ECHOE tool, that's confusing --> tool" for laying bare similarities between sentence-like segments across the corpus, so further connections may yet be discovered. However, segmentation is envisioned to remain unchanged after the initial release, as any subsequent changes to segmentation would render the scholarly citation of specific segments or their deeplinking by other resources unreliable. Accordingly, any cognate material within the corpus discovered in future will have to be cross-referenced with segment boundaries remaining as they are, even if parallel witnesses differ in their segmentation strategies and the similarity of the material may as a consequence remain somewhat obscured.
+
+Explicit word segmentation (tokenization) and the markup of names and numerals were carried out in an automated fashion and then manually corrected. TEI headers were proofread along with the text (i.e. several times), but global changes were repeatedly made to their structure both during and after revision, so not every part of the header has seen equal amounts of proofreading. Here, however, faulty metadata was typically quickly spotted in the proofing environment and corrected as needed. Rhetorical markup was conducted by hand in a separate stage.<!-- The entry of biblical source references was put on hold after the separate documentation of sources got underway, to avoid task duplication; but as source documentation remains incomplete, biblical references encoded in the XML are likewise incomplete.--> A range of cross-corpus structural changes to such matters as the encoding of transpositions, glosses, and Romanized Greek, as well as the addition of such further metadata as geolocations, was carried out at a late stage with the help of scores of Python scripts.
+
+The sequence of stages here laid out lacks a dedicated text-critical examination. Generally speaking, the transcription and first proofreading stages focused primarily on ensuring an accurate letter-for-letter representation of the manuscript text, whereas subsequent revision was carried out with more of an eye to ensuring readings are plausible and grammatical; but at every stage of proofreading the quality of the text was only one among many points of attention. Whereas some of our transcribers and early-stage proofreaders worked with leading critical editions at hand, others did not, and final revision was carried out with reference to textual scholarship for suspect readings only. Time constraints in the face of the amount of text to be processed precluded a more thorough textual analysis, so that the text of ECHOE, though generally well considered, is not consistently as authoritative as that of leading editions. Having said that, we are confident that ECHOE improves on received readings in many places, particularly where text has been erased or the manuscript damaged. For more on our text-critical approach, see [Emendation and Conjecture] below.
 
 # The TEI Header
 
@@ -170,21 +184,13 @@ Each version's participation in a set of common motifs is recorded in a sequence
 
 Insofar as may confidently be inferred from each version and/or its sources and peers, a text's intended (preaching) occasion is recorded under `profileDesc/settingDesc/setting`{.xslt}, and wherever such an occasion is noted, a broad categorization is supplied in `@ana` into one of the values `temporale`, `sanctorale`, and `other`, that last value covering such more broadly understood contexts as baptism, confession, the teaching of Creed and Paternoster, and church dedication sermons as well less clearly understood settings. In hagiographical prose not clearly centred on a specific feast day (e.g. a text on the Virgin Mary that is not primarily associated with one of Nativity, Purification, Annunciation, or Assumption), this field records just the name of the saint, and no header identifies Michaelmas or Martinmas specifically even though Blickling rubrics do. Of the Marian feast days, the Annunciation is grouped with the temporale, the remainder with the sanctorale.
 
-# Methods
-
-☞ ECHOE users may benefit from understanding how the corpus was created. This section offers a brief account of the approach used.
-
-The text itself was transcribed directly into XML by human transcribers, along with much of the basic markup: script color and size, abbreviations, scribal interventions, and some emendations and biblical source references. A template of the TEI header was also manually populated at this time. Transcribers typically worked in teams of two proofreading each other's transcriptions. Transcriptions were subsequently proofread by a revision team consisting of a junior revising editior and a senior revising editor. In most cases, both revisers proofread the whole of the raw XML directly against the manuscript images again, so that the vast majority of transcriptions were subjected to a minimum of three proofreading stages. The final form of the transcriptions reflects the single-pair-of-eyes principle, with the senior revising editor, who has been involved in every decision on transcription and encoding alike since the start of the project, attempting to subject all transcriptions to the same formatting standard at the end of the revision process. This also involved adding further emendations and rejecting some emendations previously encoded, as well as adding and rejecting perceived scribal interventions. Illness prevented the senior revising editor from subjecting a modest proportion of the corpus to a final check ahead of the initial release, but this is expected to be redressed in the near future.
-
-Sentence segmentation and the cross-referencing of cognate clusters of sentences was likewise carried out manually by the senior revising editor in collaboration with the principal investigator. This work predates the development of our "echo<!-- surely this cannot be called ECHOE tool, that's confusing --> tool" for laying bare similarities between sentence-like segments across the corpus, so further connections may yet be discovered. However, segmentation is envisioned to remain unchanged after the initial release, as any subsequent changes to segmentation would render the scholarly citation of specific segments or their deeplinking by other resources unreliable. Accordingly, any cognate material within the corpus discovered in future will have to be cross-referenced with segment boundaries remaining as they are, even if parallel witnesses differ in their segmentation strategies and the similarity of the material may as a consequence remain somewhat obscured.
-
-Explicit word segmentation (tokenization) and the markup of names and numerals were carried out in an automated fashion and then manually corrected. TEI headers were proofread along with the text (i.e. several times), but global changes were repeatedly made to their structure both during and after revision, so not every part of the header has seen equal amounts of proofreading. Here, however, faulty metadata was typically quickly spotted in the proofing environment and corrected as needed. Rhetorical markup was conducted by hand in a separate stage.<!-- The entry of biblical source references was put on hold after the separate documentation of sources got underway, to avoid task duplication; but as source documentation remains incomplete, biblical references encoded in the XML are likewise incomplete.--> A range of cross-corpus structural changes to such matters as the encoding of transpositions, glosses, and Romanized Greek were made at a late stage using a combination of mechanical and manual intervention.
-
-The sequence of stages here laid out lacks a dedicated text-critical examination. Generally speaking, the transcription and first proofreading stages focused primarily on ensuring an accurate letter-for-letter representation of the manuscript text, whereas subsequent revision was carried out with more of an eye to ensuring readings are plausible and grammatical; but at every stage of proofreading the quality of the text was only one among many points of attention. Whereas some of our transcribers and early-stage proofreaders worked with leading critical editions at hand, others did not, and final revision was carried out with reference to textual scholarship for suspect readings only. Time constraints in the face of the amount of text to be processed precluded a more thorough textual analysis, so that the text of ECHOE, though generally well considered, is not consistently as authoritative as that of leading editions. Having said that, we are confident that ECHOE improves on received readings in many places, particularly where text has been erased or the manuscript damaged. For more on our text-critical approach, see [Emendation and Conjecture] below.
-
 # Selected Principles
 
 ☞ This section describes key transcription and encoding strategies.
+
+## Character Encoding
+
+For its entity declarations, ECHOE relies on [MUFI](https://mufi.info) recommendations. Insofar as these extend beyond the standard unicode character set into the Private Use Area, particularly in the realm of punctuation, nonnormalized transformations of the corpus should only be undertaken with MUFI-compliant typefaces such as [Junicode](https://github.com/psb1558/Junicode-font). In addition, we encode one letter-shape not currently in MUFI: _f_-shaped _y_ &lt;\yf&gt; as it occurs in the Vercelli Book, and more rarely in CCCC 41, Hatton 115, and Blickling. This letter-form has been available in Junicode 2 since June 2023, but only as an OpenType character variant (`cv50:3` if counting from 1). Accordingly, we have encoded it inline using `<g>`{.xml} from TEI's `gaiji` module and defined it in the TEI header using `<charDecl>`{.xml}. For it to be rendered mimicking its manuscript form, a stylesheet will have to refer it back to the appropriate stylistic variant (`font-feature-settings: 'cv50' 3`). For most purposes, it may be rendered simply &lt;y&gt; (i.e. `<g>`{.xml} may be rendered or transformed without further instructions).
 
 ## Abbreviation
 
@@ -314,6 +320,22 @@ Binomials within enumerations have only been tagged if they rhyme, alliterate or
 
 -   "*on mǣgenþrymme and on mīhte* and on godcundnysse" (394.24.3)
 -   "*ǣgðer ge on golde ge on seolfre* ge on fela ōðra dēorwurðra þinga" (38.36.105)
+
+# The `<standOff>` Node
+
+☞ Where metadata were available that we could not accommodate in either header or text body, we have anchored a `<standOff>`{.xml} at the end of the XML document. This context is home to the information here described.
+
+## Glosses and Alternate Readings
+
+We have followed TEI recommendations in linking up textual lemmata with their glosses and scribal alternates in an `<altGrp>`{.xml} node here, though for our own purposes we have found it easier to rely on text body markup as described under [Scribal Intervention] above. For alternate readings we have entered equal weights between the available readings, giving us the option to adjust these weights in future, while for glosses we have registered the full weight with the lemmata against their glosses.
+
+## Transpositions
+
+We have followed TEI recommendations in indicating the intended order of transposition segments in a `<listTranspose>`{.xml} node here, though for our own purposes we have found it easier to rely on text body markup as described under [Scribal Intervention] above.
+
+## Named Entities and Geolocations
+
+A file may have up to two `<listPlace`{.xml} nodes, differentiated by `@type="diegetic"` for places referenced in the text or `@type="origin"` for settlements identified in the header where it discusses the manuscript's origins and/or provenance. The latter type, and the former where possible, are accompanied by approximate latitude and longitude coordinates.
 
 # Consistency
 
@@ -574,18 +596,18 @@ Running titles				Encoded using `<fw>`{.xml} (forme work).
 Marginal content			Encoded using `<note>`{.xml} or `<add>`{.xml} as appropriate.
 ------------------------------------------------------------------------------------------
 
-: ECHOE in-text metadata
+: ECHOE in-text metadata {#tbl:metadata}
 
 Notably absent from ECHOE's transcription standard are the following palaeographical and codicological data:
 
 - Manuscript damage not interfering with readings (e.g. holes predating the text)
 - Scribal word spacing (e.g. the separation of prefixes; the affixation of &lt;⁊&gt;)
-- Letter-forms beyond the ones specified above
+- Letter-forms beyond the ones specified in @tbl:metadata
 - Scribal performances postdating c. 1200 (notably absent is the Tremulous hand of Worcester)
 
 # Annotated Indices of Body Elements and Universal Attributes
 
-The alphabetical list of TEI elements in @tbl:elements offers notes on transcription and encoding policy within the `<body>`{.xml} environment on a per-element basis. Excluded are the TEI header (for which see [above](#the-tei-header)) and the `<standOff>`{.xml} environment (which requires no explanation beyond the [TEI Guidelines](https://tei-c.org/guidelines/p5/)).
+The alphabetical list of TEI elements in @tbl:elements offers notes on transcription and encoding policy within the `<body>`{.xml} environment on a per-element basis. Excluded are the TEI header and the `<standOff>`{.xml} node, for which see [here](#the-tei-header) and [here](#the-standoff-node) above.
 
 --------------------------------------------------------------------------------
 Element					Usage in ECHOE

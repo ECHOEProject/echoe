@@ -1,10 +1,9 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -44,7 +43,7 @@
       <collection/>
       <idno type="ms">Auctarium F.4.32</idno>
       <idno type="siglum" xml:id="U">U</idno>
-      <msName>Auct. F.4.32</msName>
+      <msName>Auct F.4.32</msName>
      </msIdentifier>
      <msContents>
       <msItem n="b" defective="true">
@@ -64,9 +63,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1063" notAfter="1087">xi<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high">Glastonbury</provenance>
+	  <provenance cert="low" corresp="#Glastonbury">Glastonbury</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -111,4 +110,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="Glastonbury">
+    <placeName>Glastonbury</placeName>
+    <location><geo>51.1460616,-2.7178477</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

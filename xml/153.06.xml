@@ -1,17 +1,16 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY er "&#x035B;">		<!-- COMBINING ZIGZAG ABOVE -->
 <!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
-<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
 <!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -69,9 +68,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1113" notAfter="1137">s. xii<hi rend="superscript">1</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -165,8 +164,8 @@
       <expan>þ<ex>æt</ex></expan>
      </choice></w> <w>he</w> <w>lengc</w> <w>ne</w> <w notation="accentuated">mot</w> <w>rixian</w> <pc>·</pc> <w>&slongdes;ƿa</w>
     <lb n="22"/><w>þonne</w> <w>man</w> <w>mid</w> <w>ælme&slongdes;&slongdes;an</w> <w>ealle</w> <w>al&ydotacute;&slongdes;eð</w> <w>hi&slongdes;</w> <w>gẏl
-    <lb n="23"/>ta&slongdes;</w> <w>&et;</w> <w>hi&slongdes;</w> <w>&slongdes;ẏnna</w> <w>gehæleð</w> <pc>·</pc> </s><s xml:id="s153.6.9" n="x394.12.79"><w>þonne</w> <w>nolde&slongdes;t</w> <w>þu</w>
-    <lb n="24"/><w>ƿelega</w> <w>mine</w> <w>bebodu</w> <w>healdan</w> </s><s xml:id="s153.6.10" n="x394.12.80"><w>ac</w> <w>&slongdes;ceolde</w>
+    <lb n="23"/>ta&slongdes;</w> <w>&et;</w> <w>hi&slongdes;</w> <w>&slongdes;ẏnna</w> <w>gehæleð</w> <pc>·</pc> </s><s xml:id="s153.6.9" n="x394.12.79"><w>þonne</w> <w>nolde&slongdes;t</w> <seg ana="audAddress"><w>þu</w>
+    <lb n="24"/><w>ƿelega</w></seg> <w>mine</w> <w>bebodu</w> <w>healdan</w> </s><s xml:id="s153.6.10" n="x394.12.80"><w>ac</w> <w>&slongdes;ceolde</w>
    <pb n="28r"/>
     <lb n="1"/><w>&slongdes;e</w> <w>min</w> <w>þearfe</w> <w notation="accentuated">a&slongdes;ƿæman</w> <w>æt</w> <w>þinra</w> <w>handa</w> <pc>&colmidcomposit;</pc> </s><s xml:id="s153.6.11" n="x394.12.81"><w><hi rend="color(black-red)">H</hi>ƿi</w>
     <lb n="2"/><w>nolde&slongdes;t</w> <w>þu</w> <w>geþæncan</w> <w>hƿa</w> <w>hit</w> <w>þe</w> <w>&slongdes;ealde</w> </s><s xml:id="s153.6.12" n="x394.12.82"><w>þonne</w>
@@ -282,7 +281,7 @@
       <abbr>&thornbarslash;</abbr>
       <expan>þ<ex>æt</ex></expan>
      </choice></w> <w>ic</w> <w>eom</w> <w>&slongdes;e</w> <w>ilca</w> <w>god</w>
-    <lb n="9"/><w>þe</w> <w>þe</w> <w>ƿelegan</w> <w>&et;</w> <w>þe</w> <w>heanan</w> <w>geƿorhte</w> <w>minu<choice>
+    <lb n="9"/><w>þe</w> <seg ana="audAddress"><w>þe</w> <w>ƿelegan</w> <w>&et;</w> <w>þe</w> <w>heanan</w></seg> <w>geƿorhte</w> <w>minu<choice>
        <am>&combmacr;</am>
        <ex>m</ex>
      </choice></w> <w>handu<choice>
@@ -423,14 +422,14 @@
        <am>&er;</am>
        <ex>e</ex>
      </choice></w>
-    <lb n="23"/><w>þu</w> <w>ƿelega</w> <w>ne</w> <w>þu</w> <w>þinne</w> <w><choice>
+    <lb n="23"/><seg ana="audAddress"><w>þu</w> <w>ƿelega</w></seg> <w>ne</w> <w>þu</w> <w>þinne</w> <w><choice>
       <abbr>dri&hstrok;t</abbr>
       <expan>driht<ex>en</ex></expan>
      </choice></w> <w>ne</w> <w>lufode&slongdes;t</w> <w>ne</w>
-    <lb n="24"/><w>þu</w> <w>him</w> <w notation="accentuated">are</w> <w notation="accentuated">æt</w> <w>næf&slongdes;t</w> <pc>&punctelev;</pc> <w>ne</w> <w>þu</w> <w>&ydotacute;rmincg</w> <w>ne</w>
+    <lb n="24"/><w>þu</w> <w>him</w> <w notation="accentuated">are</w> <w notation="accentuated">æt</w> <w>næf&slongdes;t</w> <pc>&punctelev;</pc> <w>ne</w> <w>þu</w> <seg ana="audAddress"><w>&ydotacute;rmincg</w></seg> <w>ne</w>
    <pb n="29v"/>
     <lb n="1"/><w notation="accentuated">mo&slongdes;t</w> <w notation="accentuated">her</w> <w>on</w> <w>ƿorulde</w> <w>libban</w> <w>naht</w> <w>lange</w> <pc>&colmidcomposit;</pc> </s><s xml:id="s153.6.54" n="x394.12.123"><w><hi rend="color(black-red)">H</hi>ƿæt</w>
-    <lb n="2"/><w>ƿende&slongdes;t</w> <w>þu</w> <w notation="accentuated">ƿlanca</w> <w>gif</w> <w>þu</w> <w>me</w> <w>&slongdes;ealde&slongdes;t</w> <w>þine&slongdes;</w>
+    <lb n="2"/><w>ƿende&slongdes;t</w> <seg ana="audAddress"><w>þu</w> <w notation="accentuated">ƿlanca</w></seg> <w>gif</w> <w>þu</w> <w>me</w> <w>&slongdes;ealde&slongdes;t</w> <w>þine&slongdes;</w>
     <lb n="3"/><w>aƿiht</w> <pc>·</pc> <w><choice>
       <abbr>&thornbarslash;</abbr>
       <expan>þ<ex>æt</ex></expan>
@@ -457,7 +456,7 @@
       <abbr>&thornbarslash;</abbr>
       <expan>þ<ex>æt</ex></expan>
      </choice></w> <w notation="accentuated">þin</w> <w notation="accentuated">lif</w> <w>bið</w> <w notation="accentuated">ge
-    <lb n="8"/>endod</w> <w>þonne</w> <w>þu</w> <w>hi&slongdes;</w> <w>naht</w> <w>ne</w> <w notation="accentuated">ƿen&slongdes;t</w> <pc>&punctelev;</pc> </s><s xml:id="s153.6.58" n="x394.12.127"><w>&et;</w> <w>þu</w> <w>ƿelega</w>
+    <lb n="8"/>endod</w> <w>þonne</w> <w>þu</w> <w>hi&slongdes;</w> <w>naht</w> <w>ne</w> <w notation="accentuated">ƿen&slongdes;t</w> <pc>&punctelev;</pc> </s><s xml:id="s153.6.58" n="x394.12.127"><w>&et;</w> <seg ana="audAddress"><w>þu</w> <w>ƿelega</w></seg>
     <lb n="9"/><w>to</w> <w>hƿon</w> <w>truƿode&slongdes;t</w> <w>þu</w> <w>on</w> <w>þinne</w> <w>ƿelan</w> <w>&et;</w> <w>on</w> <w>þa</w>
     <lb n="10"/><w notation="accentuated">oferfloƿne&slongdes;&slongdes;a</w> <w notation="accentuated">þinra</w> <w notation="accentuated">goda</w> <pc>·</pc> <w>&et;</w> <w notation="accentuated">na</w> <w>on</w> <w>me</w> <w>þe</w> <w>hit</w>
     <lb n="11"/><w>þe</w> <w>eal</w> <w>forgeaf</w> <w><choice>
@@ -470,8 +469,8 @@
     <lb n="12"/><persName key="Jesus"><w>cri&slongdes;t</w></persName> <w>cƿæð</w> <w>to</w> <w>þa<choice>
        <am>&combmacr;</am>
        <ex>m</ex>
-     </choice></w> <w>ƿelegan</w> <w>men</w> <pc>&colmidcomposit;</pc> </s><s xml:id="s153.6.60" n="x394.12.129"><w><hi rend="color(black-red)">E</hi>ala</w> <seg ana="binomial"><w>þu</w> <w>dẏ&slongdes;iga</w>
-    <lb n="13"/><w>&et;</w> <w>þu</w> <w notation="accentuated">gedƿola</w></seg> <w>to</w> <w notation="accentuated">hƿan</w> <w>getrẏƿde&slongdes;t</w> <w>þu</w> <w>on</w> <w>þine</w>
+     </choice></w> <w>ƿelegan</w> <w>men</w> <pc>&colmidcomposit;</pc> </s><s xml:id="s153.6.60" n="x394.12.129"><w><hi rend="color(black-red)">E</hi>ala</w> <seg ana="audAddress"><seg ana="binomial"><w>þu</w> <w>dẏ&slongdes;iga</w>
+    <lb n="13"/><w>&et;</w> <w>þu</w> <w notation="accentuated">gedƿola</w></seg></seg> <w>to</w> <w notation="accentuated">hƿan</w> <w>getrẏƿde&slongdes;t</w> <w>þu</w> <w>on</w> <w>þine</w>
     <lb n="14"/><w notation="accentuated">&slongdes;peda</w> <w>&et;</w> <w>on</w> <w>þine</w> <w>æhta</w> </s><s xml:id="s153.6.61" n="x394.12.130"><w notation="accentuated">þin</w> <w>&slongdes;aƿl</w> <w>bið</w> <w>afẏrred</w> <w>fra<choice>
        <am>&combmacr;</am>
        <ex>m</ex>

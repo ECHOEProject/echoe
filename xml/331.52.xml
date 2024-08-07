@@ -1,20 +1,19 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY er "&#x035B;">		<!-- COMBINING ZIGZAG ABOVE -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
 <!ENTITY Lhighstrok "&#xA748;">		<!-- LATIN CAPITAL LETTER L WITH HIGH STROKE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY er "&#x035B;">		<!-- COMBINING ZIGZAG ABOVE -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
-<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
 <!ENTITY cross "&#x271D;">		<!-- LATIN CROSS -->
+<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -74,9 +73,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1051" notAfter="1075">s. xi (3rd quarter)</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Worcester">Worcester</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+       <provenance cert="low">unknown</provenance>
      </history>
      <msPart>
       <msIdentifier>
@@ -520,13 +519,19 @@
   <altGrp>
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
    <place xml:id="Vienne">
     <placeName>Vienne</placeName>
     <location><geo>45.5220501,4.8023096</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Worcester">
+    <placeName>Worcester</placeName>
+    <location><geo>52.188895,-2.2232631</geo></location>
    </place>
   </listPlace>
  </standOff>

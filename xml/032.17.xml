@@ -1,16 +1,15 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
-<!ENTITY rum "&#xA75D;">		<!-- LATIN SMALL LETTER RUM ROTUNDA -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY punctposit "&#xF1E4;"> <!-- PUNCTUS WITH COMMA POSITURA -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY rum "&#xA75D;">		<!-- LATIN SMALL LETTER RUM ROTUNDA -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
-<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
+<!ENTITY punctposit "&#xF1E4;"> <!-- PUNCTUS WITH COMMA POSITURA -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -70,9 +69,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1013" notAfter="1062">xi<hi rend="superscript">1</hi>–xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="high" corresp="#Exeter">Exeter</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -924,10 +923,16 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Tralles">
     <placeName>Tralles</placeName>
     <location><geo>37.8604611,27.8323109</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Exeter">
+    <placeName>Exeter</placeName>
+    <location><geo>50.7225144,-3.5324881</geo></location>
    </place>
   </listPlace>
  </standOff>

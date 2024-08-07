@@ -1,21 +1,20 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
-<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
 <!ENTITY Lhighstrok "&#xA748;">		<!-- LATIN CAPITAL LETTER L WITH HIGH STROKE -->
-<!ENTITY rrot "&#xA75B;">		<!-- LATIN SMALL LETTER R ROTUNDA -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY bstrok "&#x0180;">		<!-- LATIN SMALL LETTER B WITH STROKE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY rrot "&#xA75B;">		<!-- LATIN SMALL LETTER R ROTUNDA -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
 <!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
+<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -73,9 +72,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1013" notAfter="1062">s. xi<hi rend="superscript">1</hi>–xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="high" corresp="#Exeter">Exeter</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -771,8 +770,8 @@
     <lb n="6"/>&slongdes;tal</w> <w>g<choice>
        <am>&combmacr;</am>
        <ex>e</ex>
-     </choice>hireð</w> <w>&et;</w> <w>eal</w> <w>engla</w>
-    <lb n="7"/><w>ƿerod</w> <w>&et;</w> <w>heahengla&slongdes;</w> <w>beoð</w>
+     </choice>hireð</w> <w>&et;</w> <w>eal</w> <seg ana="binomial"><w>engla</w>
+    <lb n="7"/><w>ƿerod</w> <w>&et;</w> <w>heahengla&slongdes;</w></seg> <w>beoð</w>
     <lb n="8"/><w>þẏ</w> <w>gemete</w> <w>beforan</w> <w>gode</w> <pc>·</pc>
     <lb n="9"/><w><choice>
       <abbr>&thornbarslash;</abbr>
@@ -1530,8 +1529,8 @@
     <lb n="4"/><w>ga&slongdes;t</w> <w>f<add type="augm" place="above" hand="#DP0283">r</add>om</w> <w>gode</w> <w>on</w> <w>þe</w>
     <lb n="5"/><w>&slongdes;ended</w> <w>&et;</w> <w>þu</w> <w>ƿære</w> <w>eorþan</w>
     <lb n="6"/><w>lam</w> </s><s xml:id="s32.9.135" n="x394.4.136"><w>ƿa</w> <w>ðe</w> <w>a</w> <w>in</w> <w>ecnes
-    <lb n="7"/>&slongdes;e</w> <pc>·</pc> </s><s xml:id="s32.9.136" n="x394.4.137"><w>forhƿon</w> <seg ana="binomial"><w>&slongdes;ƿenctes<supplied reason="trimming" evidence="internal external">t</supplied></w>
-    <lb n="8"/><w>þu</w> <w>me</w> <w>&et;</w> <w>ƿlencte&slongdes;t</w> <w>þe</w></seg>
+    <lb n="7"/>&slongdes;e</w> <pc>·</pc> </s><s xml:id="s32.9.136" n="x394.4.137"><w>forhƿon</w> <w>&slongdes;ƿenctes<supplied reason="trimming" evidence="internal external">t</supplied></w>
+    <lb n="8"/><w>þu</w> <w>me</w> <w>&et;</w> <w>ƿlencte&slongdes;t</w> <w>þe</w>
     <lb n="9"/><w>on</w> <w>þære</w> <w>&slongdes;ceortan</w>
     <lb n="10"/><w>ƿorulde</w> </s><s xml:id="s32.9.137" n="x394.4.138"><w>ƿa</w> <w>me</w> <w><choice>
       <abbr>&thornbarslash;</abbr>
@@ -2281,4 +2280,12 @@
    </ab> 
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="Exeter">
+    <placeName>Exeter</placeName>
+    <location><geo>50.7225144,-3.5324881</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

@@ -1,11 +1,10 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -64,9 +63,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="0844" notAfter="0867">844x867</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low" corresp="#Northumbria">Northumbria</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -119,4 +118,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="Northumbria">
+    <placeName>Northumbria</placeName>
+    <location><geo>54.8598544,-1.5916359</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

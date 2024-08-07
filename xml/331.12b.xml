@@ -1,12 +1,11 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -68,9 +67,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1051" notAfter="1075">s. xi (3rd quarter)</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Worcester">Worcester</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -234,10 +233,16 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Jerusalem">
     <placeName>Jerusalem</placeName>
     <location><geo>31.776667,35.234167</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Worcester">
+    <placeName>Worcester</placeName>
+    <location><geo>52.188895,-2.2232631</geo></location>
    </place>
   </listPlace>
  </standOff>

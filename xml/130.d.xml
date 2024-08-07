@@ -1,11 +1,10 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -56,16 +55,16 @@
      </msContents>
      <physDesc>
       <handDesc>
-       <handNote xml:id="DP548" scribe="Wulfstan" corresp="http://www.digipal.eu/digipal/hands/548/descriptions/" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=11858"><p>
+       <handNote xml:id="DP548" scribe="Wulfstan" corresp="http://www.digipal.eu/digipal/hands/548/descriptions/"><p>
         The (drafting?) hand of Archbishop Wulfstan of York (d. 1023), perhaps during his early years as archbishop of York 1002–1005 AD. Forward-sloping ductus; long ascenders; curving upstroke of d; prefers þ in initial position and almost exclusively long ſ, probably to avoid confusion with the hybrid r. Annotations also by Wulfstan.</p></handNote>
       </handDesc>
      </physDesc>
      <history>
 	  <origin>
 	   <origDate notBefore="1002" notAfter="1005">1002x1005</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low" corresp="#York">York?</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -213,4 +212,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="York">
+    <placeName>York</placeName>
+    <location><geo>53.9623291,-1.0867968</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

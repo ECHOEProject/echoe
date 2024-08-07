@@ -1,16 +1,15 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
-<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
+<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
 <!ENTITY macr "&#x00AF;">		<!-- MACRON -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -71,9 +70,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1063" notAfter="1087">s. xi<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Exeter">Exeter</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -367,10 +366,16 @@
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
    <alt target="#alt2a #alt2b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Exeter">
+    <placeName>Exeter</placeName>
+    <location><geo>50.7225144,-3.5324881</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

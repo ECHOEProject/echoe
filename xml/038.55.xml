@@ -1,11 +1,10 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY Rtailstrok "&#x211E;">		<!-- PRESCRIPTION TAKE -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY Rtailstrok "&#x211E;">		<!-- PRESCRIPTION TAKE -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -62,9 +61,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="0996" notAfter="1020">s. xi in.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -134,4 +133,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

@@ -1,18 +1,17 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY dstrok "&#x0111;">		<!-- LATIN SMALL LETTER D WITH STROKE -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY erang "&#xF1C7;">		<!-- COMBINING ABBREVIATION MARK ZIGZAG ABOVE ANGLE FORM -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
+<!ENTITY dstrok "&#x0111;">		<!-- LATIN SMALL LETTER D WITH STROKE -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
 <!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
-<!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<!ENTITY erang "&#xF1C7;">		<!-- COMBINING ABBREVIATION MARK ZIGZAG ABOVE ANGLE FORM -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->]>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -69,9 +68,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1113" notAfter="1137">s. xii<hi rend="superscript">1</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Rochester">Rochester</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -1659,7 +1658,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Antioch">
     <placeName>Antioch in Pisidia (in <emph>Margaret</emph>)</placeName>
     <location><geo>36.7860617,18.1661046</geo></location>
@@ -1677,6 +1676,12 @@
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Rochester">
+    <placeName>Rochester</placeName>
+    <location><geo>51.3889909,0.5008173</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

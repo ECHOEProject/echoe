@@ -1,14 +1,13 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY bstrok "&#x0180;">		<!-- LATIN SMALL LETTER B WITH STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY bstrok "&#x0180;">		<!-- LATIN SMALL LETTER B WITH STROKE -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -67,9 +66,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1038" notAfter="1062">xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Kent">Kent</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low" corresp="#Rochester">Rochester</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -169,7 +168,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Kent">
     <placeName>Kent</placeName>
     <location><geo>51.279797,1.082800</geo></location>
@@ -177,6 +176,16 @@
    <place xml:id="York">
     <placeName>York</placeName>
     <location><geo>53.9585894,-1.1218766</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Kent">
+    <placeName>Kent</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
+   <place xml:id="Rochester">
+    <placeName>Rochester</placeName>
+    <location><geo>51.3889909,0.5008173</geo></location>
    </place>
   </listPlace>
  </standOff>

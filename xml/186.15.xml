@@ -1,15 +1,14 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY macr "&#x00AF;">		<!-- MACRON -->
+<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -71,9 +70,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1038" notAfter="1062">s. xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -907,7 +906,7 @@
   <altGrp>
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Antioch">
     <placeName>Antioch in Pisidia (in <emph>Margaret</emph>)</placeName>
     <location><geo>36.7860617,18.1661046</geo></location>
@@ -923,6 +922,12 @@
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

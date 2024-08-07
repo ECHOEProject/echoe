@@ -6,8 +6,7 @@
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY ET "&#xF142;">		<!-- LATIN ABBREVIATION SIGN CAPITAL ET -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -66,9 +65,9 @@
       <history>
       <origin>
        <origDate notBefore="0963" notAfter="0987">s. x<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Kent">Kent</origPlace>
       </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
      </history>
     </msDesc>
     <bibl>
@@ -697,4 +696,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="Kent">
+    <placeName>Kent</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

@@ -1,13 +1,12 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY punctinter "&#xF160;">		<!-- PUNCTUS INTERROGATIVUS -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -45,9 +44,9 @@
       <settlement>Cambridge</settlement>
       <repository>Corpus Christi College</repository>
       <collection/>
-      <idno type="ms">201</idno>
-      <idno type="siglum" xml:id="Xd">Xᵈ</idno>
-      <msName>CCCC 201/B</msName>
+      <idno type="ms">201, pp. 179–272</idno>
+      <idno type="siglum" xml:id="R">R</idno>
+      <msName>CCCC 201 179ff.</msName>
      </msIdentifier>
      <msContents>
       <msItem n="2" defective="false">
@@ -64,9 +63,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1050" notAfter="1072">1050x1072</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low" corresp="#Winchester">Winchester (New Minster)</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -275,7 +274,7 @@
     <lb n="12"/>ſe</w> <w>beon</w> <pc>·</pc> <w>ac</w> <w>ſẏmble</w> <w>urne</w> <w>deaðe&slongdes;</w> <w>dæg</w>
     <lb n="13"/><w>beforan</w> <w>ure&slongdes;</w> <w>lichoman</w> <w>eagum</w> <w>ſet
     <lb n="14"/>tan</w> <pc>·</pc> </s><s xml:id="s50.2.37"><w>forþan</w> <w>þi&slongdes;re</w> <w>ƿeorolde</w> <w>ƿuldor</w>
-    <lb n="15"/><w>i&slongdes;</w> <w>ſcort</w> <pc>·</pc> <w>&et;</w> <seg ana="enumeration"><seg ana="binomial"><w>feallende</w> <pc>·</pc> <w>&et;</w> <w>fleonde</w></seg> <pc>·</pc> <w>&et;</w> <w>ear
+    <lb n="15"/><w>i&slongdes;</w> <seg ana="enumeration"><w>ſcort</w> <pc>·</pc> <w>&et;</w> <seg ana="enumeration"><seg ana="binomial"><w>feallende</w> <pc>·</pc> <w>&et;</w> <w>fleonde</w></seg></seg> <pc>·</pc> <w>&et;</w> <w>ear
     <lb n="16"/>me</w></seg> <w>ſẏnt</w> <w>þi&slongdes;e&slongdes;</w> <w>middanearde&slongdes;</w> <w>geſtre
     <lb n="17"/>on</w> <pc>·</pc> </s><s xml:id="s50.2.38"><w>Hƿær</w> <w>ſẏnt</w> <w>þa</w> <w>cẏninga&slongdes;</w> <w>þe</w> <w notation="accentuated">geo</w>
     <lb n="18"/><w>ƿæron</w> <pc>·</pc> <w>&et;</w> <w>þa</w> <w>ƿelegan</w> <w>þiſſe</w> <w>ƿeorolde</w> <pc>&punctinter;</pc>
@@ -531,5 +530,11 @@
   <altGrp>
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
+  <listPlace type="origin">
+   <place xml:id="Winchester">
+    <placeName>Winchester</placeName>
+    <location><geo>51.0598406,-1.3132115</geo></location>
+   </place>
+  </listPlace>
  </standOff>
 </TEI>

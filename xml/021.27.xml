@@ -1,19 +1,18 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY er "&#x035B;">		<!-- COMBINING ZIGZAG ABOVE -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
 <!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY er "&#x035B;">		<!-- COMBINING ZIGZAG ABOVE -->
 <!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -56,7 +55,7 @@
       <collection/>
       <idno type="ms">Ii. 4. 6</idno>
       <idno type="siglum" xml:id="Xb">Xᵇ</idno>
-      <msName>CUL Ii. 4. 6</msName>
+      <msName>CUL Ii.4.6</msName>
      </msIdentifier>
      <msContents>
       <msItem n="27" defective="false">
@@ -76,9 +75,9 @@
         <history>
             <origin>
                 <origDate notBefore="1038" notAfter="1062">s. xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Winchester">Winchester (New Minster)</origPlace>
             </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
         </history>
      <msPart>
       <msIdentifier>
@@ -1214,4 +1213,18 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="diegetic">
+   <place xml:id="Winchester">
+    <placeName>Winchester</placeName>
+    <location><geo>51.0598406,-1.3132115</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Winchester">
+    <placeName>Winchester</placeName>
+    <location><geo>51.0598406,-1.3132115</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>

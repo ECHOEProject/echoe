@@ -4,8 +4,7 @@
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="eng">
   <fileDesc>
@@ -60,9 +59,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1038" notAfter="1062">xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low" corresp="#Worcester">Worcester</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -126,7 +125,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="EphraimGate">
     <placeName>The Gate of Ephraim (Jerusalem)</placeName>
     <location><geo>31.781601,35.229575</geo></location>
@@ -134,6 +133,12 @@
    <place xml:id="Jerusalem">
     <placeName>Jerusalem</placeName>
     <location><geo>31.776667,35.234167</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Worcester">
+    <placeName>Worcester</placeName>
+    <location><geo>52.188895,-2.2232631</geo></location>
    </place>
   </listPlace>
  </standOff>

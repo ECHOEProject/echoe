@@ -2,15 +2,14 @@
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
 <!ENTITY THORNbarslash "&#xE337;">		<!-- LATIN CAPITAL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY rrot "&#xA75B;">		<!-- LATIN SMALL LETTER R ROTUNDA -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY rrot "&#xA75B;">		<!-- LATIN SMALL LETTER R ROTUNDA -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -73,9 +72,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="0996" notAfter="1020">s. xi in.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Kent">Kent</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low" corresp="#Rochester">Rochester</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -751,7 +750,7 @@
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
    <alt target="#alt2a #alt2b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Bethlehem">
     <placeName>Bethlehem</placeName>
     <location><geo>31.712291,35.202123</geo></location>
@@ -771,6 +770,16 @@
    <place xml:id="Syria">
     <placeName>Syria</placeName>
     <location><geo>36.2209997,36.087605</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Kent">
+    <placeName>Kent</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
+   <place xml:id="Rochester">
+    <placeName>Rochester</placeName>
+    <location><geo>51.3889909,0.5008173</geo></location>
    </place>
   </listPlace>
  </standOff>

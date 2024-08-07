@@ -1,16 +1,15 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
 <!ENTITY Lhighstrok "&#xA748;">		<!-- LATIN CAPITAL LETTER L WITH HIGH STROKE -->
+<!ENTITY tridotright "&#x10FB;">		<!-- PUNCTUATION MARK RIGHT-POINTING TRIANGULAR DOTS -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
 <!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
-<!ENTITY tridotright "&#x10FB;">		<!-- PUNCTUATION MARK RIGHT-POINTING TRIANGULAR DOTS -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -66,16 +65,16 @@
      <physDesc>
       <p>There are also a number of additions and emendations by the Tremulous Hand of Worcester.</p>
        <handDesc>
-       <handNote xml:id="DP1037" scribe="Eadric" corresp="https://www.digipal.eu/digipal/hands/1037/descriptions/"><p>Ker's scribe 'P'. The scribe Eadric. A round Anglo-Saxon miniscule. Quite upright in character. The top of flat-topped g is quite short compared to the width of the descending loop. Tongue of e short and clubby, e is horned in a similarly 'clubby' manner. Miniscule eth of unsual form, with tall, swooping ascender, and curly cross-stroke that extends only to the right. Bellies of thorn and wynn bottom-heavy, round and p-like. Some forking and flagging to the tops of ascenders, while descenders of thorn, f, r, long s tend to have a flick to the left.  </p></handNote>
+       <handNote xml:id="DP1037" scribe="Eadric" corresp="https://www.digipal.eu/digipal/hands/1037/descriptions/"><p>Ker's scribe 'P'. The scribe Eadric. A round Anglo-Saxon miniscule. Quite upright in character. The top of flat-topped g is quite short compared to the width of the descending loop. Tongue of e short and clubby, e is horned in a similarly 'clubby' manner. Heads of ƿ and p open on top, sometimes e too. Miniscule eth of unsual form, with tall, swooping ascender, and curly cross-stroke that extends only to the right. Bellies of thorn and wynn bottom-heavy, round and p-like. Some forking and flagging to the tops of ascenders, while descenders of thorn, f, r, long s tend to have a flick to the left.  </p></handNote>
        <handNote xml:id="EC1036a"><p>An addending hand generally using a somewhat more finely-cut pen. The hand is marked by its tendency to leave a small gap at the top of e and fondness for an upwardly-curling long tongue on e. This hand sometimes adds interlinear Latin glosses or 'vel'-alternatives in other homilies. The same hand can be seen in other places in Hatton 113 and Hatton 114, generally inserting words either by extending the descender of a letter downward to mark the intended insertion area, or using a double-punctus marking. This is the same hand as that identified by ECHOE handID DP1032a.</p></handNote>
       </handDesc>
      </physDesc>
      <history>
 	  <origin>
 	   <origDate notBefore="1051" notAfter="1075">s. xi (3rd quarter)</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Worcester">Worcester</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+       <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -871,10 +870,16 @@
   <altGrp>
    <alt target="#alt1a #alt1b" mode="excl" weights="0.5 0.5"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Jerusalem">
     <placeName>Jerusalem</placeName>
     <location><geo>31.776667,35.234167</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Worcester">
+    <placeName>Worcester</placeName>
+    <location><geo>52.188895,-2.2232631</geo></location>
    </place>
   </listPlace>
  </standOff>

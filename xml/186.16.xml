@@ -1,16 +1,15 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
-<!ENTITY lstrok "&#x0142;">		<!-- LATIN SMALL LETTER L WITH STROKE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
+<!ENTITY lstrok "&#x0142;">		<!-- LATIN SMALL LETTER L WITH STROKE -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -72,9 +71,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1038" notAfter="1062">s. xi med.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -400,7 +399,7 @@
     <lb n="17"/><w>ealdorman</w> <w><choice>
       <abbr>&thornbarslash;</abbr>
       <expan>þ<ex>æt</ex></expan>
-     </choice></w> <w>þa</w> <name type="demonym" key="Jewish"><w>iudeaſ</w></name> <w>hefdan</w> <w>micelne</w> <w>&et;</w> <w>adan</w> <w>&et;</w> <w>graman</w> <pc>·</pc> <w>on
+     </choice></w> <w>þa</w> <name type="demonym" key="Jewish"><w>iudeaſ</w></name> <w>hefdan</w> <w>micelne</w> <w>&et;</w> <seg ana="binomial"><w>adan</w> <w>&et;</w> <w>graman</w></seg> <pc>·</pc> <w>on
     <lb n="18"/>gean</w> <w>þone</w> <w>hælend</w> <pc>·</pc> <w>f<subst><del rend="lettermod" hand="#DP0680">r</del><add type="subst" place="lettermod" hand="#DP0680">o</add></subst>r</w> <w>þam</w> <w>miclum</w> <w>ƿundrum</w> <pc>·</pc> <w>þẏ</w> <w>he</w> <w>dægh<supplied reason="omitted" evidence="internal">ƿ</supplied>amlice</w>
     <lb n="19"/><w>ƿorhte</w> <pc>·</pc> </s><s xml:id="s186.16.126"><quote source="io18.29"><w>þa</w> <w>cƿæþ</w> <persName key="Pilate"><w>pilatuſ</w></persName> <w>to</w> <w>þam</w> <name type="demonym" key="Jewish"><w>iudeum</w></name> <w>hƿæt</w> <w>ƿitaþ</w> <w>ge</w> <w>þi&slongdes;um</w> <w>men</w> <pc>·</pc>
     <lb n="20"/></quote></s><s xml:id="s186.16.127"><w>Ac</w> <w>ſe</w> <w>hælend</w> <w>nolde</w> <w>hine</w> <w>betellan</w> <w>mid</w> <w>nanre</w> <w>ſoþ&slongdes;egene</w> <w>þeah</w> <w>þẏ</w>
@@ -763,7 +762,7 @@
     <ptr target="#trans1a"/>
    </transpose>
   </listTranspose>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Galilee">
     <placeName>Galilee</placeName>
     <location><geo>32.760000,35.527000</geo></location>
@@ -778,6 +777,12 @@
    <place xml:id="heavenlyJerusalem">
     <placeName>Heavenly Jerusalem</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

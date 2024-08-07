@@ -1,21 +1,20 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
 <!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
-<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY etfin "&#xA76B;">		<!-- LATIN SMALL LETTER ET -->
 <!ENTITY bstrok "&#x0180;">		<!-- LATIN SMALL LETTER B WITH STROKE -->
+<!ENTITY ra "&#x1DD3;">		<!-- COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY etfin "&#xA76B;">		<!-- LATIN SMALL LETTER ET -->
 <!ENTITY pflour "&#xA753;">		<!-- LATIN SMALL LETTER P WITH FLOURISH -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
-<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
 <!ENTITY cross "&#x271D;">		<!-- LATIN CROSS -->
+<!ENTITY ydotacute "&#xE784;">		<!-- LATIN SMALL LETTER Y WITH DOT ABOVE AND ACUTE -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -73,9 +72,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="1063" notAfter="1087">s. xi<hi rend="superscript">2</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low">unknown</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -301,7 +300,7 @@
       <expan>þ<ex>æt</ex></expan>
      </choice></w> <w>hi</w> <w>mihton</w> <w>gemunan</w>
     <lb n="22"/><w>&et;</w> <w>eall</w> <w>aſecgan</w> <w>þa</w> <w>ƿundru</w> <w>þi&slongdes;e&slongdes;</w> <w>eadigan</w> <w>ƿereſ</w> <pc>·</pc> </s><s xml:id="s344.5.21"><w notation="accentuated">ƿæron</w>
-    <lb n="23"/><w>hi</w> <w>&slongdes;ƿiðe</w> <w notation="accentuated">ƿide</w> <w>cuðe</w> <w>&et;</w> <w notation="accentuated">mære</w> <w>geond</w> <placeName key="#England"><name type="demonym" key="English"><w>angelcẏnne&slongdes;</w></name> <w>land</w></placeName> <pc>·</pc>
+    <lb n="23"/><w>hi</w> <w>&slongdes;ƿiðe</w> <w notation="accentuated">ƿide</w> <seg ana="binomial"><w>cuðe</w> <w>&et;</w> <w notation="accentuated">mære</w></seg> <w>geond</w> <placeName key="#England"><name type="demonym" key="English"><w>angelcẏnne&slongdes;</w></name> <w>land</w></placeName> <pc>·</pc>
     <lb n="24"/></s><s xml:id="s344.5.22"><w>Ic</w> <w>forþon</w> <w>þinum</w> <w>bebodu<choice>
        <am>&combmacr;</am>
        <ex>m</ex>
@@ -3393,7 +3392,7 @@
      </choice></w> <w>ƿundru<choice>
        <am>&combmacr;</am>
        <ex>m</ex>
-     </choice></w> <w>ſcean</w> <w>&et;</w> <w>berhte</w> <pc>·</pc> </s><s xml:id="s344.5.440"><w>Mid</w> <w>þẏ</w>
+     </choice></w> <seg ana="binomial"><w>ſcean</w> <w>&et;</w> <w>berhte</w></seg> <pc>·</pc> </s><s xml:id="s344.5.440"><w>Mid</w> <w>þẏ</w>
     <lb n="8"/><w>he</w> <w>þa</w> <w>ƿæſ</w> <num n="12"><w>tƿelf</w></num> <w>monað</w> <w>bebẏrged</w> <w>æft<choice>
        <am>&combmacr;</am>
        <ex>er</ex>
@@ -3621,7 +3620,7 @@
   <altGrp>
    <alt target="#gloss1a #gloss1b" mode="excl" weights="1 0"/>
   </altGrp>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Britain">
     <placeName>Britain</placeName>
     <location><geo>53.3956149,-1.6555078</geo></location>

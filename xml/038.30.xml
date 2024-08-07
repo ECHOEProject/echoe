@@ -1,19 +1,18 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
-<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
 <!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
+<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
 <!ENTITY usmod "&#xA770;">		<!-- MODIFIER LETTER US -->
 <!ENTITY cross "&#x271D;">		<!-- LATIN CROSS -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -72,9 +71,9 @@
      <history>
 	  <origin>
 	   <origDate notBefore="0996" notAfter="1020">s. xi in.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -1422,7 +1421,7 @@
       <expan>þ<ex>æt</ex></expan>
      </choice></w> <w>man</w> <w>þæra</w>
     <lb n="21"/><w>ricra</w> <w>manna</w> <w>lichaman</w> <w>mid</w> <w>deorƿurðum</w> <w>ƿyrtum</w>
-    <lb n="22"/><w>&slongdes;myredon</w> <w>þy</w> <w>læ&slongdes;</w> <w>hi</w> <seg ana="binomial"><w>bro&slongdes;nudon</w> <w>oððe</w> <w>ſtincan</w></seg> <w>&slongdes;ceoldon</w> <pc>&punctvers;</pc>
+    <lb n="22"/><w>&slongdes;myredon</w> <w>þy</w> <w>læ&slongdes;</w> <w>hi</w> <w>bro&slongdes;nudon</w> <w>oððe</w> <w>ſtincan</w> <w>&slongdes;ceoldon</w> <pc>&punctvers;</pc>
     <lb n="23"/></s><s xml:id="s38.30.184" n="x48.25.184"><quote source="io19.41"><w>þær</w> <w>ƿæ&slongdes;</w> <w>þa</w> <add type="augm" place="above" hand="uncertain"><w>bynna<del rend="erasure" hand="uncertain">n</del><add type="augm" place="above" hand="uncertain">n</add></w></add> <w>&slongdes;um</w> <w>ƿyrtune</w> <w>&slongdes;um</w> <w>niƿe</w> <w>byrgen</w> <w>of</w> <w>þam</w>
    <pb n="365" facs="https://dms-data.stanford.edu/data/manifests/Parker/ft757ht3699/manifest.json 383"/>
     <lb n="1"/><w>ſtane</w> <w>geƿorht</w> <pc>·</pc> <w>on</w> <w>ðære</w> <w>næ&slongdes;</w> <w>ær</w> <w>nænige&slongdes;</w> <w>manne&slongdes;</w> <w>lic
@@ -1459,7 +1458,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Arimathea">
     <placeName>Arimathea</placeName>
     <location><geo>32.028056,35.019444</geo></location>
@@ -1483,6 +1482,12 @@
    <place xml:id="Kidron">
     <placeName>Kidron (river)</placeName>
     <location><geo>31.780278,35.240000</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
    </place>
   </listPlace>
  </standOff>

@@ -1,18 +1,17 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
+<!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
+<!ENTITY tridotright "&#x10FB;">		<!-- PUNCTUATION MARK RIGHT-POINTING TRIANGULAR DOTS -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY pbardes "&#xA751;">		<!-- LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER -->
 <!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
-<!ENTITY amp "&#x0026;">		<!-- AMPERSAND -->
-<!ENTITY colmidcomposit "&#xF1E5;">		<!-- COLON WITH MIDDLE COMMA POSITURA -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
-<!ENTITY tridotright "&#x10FB;">		<!-- PUNCTUATION MARK RIGHT-POINTING TRIANGULAR DOTS -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -74,9 +73,9 @@
      <history>
 	  <origin>
 		  <origDate notBefore="1013" notAfter="1037">s. xi<hi rend="superscript">1</hi></origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low" corresp="#Canterbury">Canterbury</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -272,9 +271,9 @@
     <lb n="19"/><w><choice>
       <abbr>&thornbarslash;</abbr>
       <expan>þ<ex>æt</ex></expan>
-     </choice></w> <w>þone</w> <w>aƿergedan</w> <w>ga&slongdes;t</w> <w>ge
+     </choice></w> <w>þone</w> <w>aƿergedan</w> <w>ga&slongdes;t</w> <seg ana="binomial"><w>ge
    <pb n="177" facs="https://dms-data.stanford.edu/data/manifests/Parker/pz542dy6146/manifest.json 187"/>
-    <lb n="1"/>fleman</w> <pc>·</pc> <w>&et;</w> <w>gehẏnan</w> <w>þurh</w> <w>þa</w>
+    <lb n="1"/>fleman</w> <pc>·</pc> <w>&et;</w> <w>gehẏnan</w></seg> <w>þurh</w> <w>þa</w>
     <lb n="2"/><w>hean</w> <w>mihte</w> <w>ure&slongdes;</w> <w>drihtne&slongdes;</w> <pc>·</pc>
     <lb n="3"/></s><s xml:id="s69.9.25" n="x394.12.30"><w>forðam</w> <w>ƿe</w> <w>ſcẏlon</w> <w>beon</w> <seg ana="binomial"><w>ẏmb
     <lb n="4"/>hẏdige</w> <pc>·</pc> <w>&et;</w> <w>gemẏndige</w></seg> <pc>·</pc> <w>&slongdes;aƿle</w>
@@ -531,9 +530,9 @@
     <lb n="8"/>dan</w> <pc>·</pc> <w>&et;</w> <w>rummode</w> <w>beon</w>
     <lb n="9"/><w>rihtra</w> <w>ge&slongdes;treona</w> <pc>·</pc> <w>&et;</w> <w>þear
     <lb n="10"/>fendum</w> <w>mannum</w> <w>arfulle</w> <pc>·</pc>
-    <lb n="11"/><w>&et;</w> <w>ƿudeƿena</w> <w>helpend</w> <pc>·</pc> <w>and</w>
+    <lb n="11"/><w>&et;</w> <seg ana="enumeration"><w>ƿudeƿena</w> <w>helpend</w> <pc>·</pc> <w>and</w>
     <lb n="12"/><w>&slongdes;teopcilda</w> <w>arigend</w> <pc>·</pc> <w>&et;</w> <w>earmra</w>
-    <lb n="13"/><w>retend</w> <pc>·</pc> <w>&et;</w> <w>ƿependra</w> <w>frefriend</w> <pc>·</pc>
+    <lb n="13"/><w>retend</w> <pc>·</pc> <w>&et;</w> <w>ƿependra</w> <w>frefriend</w></seg> <pc>·</pc>
     <lb n="14"/></s><s xml:id="s69.9.66" n="x394.12.70"><w>gif</w> <w>ƿe</w> <w>þa&slongdes;</w> <w>ƿeorc</w> <seg ana="enumeration"><w>onginnað</w>
     <lb n="15"/><w>&et;</w> <w>gelæ&slongdes;tað</w> <pc>·</pc> <w>&et;</w> <w>gehealdað</w></seg> <pc>·</pc>
     <lb n="16"/><w>þonne</w> <w>beo</w> <w>ƿe</w> <w>gode&slongdes;</w> <w>dyr
@@ -596,10 +595,10 @@
       <abbr>Ðo<am>&combmacr;</am>n</abbr>
       <expan>Ðon<ex>ne</ex></expan>
      </choice></w>
-    <lb n="18"/><w>nolde&slongdes;t</w> <w>þu</w> <w>ƿelig<subst>
+    <lb n="18"/><w>nolde&slongdes;t</w> <seg ana="audAddress"><w>þu</w> <w>ƿelig<subst>
        <del rend="lettermod" hand="#DP0425">e</del>
        <add type="subst" place="lettermod" hand="#DP0425">a</add>
-     </subst></w> <w>mine</w>
+     </subst></w></seg> <w>mine</w>
     <lb n="19"/><w>bebodu</w> <w>healdan</w> <pc>·</pc> </s><s xml:id="s69.9.76" n="x394.12.80"><w>ac</w> <w>&slongdes;ceolde</w>
    <pb n="188" facs="https://dms-data.stanford.edu/data/manifests/Parker/pz542dy6146/manifest.json 198"/>
     <lb n="1"/><w>&slongdes;e</w> <w>min</w> <w>þearfa</w> <w>a&slongdes;ƿæman</w>
@@ -838,13 +837,13 @@
     <lb n="17"/><w>heora</w> <w>hlaforde</w> <pc>&punctvers;</pc> </s><s xml:id="s69.9.118" n="x394.12.122"><w><choice>
       <abbr>Ðo<am>&combmacr;</am>n</abbr><expan>Ðon<ex>ne</ex></expan>
      </choice></w>
-    <lb n="18"/><w>þu</w> <w>ƿeliga</w> <pc>·</pc> <w>ne</w> <w>þu</w> <w>þinne</w>
+    <lb n="18"/><seg ana="audAddress"><w>þu</w> <w>ƿeliga</w></seg> <pc>·</pc> <w>ne</w> <w>þu</w> <w>þinne</w>
     <lb n="19"/><w>drihten</w> <w>ne</w> <w>lufadeſt</w> <pc>·</pc> <w>ne</w>
    <pb n="195" facs="https://dms-data.stanford.edu/data/manifests/Parker/pz542dy6146/manifest.json 205"/>
     <lb n="1"/><w>þu</w> <w>are</w> <w>æt</w> <w>him</w> <w>hæfſt</w>
     <lb n="2"/><w>ne</w> <w>þu</w> <w>earming</w> <w>ne</w> <w>mo&slongdes;t</w>
     <lb n="3"/><w>lifian</w> <w>aht</w> <w>lange</w> <pc>·</pc> </s><s xml:id="s69.9.119" n="x394.12.123"><w>Hƿæt</w>
-    <lb n="4"/><w>ƿendeſt</w> <w>þu</w> <w>ƿlanca</w> <w>gif</w> <w>þu</w>
+    <lb n="4"/><w>ƿendeſt</w> <seg ana="audAddress"><w>þu</w> <w>ƿlanca</w></seg> <w>gif</w> <w>þu</w>
     <lb n="5"/><w>me</w> <w>&slongdes;ealde&slongdes;t</w> <w>oƿiht</w> <w>þine&slongdes;</w> <pc>·</pc>
     <lb n="6"/><w><choice>
       <abbr>&thornbarslash;</abbr>
@@ -867,7 +866,7 @@
     <lb n="15"/><w>lif</w> <w>geendað</w> <w><choice>
       <abbr>þo<am>&combmacr;</am>n</abbr><expan>þon<ex>ne</ex></expan>
      </choice></w> <w>þu</w> <w>hi&slongdes;</w>
-    <lb n="16"/><w>ne</w> <w>ƿeneſt</w> <pc>&punctvers;</pc> </s><s xml:id="s69.9.123" n="x394.12.127"><w>Ðu</w> <w>ƿeliga</w> <pc>·</pc> <w>to</w>
+    <lb n="16"/><w>ne</w> <w>ƿeneſt</w> <pc>&punctvers;</pc> </s><s xml:id="s69.9.123" n="x394.12.127"><seg ana="audAddress"><w>Ðu</w> <w>ƿeliga</w></seg> <pc>·</pc> <w>to</w>
     <lb n="17"/><w>hƿon</w> <w>treoƿode&slongdes;t</w> <w>þu</w> <w>on</w>
     <lb n="18"/><w>þinne</w> <w>ƿelan</w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>ofer
     <lb n="19"/>floƿne&slongdes;&slongdes;a</w> <w>þinra</w> <w>goda</w>
@@ -879,11 +878,11 @@
      </choice></w> <w>þu</w> <w>on</w> <w>ƿære</w> <pc>&punctvers;</pc>
     <lb n="3"/></s></ab><ab><s xml:id="s69.9.124" n="x394.12.128"><w>He</w> <w>ða</w> <w>drihten</w> <persName key="Jesus"><w>criſt</w></persName> <w>cƿæð</w>
     <lb n="4"/><w>to</w> <w>þam</w> <w>ƿeligan</w> <w>men</w> <pc>·</pc> </s><s xml:id="s69.9.125" n="x394.12.129"><w>eala</w>
-    <lb n="5"/><w>þu</w> <seg ana="binomial"><w>d<subst>
+    <lb n="5"/><seg ana="audAddress"><w>þu</w> <seg ana="binomial"><w>d<subst>
        <del rend="lettermod" hand="#DP0425"><unclear reason="unfinished">u</unclear></del>
        <add type="subst" hand="#DP0425" place="lettermod">ẏ</add>
      </subst>
-     &slongdes;iga</w> <pc>·</pc> <w>&et;</w> <w>þu</w> <w>gedƿeleda</w></seg>
+     &slongdes;iga</w> <pc>·</pc> <w>&et;</w> <w>þu</w> <w>gedƿeleda</w></seg></seg>
     <lb n="6"/><w>to</w> <w>hƿan</w> <w>getreoƿdeſt</w> <w>þu</w>
     <lb n="7"/><w>on</w> <w>þine</w> <w>&slongdes;peda</w> <pc>·</pc> <w>&et;</w> <w>on</w> <w>þine</w>
     <lb n="8"/><w>æhta</w> <pc>·</pc> </s><s xml:id="s69.9.126" n="x394.12.130"><w>þin</w> <w>&slongdes;aƿl</w> <w>bið</w> <w>afẏr
@@ -1277,10 +1276,16 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Paradise">
     <placeName>Paradise/Eden/Neorxnawang</placeName>
     </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
+   </place>
   </listPlace>
  </standOff>
 </TEI>

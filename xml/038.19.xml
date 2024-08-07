@@ -1,15 +1,14 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY dstrok "&#x0111;">		<!-- LATIN SMALL LETTER D WITH STROKE -->
-<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
-<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
 <!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
-<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
 <!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY dstrok "&#x0111;">		<!-- LATIN SMALL LETTER D WITH STROKE -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY hstrok "&#x0127;">		<!-- LATIN SMALL LETTER H WITH STROKE -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -71,9 +70,9 @@
      <history>
       <origin>
        <origDate notBefore="0996" notAfter="1020">s. xi in.</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="high" corresp="#Canterbury">Canterbury</origPlace>
       </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
      </history>
      <msPart>
       <msIdentifier>
@@ -538,11 +537,11 @@
        <ex>m</ex>
      </choice></w>
     <lb n="5"/><w>geihte</w> <w>god</w> <num n="15"><w>fiftyne</w></num> <w>gear</w> <w>to</w> <w>life</w> <pc>&punctvers;</pc> </s><s xml:id="s38.19.101" n="x394.3.101"><w>ƿitodlice</w> <w>&slongdes;ƿa</w> <w notation="accentuated">hƿa</w> <pc>·</pc> <w>&slongdes;ƿa</w> <w>ƿile</w>
-    <lb n="6"/><w>&slongdes;ẏmle</w> <w>mid</w> <w>gode</w> <w>beon</w> <pc>·</pc> <w>he</w> <w>&slongdes;ceal</w> <w>hine</w> <w>gelomlice</w> <w><add type="augm" place="above" hand="#DP0312">ge</add>biddan</w> <pc>·</pc> <w>&et;</w> <w>eac</w> <add type="augm" place="rmargin" hand="#EC0312a"><w>gelo<choice>
+    <lb n="6"/><w>&slongdes;ẏmle</w> <w>mid</w> <w>gode</w> <w>beon</w> <pc>·</pc> <w>he</w> <w>&slongdes;ceal</w> <w>hine</w> <seg ana="binomial"><w>gelomlice</w> <w><add type="augm" place="above" hand="#DP0312">ge</add>biddan</w> <pc>·</pc> <w>&et;</w> <w>eac</w> <add type="augm" place="rmargin" hand="#EC0312a"><w>gelo<choice>
        <am>&combmacr;</am>
        <ex>m</ex>
      </choice>lice</w></add>
-    <lb n="7"/><w notation="accentuated">rædan</w> <pc>&punctvers;</pc> </s><s xml:id="s38.19.102" n="x394.3.102"><w notation="accentuated">forþam</w> <w>þon<choice>
+    <lb n="7"/><w notation="accentuated">rædan</w></seg> <pc>&punctvers;</pc> </s><s xml:id="s38.19.102" n="x394.3.102"><w notation="accentuated">forþam</w> <w>þon<choice>
        <am>&combmacr;</am>
        <ex>ne</ex>
      </choice></w> <w>ƿe</w> <w>u&slongdes;</w> <w>gebiddað</w> <pc>·</pc> <w>þonne</w> <w>&slongdes;prece</w> <w>ƿe</w> <w>ƿið</w> <w>god</w> <pc>·</pc>
@@ -613,7 +612,7 @@
   </body>
  </text>
  <standOff>
-  <listPlace>
+  <listPlace type="diegetic">
    <place xml:id="Nineveh">
     <placeName>Nineveh</placeName>
     <location><geo>36.359400,43.152800</geo></location>
@@ -624,6 +623,12 @@
    <place xml:id="RedSea">
     <placeName>Red Sea</placeName>
     <location><geo>28.750000,33.000000</geo></location>
+   </place>
+  </listPlace>
+  <listPlace type="origin">
+   <place xml:id="Canterbury">
+    <placeName>Canterbury</placeName>
+    <location><geo>51.279797,1.0779235</geo></location>
    </place>
   </listPlace>
  </standOff>

@@ -1,14 +1,13 @@
 <!DOCTYPE TEI [
 <!-- Entity declarations following MUFI character recommendation v. 4.0 (https://bora.uib.no/bora-xmlui/handle/1956/10699): -->
-<!ENTITY csup "&#x0368;">		<!-- COMBINING LATIN SMALL LETTER C -->
+<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
 <!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
-<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
 <!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
-<!ENTITY punctelev "&#xF161;">		<!-- PUNCTUS ELEVATUS -->
+<!ENTITY csup "&#x0368;">		<!-- COMBINING LATIN SMALL LETTER C -->
 <!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->]>
-<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<?xml-model href="echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-stylesheet href="../misc/style.css" type="text/css"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader xml:lang="en">
   <fileDesc>
@@ -59,16 +58,16 @@
      </msContents>
      <physDesc>
       <handDesc>
-       <handNote xml:id="DP0548" scribe="Wulfstan" corresp="http://www.digipal.eu/digipal/hands/548/descriptions/" ref="https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=11858"><p>
+       <handNote xml:id="DP0548" scribe="Wulfstan" corresp="http://www.digipal.eu/digipal/hands/548/descriptions/"><p>
         The (drafting?) hand of Archbishop Wulfstan of York (d. 1023), probably during his London episcopate 996–1002 AD. Forward-sloping ductus; long ascenders; curving upstroke of d; prefers þ in initial position and almost exclusively long ſ, probably to avoid confusion with the hybrid r. Annotations also by Wulfstan.</p></handNote>
       </handDesc>
      </physDesc>
      <history>
 	  <origin>
 	   <origDate notBefore="0996" notAfter="1002">996x1002</origDate>
-	   <origPlace cert="high"/>
+	   <origPlace cert="low" corresp="#York">York?</origPlace>
 	  </origin>
-	  <provenance cert="high"/>
+	  <provenance cert="low">unknown</provenance>
 	 </history>
      <msPart>
       <msIdentifier>
@@ -148,4 +147,12 @@
    </ab>
   </body>
  </text>
+ <standOff>
+  <listPlace type="origin">
+   <place xml:id="York">
+    <placeName>York</placeName>
+    <location><geo>53.9623291,-1.0867968</geo></location>
+   </place>
+  </listPlace>
+ </standOff>
 </TEI>
