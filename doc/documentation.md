@@ -1,5 +1,5 @@
 % ECHOE Documentation
-% Paul Langeslag^[The section on [Rhetorical Markup] was contributed by Bente Offereins.]
+% Paul Langeslag^[With a section on [Rhetorical Markup] contributed by Bente Offereins.]
 % revision of \today
 
 <!---
@@ -265,9 +265,13 @@ Accents appearing over letters or words have been encoded by marking the contain
 
 Hyphenation has been excluded from transcription.
 
+## Verse and Rhythmical Prose
+
+Any content deemed to evince metrical qualities has been marked up as `<seg ana="verseLike">`{.xml} without metrical markup or division into verses or lines.
+
 ## Rhetorical Markup
 
-Within the ECHOE subset of Blickling, Vercelli, and their variant witnesses, we have striven to record the rhetorical structures of binomial pair and enumeration, while instances of audience address have been marked up throughout the corpus. These features have been recorded as `<seg>`{.xml} nodes with the attribute `@ana` carrying a value `binomial`, `enumeration`, or `audAddress`. (Contrast uses of the same element with `@xml:id`, used to mark up sequences for which scribes have offered alternative readings or glosses, and `@type`, used to mark transposition sequences and Romanized Greek script. Please note that where transposition elements extend beyond the word level, this too involves `<seg>`{.xml} elements with `@ana` attributes; these can be distinguished from rhetorical markup by their value `pos1`/`pos2`.)
+Within the ECHOE subset of Blickling, Vercelli, and their variant witnesses, we have striven to record the rhetorical structures of binomial pair and enumeration, while instances of audience address have been marked up throughout the corpus. These features have been recorded as `<seg>`{.xml} nodes with the attribute `@ana` carrying a value `binomial`, `enumeration`, or `audAddress`. (As noted under [Verse and Rhythmical Prose] above, the same element and attribute have been used with the value `verseLike` to set off metrical content. Where transposition elements extend beyond the word level, this too involves `<seg>`{.xml} elements with `@ana` attributes; these can be distinguished from rhetorical and metrical markup by their value `pos1`/`pos2`. Contrast uses of the same element with `@xml:id`, used to mark up sequences for which scribes have offered alternative readings or glosses, and `@type`, used to mark transposition sequences and Romanized Greek script.)
 
 ### Audience Address
 
@@ -585,6 +589,8 @@ Named entities				Identified using `<name>`{.xml}, `<persName>`{.xml},
 							[PASE](https://pase.ac.uk) where applicable.
 
 Numerals					Identified using `<num>`{.xml}.
+
+Metrical content			Encoded as `<seg ana="verseLike">`{.xml}.
 
 Rhetorics					Encoded as `<seg>`{.xml} with a categorization as a value
 							of `@ana` (`audAddress`, `binomial`, or `enumeration`).
