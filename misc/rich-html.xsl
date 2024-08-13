@@ -412,9 +412,17 @@
         	    	</xsl:attribute>
 				</xsl:otherwise>
 			</xsl:choose>
-			<span class="echoe-sentence-number">
-                <xsl:value-of select="substring(@xml:id, 2)"/>
-            </span>
+			<a>
+				<xsl:attribute name="id">
+					<xsl:value-of select="@xml:id"/>
+				</xsl:attribute>
+				<xsl:attribute name="href">
+					<xsl:text>#</xsl:text><xsl:value-of select="@xml:id"/>
+				</xsl:attribute>
+				<span class="echoe-sentence-number">
+               		<xsl:value-of select="substring(@xml:id, 2)"/>
+            	</span>
+			</a>
             <span class="echoe-sentence-content">
                 <xsl:apply-templates/>
             </span>
@@ -518,20 +526,11 @@
 		</span>
 	</xsl:template>
 
- <xsl:variable name="semiSic" select="('á', 'ǽ', 'é', 'í', 'ó', 'ú', 'ý', 'ẏ', '&ydotacute;', '&combacute;', 'ſ', '&slongdes;', 'ƿ', 'Ƿ', '\n\s*', 'ß', 'ä', ' ·', ' &bidotscomposit;', ' &punctelev;', ' &punctvers;', ' &punctelevdiag;', '-', '&ilong;', 'Ẏ', '&rrot;', 'É', 'Á', 'Í', 'Ó', 'Ý', 'Ú', 'Ǽ', '', 'n͘', 'r͘', 'Ä', '&ndot;', '&rdot;')"/>
- <xsl:variable name="semiSubst" select="('a', 'æ', 'e', 'i', 'o', 'u', 'y', 'y', 'y', '', 's', 's', 'w', 'W', '', 'y', 'a', '&nbsp;·', '&nbsp;&bidotscomposit;', '&nbsp;&punctelev;', '&nbsp;&punctvers;', '&nbsp;&punctelevdiag;', '', 'i', 'Y', 'r', 'E', 'A', 'I', 'O', 'Y', 'U', 'Æ', 'V', 'n', 'r', 'A', 'n', 'r')"/>
- <xsl:variable name="semiIntrawordSic" select="('á', 'ǽ', 'é', 'í', 'ó', 'ú', 'ý', 'ẏ', '&ydotacute;', '&combacute;', 'ſ', '&slongdes;', 'ƿ', 'Ƿ', '\n\s*', 'ß', 'ä', ' ·', ' &bidotscomposit;', ' &punctelev;', ' &punctvers;', '-', '&thornbarslash;', '&THORNbarslash;', ' ', '&nbsp;', '&rrot;', 'n͘', 'r͘', '&ndot;', '&rdot;', '·')"/>
- <xsl:variable name="semiIntrawordSubst" select="('a', 'æ', 'e', 'i', 'o', 'u', 'y', 'y', 'y', '', 's', 's', 'w', 'W', '', 'y', 'a', '&nbsp;·', '&nbsp;&bidotscomposit;', '&nbsp;&punctelev;', '&nbsp;&punctvers;', '', 'þ', 'Þ', '', '', 'r', 'n', 'r', 'n', 'r', '')"/>
+<!--The following template uses a custom recursive implementation of the XSLT 2.0 function `replace` to normalize features. It requires for the functx namespace to be loaded and library to be imported. In its present form a stock replace() would actually do, but I'm keeping this in case we end up filtering more out. -->
+ <xsl:variable name="before" select="('\n\s*')"/>
+ <xsl:variable name="after" select="('')"/>
  <xsl:template match="text()">
-	<xsl:choose>
-		<xsl:when test="ancestor::tei:w">
-   <xsl:value-of select="functx:replace-multi(.,$semiIntrawordSic,$semiIntrawordSubst)"/>
-		</xsl:when>
-		<xsl:otherwise>
-   <xsl:value-of select="functx:replace-multi(.,$semiSic,$semiSubst)"/>
-		</xsl:otherwise>
-	</xsl:choose>
+     <xsl:value-of select="functx:replace-multi(.,$before,$after)"/>
  </xsl:template>
-
-    
+   
 </xsl:stylesheet>
