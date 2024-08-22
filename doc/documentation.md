@@ -2,13 +2,6 @@
 % Paul Langeslag^[With a section on [Rhetorical Markup] contributed by Bente Offereins.]
 % revision of \today
 
-<!---
-Process file as `pandoc -o documentation.pdf documentation.md --pdf-engine=xelatex --filter pandoc-crossref --citeproc`.
-
-Prior to release, verify that long lines of code break correctly (some have been manually broken up to match line length).
-
--->
-
 ---
 mainfont: Junicode
 monofont: "DejaVu Sans Mono"
@@ -55,21 +48,21 @@ The typeface used in this user manual and sourced in the included CSS stylesheet
 
 ## Corpus Definition and Taxonomy
 
-ECHOE: Electronic Corpus of Anonymous Homilies in Old English is a text corpus, native to TEI P5-conformant XML but here additionally supplied in a flattened plaintext transformation, containing manual transcriptions, newly produced for ECHOE, of all extant witnesses of anonymous and Wulfstanian prose homilies predating c. 1200 (excluding the late collections known as the Lambeth and Trinity homilies) and whose dominant language is Old English, as well as long-format anonymous Old English prose saints' lives from the same period. Defined another way, it transcribes all manuscript copies of all non-Ælfrician Old English prose homilies and saints' lives. Following the initial release of its XML source code in October 2024, the corpus is subject to revision on a rolling release basis. Corrections and technical queries may be directed to [Paul Langeslag](mailto:planges@uni-goettingen.de), while [Winfried Rudolf](winfried.rudolf@phil.uni-goettingen.de) as the principal investigator is the project's contact person for strategic matters and press requests.
+ECHOE: Electronic Corpus of Anonymous Homilies in Old English is a text corpus, native to TEI P5-conformant XML but here additionally supplied in a flattened plaintext transformation, containing manual transcriptions, newly produced for ECHOE, of all extant witnesses of anonymous and Wulfstanian prose homilies predating c. 1200 (excluding the late collections known as the Lambeth and Trinity homilies) and whose dominant language is Old English, as well as long-format anonymous Old English prose saints' lives from the same period. Defined another way, it transcribes all manuscript copies of all non-Ælfrician Old English prose homilies and saints' lives. Following the initial release of its XML source code in July 2024, the corpus is subject to revision on a rolling release basis. Corrections and technical queries may be directed to [Paul Langeslag](mailto:planges@uni-goettingen.de), while [Winfried Rudolf](winfried.rudolf@phil.uni-goettingen.de) as the principal investigator is the project's contact person for strategic matters and press requests.
 
-The definition of homiletic manuscript articles (hereafter "versions") follows N.\ R. Ker's 1957 _Catalogue of Manuscripts Containing Anglo-Saxon_ for materials known to Ker.[@ker] Each version is contained in its own file (`018.40.xml`, `018.42.xml`, etc.), which is numbered following Ker's manuscript and article system, i.e. the first element represents a manuscript or fragment sorted alphabetically by location and library, while the element after the period is normally Ker's sequential article number (for longer articles) or letter (for shorter articles) within the manuscript. Materials that have come to light since the publication of Ker's _Catalogue_ are numbered in accordance with the same principles but with `x` appended to Ker's manuscript number to allow its inclusion in the alphabetically appropriate position within the system (e.g. [284x](https://echoe.uni-goettingen.de/#/versions/284x.a) for Westminster Muniment 67209, alphabetically between London, Lambeth Palace on the one hand and Oxford, Bodleian Library on the other; the other new entry is [386x](https://echoe.uni-goettingen.de/#/versions/386x.a) for the Taunton fragments). Articles within such newly discovered manuscripts and fragments have been defined in accordance with Ker's principles, with the one difference that articles that have no peers within their fragment are given an article identifier `a` where Ker would have omitted such an identifier: thus [284x.a](https://echoe.uni-goettingen.de/#/versions/284x.a) for the sole article contained in Westminster Muniment 67209, the superfluous article identifier facilitating uniform processing. In Ker's system, a single article may contain the same or similar material twice, first in Latin and then in Old English. Since ECHOE is a language-specific corpus, however, it excludes complete Latin compositions of this kind. In such cases, we have added to the Ker numbering system by (implicitly) affixing `a` to the article number for the Latin and (explicitly) `b` for the Old English. Thus Ker's 49B, art. 29 is the same Wulfstan homily contained twice, once in Latin (Bethurum Xb, _De christianitate_) and once in English (Bethurum Xc, _Be cristendome_); we have included only the latter in our main corpus, under the identifier [49B.29b](https://echoe.uni-goettingen.de/#/versions/49B.29b). The Hatton 113 witnesses to the same text follow a similar pattern: here 331.10a is the Latin (not in ECHOE), [331.10b](https://echoe.uni-goettingen.de/#/versions/331.10b) is an Old English marginal translation of part of the Latin, and [331.10c](https://echoe.uni-goettingen.de/#/versions/331.10c) is the full Old English text that follows the Latin in the manuscript. Where Ker subdivided his articles, this subdivision too is appended to the article number, as in [186.19a](https://echoe.uni-goettingen.de/#/versions/186.19a)--[186.19l](https://echoe.uni-goettingen.de/#/versions/186.19l) for the range of brief compositions in Cotton Tiberius A.iii, or [338.1xix](https://echoe.uni-goettingen.de/#/versions/338.1xix) for the last of the sections into which Ker subdivides article 1 of Junius 121.
+The definition of homiletic manuscript articles (hereafter "versions") follows N.\ R. Ker's 1957 _Catalogue of Manuscripts Containing Anglo-Saxon_ for materials known to Ker.[@ker] Each version (referenced using an identifier `18.40`, `18.42`, etc.) is contained in its own file (`018.40.xml`, `018.42.xml`, etc.). The version identifier format follows Ker's alphabtical-sequential manuscript and article system, i.e. the first element represents a manuscript or fragment sorted alphabetically by location and library, while the element after the period is normally Ker's sequential article number (for longer articles) or letter (for shorter articles) within the manuscript. Materials that have come to light since the publication of Ker's _Catalogue_ are numbered in accordance with the same principles but with `x` appended to Ker's manuscript number to allow its inclusion in the alphabetically appropriate position within the system (e.g. [284x](https://echoe.uni-goettingen.de/#/versions/284x.a) for Westminster Muniment 67209, alphabetically between London, Lambeth Palace on the one hand and Oxford, Bodleian Library on the other; the other new entry is [386x](https://echoe.uni-goettingen.de/#/versions/386x.a) for the Taunton fragments). Articles within such newly discovered manuscripts and fragments have been defined in accordance with Ker's principles, with the one difference that articles that have no peers within their fragment are given an article identifier `a` where Ker would have omitted such an identifier: thus [284x.a](https://echoe.uni-goettingen.de/#/versions/284x.a) for the sole article contained in Westminster Muniment 67209, the superfluous article identifier facilitating uniform processing. In Ker's system, a single article may contain the same or similar material twice, first in Latin and then in Old English. Since ECHOE is a language-specific corpus, however, it excludes complete Latin compositions of this kind. In such cases, we have added to the Ker numbering system by (implicitly) affixing `a` to the article number for the Latin and (explicitly) `b` for the Old English. Thus Ker's 49B, art. 29 is the same Wulfstan homily contained twice, once in Latin (Bethurum Xb, _De christianitate_) and once in English (Bethurum Xc, _Be cristendome_); we have included only the latter in our main corpus, under the identifier [49B.29b](https://echoe.uni-goettingen.de/#/versions/49B.29b). The Hatton 113 witnesses to the same text follow a similar pattern: here 331.10a is the Latin (not in ECHOE), [331.10b](https://echoe.uni-goettingen.de/#/versions/331.10b) is an Old English marginal translation of part of the Latin, and [331.10c](https://echoe.uni-goettingen.de/#/versions/331.10c) is the full Old English text that follows the Latin in the manuscript. Where Ker subdivided his articles, this subdivision too is appended to the article number, as in [186.19a](https://echoe.uni-goettingen.de/#/versions/186.19a)--[186.19l](https://echoe.uni-goettingen.de/#/versions/186.19l) for the range of brief compositions in Cotton Tiberius A.iii, or [338.1xix](https://echoe.uni-goettingen.de/#/versions/338.1xix) for the last of the sections into which Ker subdivides article 1 of Junius 121.
 
 --------------------------------------------------------------------------------------
 **NOTE**
 
-ECHOE __file names__ use leading zeroes for both manuscript and article levels in the format `001.01.xml`, but no such leading zeroes are used in any other context, whether it be scholarly reference or `@xml:id`. Thus the ECHOE version contained in `049B.01.xml` is referenced as ECHOE 49B.1, while its sentences are encoded `s49B.1.1`. etc. The other discrepancy is in `336.02.xml`, which in fact covers manuscript articles 2 and 4 and accordingly is referenced as `336.2+4` in the file's metadata.
+ECHOE __file names__ use leading zeroes for both manuscript and article levels in the format `001.01.xml`, but no such leading zeroes are used in any other context, whether it be scholarly reference or `@xml:id`. Thus the ECHOE version contained in `049B.01.xml` is referenced as ECHOE 49B.1, while its sentences are encoded `s49B.1.1`. etc. and cited as ECHOE 49B.1.1 etc. The other discrepancy is in `336.02.xml`, which in fact covers manuscript articles 2 and 4 and accordingly is properly referenced as `336.2+4`, though its sentences are encoded `s336.2.1` etc. to comply with XML validity constraints.
 --------------------------------------------------------------------------------------
 
 At the time of initial release, acceptable images of London, British Library Cotton Otho A.\ viii, B.\ x, and Vitellius D.\ xvii were not available to us, so that the twelve Old English homiletic and hagiographical items therein contained are not at present included in ECHOE. Service disruptions at the British Library in 2020–2024 additionally prevented some final proofing of further London transcriptions.<!-- update as required -->
 
 ## Citing ECHOE
 
-Although any representation of an ECHOE version is derived from the underlying XML transcription, most users will want to cite the online edition. Please keep in mind that (1) the data are subject to rolling updates, lending relevance to the date of access; and (2) any one transcription may be rendered with different display settings, so that one and the same version or extract may be quoted in a range of realizations. We recommend users feed their citation managers the following values:
+Although any representation of an ECHOE version is derived from the underlying XML transcription, most users will want to cite the online edition. Please keep in mind that (1) the data are subject to rolling updates, lending relevance to the date of access; and (2) any one transcription may be rendered with different display settings, so that one and the same version or excerpt may be quoted in a range of realizations. We recommend users feed their citation managers the following values:
 
 ```bibtex
 @online{echoe,
@@ -126,10 +119,10 @@ The ECHOE repository at <https://github.com/ECHOEProject/echoe> hosts the follow
 - A flattened, plaintext transformation
 - An ebook of the corpus based on the same transformation settings
 - This user manual
-- A handful of metadata files extracted from the corpus and used for [ECHOE Online](https://echoe.uni-goettingen.de)
-- A `misc/` folder with (1) the ODD containing ECHOE's TEI schema and documentation; (2) several sample XSLT transformation stylesheets to assist users with their own transformation efforts; and (3) a CSS stylesheet allowing users to use the XML corpus as a semidiplomatic reading corpus locally in their web browsers.
+- A selection of metadata files extracted from the corpus
+- A `misc/` folder with (1) the ODD containing ECHOE's TEI schema and its formal documentation; (2) several sample XSLT transformation stylesheets users may adapt or consult for their own transformation purposes; and (3) a CSS stylesheet allowing users to access the XML corpus as a semidiplomatic reading corpus locally in their web browsers.
 
-Please observe that neither the plaintext corpus nor the ebook retains the richness of the XML corpus, as these attempt to render only the readings intended by the most recent scribal reviser prior to c.\ 1200, but also silently emend readings following the editors' understanding of the text. Punctuation, capitalization, and virtually all metadata are absent from these output formats. The rendering produced by our CSS stylesheet similarly is just one possible way of displaying the text with a larger selection of metadata, and limited somewhat by the capabilities of CSS; users may find that spacing in particular is occasionally imperfectly rendered, as CSS has no formal way of disregarding internode spacing.
+Please observe that neither the plaintext corpus nor the ebook retains the richness of the XML corpus, as these attempt to render only the readings intended by the most recent scribal reviser prior to c.\ 1200, but also silently emend readings following the editors' understanding of the text. Punctuation, capitalization, and virtually all metadata are absent from these output formats. The rendering produced by our CSS stylesheet similarly is just one possible way of displaying the text retaining a larger selection of metadata, and limited somewhat by the capabilities of CSS; users may find that spacing in particular is occasionally imperfectly rendered, as CSS has no formal way of disregarding internode spacing.
 
 # Creating ECHOE
 
@@ -141,11 +134,11 @@ Sentence segmentation and the cross-referencing of cognate clusters of sentences
 
 Explicit word segmentation (tokenization) and the markup of names and numerals were carried out in an automated fashion and then manually corrected. TEI headers were proofread along with the text (i.e. several times), but global changes were repeatedly made to their structure both during and after revision, so not every part of the header has seen equal amounts of proofreading. Here, however, faulty metadata was typically quickly spotted in the proofing environment and corrected as needed. Rhetorical markup was conducted by hand in a separate stage.<!-- The entry of biblical source references was put on hold after the separate documentation of sources got underway, to avoid task duplication; but as source documentation remains incomplete, biblical references encoded in the XML are likewise incomplete.--> A range of cross-corpus structural changes to such matters as the encoding of transpositions and glosses, as well as the addition of such further metadata as geolocations, was carried out at a late stage with the help of scores of custom Python scripts.
 
-The sequence of stages here laid out lacks a dedicated text-critical examination. Generally speaking, the transcription and first proofreading stages focused primarily on ensuring an accurate letter-for-letter representation of the manuscript text, whereas subsequent revision was carried out with more of an eye to ensuring readings are plausible and grammatical; but at every stage of proofreading the quality of the text was only one among many points of attention. Whereas some of our transcribers and early-stage proofreaders worked with leading critical editions at hand, others did not, and final revision was carried out with reference to textual scholarship for suspect readings only. Time constraints in the face of the amount of text to be processed precluded a more thorough textual analysis, so that the text of ECHOE, though generally well considered, is not consistently as authoritative as that of leading editions. Having said that, we are confident that ECHOE improves on received readings in many places, particularly where text has been erased or the manuscript damaged. For more on our text-critical approach, see [Emendation and Conjecture] below.
+The sequence of stages here laid out lacks a dedicated text-critical examination. Generally speaking, the transcription and first proofreading stages focused primarily on ensuring an accurate letter-for-letter representation of the manuscript text, whereas subsequent revision was carried out with more of an eye to ensuring readings are plausible and grammatical; but at every stage of proofreading the text-critical quality of the readings was only one among many points of attention. Whereas some of our transcribers and early-stage proofreaders worked with leading critical editions at hand, others did not, and final revision was carried out with reference to textual scholarship for suspect readings only. Time constraints in the face of the amount of text to be processed precluded a more thorough textual analysis, so that the text of ECHOE, though generally well considered, is not consistently as authoritative as that of leading editions. Having said that, we are confident that ECHOE improves on received readings in many places, particularly where text has been erased or the manuscript damaged. For more on our text-critical approach, see [Emendation and Conjecture] below.
 
 # The TEI Header
 
-☞ ECHOE's TEI header follows [TEI P5 recommendations](https://tei-c.org/release/doc/tei-p5-doc/en/html/HD.html) and makes substantial use of their provisions for [manuscript description](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html). In the present documentation, we will only draw attention to specific resources and conventions referenced.
+☞ ECHOE's TEI header follows [TEI P5 recommendations](https://tei-c.org/release/doc/tei-p5-doc/en/html/HD.html) and makes substantial use of their provisions for [manuscript description](https://tei-c.org/release/doc/tei-p5-doc/en/html/MS.html). In the present documentation, we will only draw attention to project-specific resources and conventions.
 
 ## Conventional Titles
 
@@ -153,15 +146,15 @@ Multiple instances of `fileDesc/titleStmt/title`{.xslt} encode a range of receiv
 
 ## Scribal Hands
 
-`fileDesc/sourceDesc/msDesc/physDesc/handDesc`{.xslt} identifies the scribal hands distinguished in the version using instances of `<handNote>`{.xml}, each of which provides (as a value of `@xml:id`) an identifier to which the transcription refers as different hands intervene, as well as a prose description of the hand in question. Where available, hand identifiers follow [DigiPal](https://digipal.eu/) (recognizable from identifiers beginning with `DP`), or else Scragg's _Conspectus of Scribal Hands Writing English, 960--1100_ (using the prefix `SC`); new identifiers may be recognized by the prefix `EC` (followed by a number refencing an adjacent DigiPal hand as well as an alphabetical suffix). Where DigiPal assigns a hand to a scribe, we have additionally supplied the attribute `@scribeRef` and used not DigiPal's scribal identifier intended for human processing but instead their database identifier: thus rather than give a value `G.108`, we supply `DP0078`, which may be transformed into <https://digital.eu/digipal/scribes/78/> to redirect to DigiPal's scribal entry for scribe G.108.^[This practice diverges slightly from TEI recommendations, which have `@scribeRef` point ["typically"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.handFeatures.html#tei_att.scriptRef) to a document-internal description.] If a scribe's name is known (i.e. for Eadric, Wulfgeat, and Wulfstan), we have encoded it as a value of `@scribe`. In the running text, the attribute `@hand` is most notably found on the elements `<add>`{.xml} and `<del>`{.xml}. Uncertain hands are there marked `uncertain`, and lack corresponding header entries.
+`fileDesc/sourceDesc/msDesc/physDesc/handDesc`{.xslt} identifies the scribal hands distinguished in the version as `<handNote>`{.xml} nodes, each of which provides (as a value of `@xml:id`) an identifier to which the transcription refers as different hands intervene, as well as a prose description of the hand in question. Where available, hand identifiers follow [DigiPal](https://digipal.eu/) (recognizable from identifiers beginning with `DP`), or else Scragg's _Conspectus of Scribal Hands Writing English, 960--1100_ (using the prefix `SC`); new identifiers may be recognized by the prefix `EC` (followed by a number referencing an adjacent DigiPal hand followed by an alphabetical suffix). Where DigiPal assigns a hand to a scribe, we have additionally supplied the attribute `@scribeRef` and used not DigiPal's scribal identifier intended for human processing but instead their database identifier: thus rather than give a value `G.108`, we supply `DP0078`, which may be transformed into <https://digital.eu/digipal/scribes/78/> to redirect to DigiPal's scribal entry for scribe G.108.^[This practice diverges slightly from TEI recommendations, which have `@scribeRef` point ["typically"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.handFeatures.html#tei_att.scriptRef) to a document-internal description.] If a scribe's name is known (i.e. for Eadric, Wulfgeat, and Wulfstan), we have encoded it as a value of `@scribe`. In the running text, the attribute `@hand` is most notably found on the elements `<add>`{.xml} and `<del>`{.xml}. Uncertain hands are there marked `uncertain`, and lack corresponding header entries.
 
 Any palaeographical notes not on a specific hand are recorded as a `<p>`{.xml} node directly within `<physDesc>`{.xml}. As standard TEI schemas do not permit such a paragraph to follow the `<handDesc>`{.xml} node, it precedes the descriptions of specific hands in the document tree.
 
 ## Dating, Origin, and Provenance
 
-Manuscript dating as recorded under `fileDesc/sourceDesc/msDesc/history/origin/`{.xslt} `origDate`{.xslt} follows Ker, unless a more accurate assessment has come to the editors' attention. To allow sorting by date of manuscript composition, attributes `@notBefore` and `@notAfter` have been populated on the basis of Francis Leneghan's analysis of Ker's dating system.[@leneghan] We recommend using the mean between the two values as the basis for chronological comparison between manuscripts.
+Manuscript dating as recorded under `fileDesc/sourceDesc/msDesc/history/origin/`{.xslt} `origDate`{.xslt} follows Ker, unless a more accurate assessment has come to the editors' attention. To allow sorting by date of manuscript composition, attributes `@notBefore` and `@notAfter` have been populated on the basis of Francis Leneghan's analysis of Ker's dating system.[@leneghan] We recommend using the mean between the two values as the basis for sorting by date.
 
-Fields `origPlace`{.xslt} and `provenance`{.xslt} have likewise been provided as descendants of `fileDesc/sourceDesc/msDesc/history`{.xslt}, with our degree of confidence recorded as either `@cert="high"` or `@cert="low"`. A map of manuscript production may be generated by accessing the coordinates encoded in corresponding entries within the `<standOff>`{.xml} node (which see [below](#the-standoff-node)).
+Fields `origPlace`{.xslt} and `provenance`{.xslt} have likewise been provided as descendants of `fileDesc/sourceDesc/msDesc/history`{.xslt}, with our degree of confidence recorded as either `@cert="high"` or `@cert="low"`. A map of manuscript production may be generated by accessing the coordinates encoded in corresponding entries within the `<standOff>`{.xml} tree (which see [below](#the-standoff-tree)).
 
 ## Sigla
 
@@ -171,16 +164,16 @@ Where available, ECHOE records Scragg's sigla as used in his _Vercelli Homilies_
 
 We use `fileDesc/sourceDesc/bibl`{.xslt} to encode four kinds of reference:
 
-- The Ker identifier (which may in most cases also be reconstructed from the ECHOE identifier for versions known to Ker);
-- The identifier from Gneuss and Lapidge's _Anglo-Saxon Manuscripts_[@gneuss] where applicable;
-- The [_Dictionary of Old English_](https://doe.utoronto.ca/)[@doe] "long" short title;
-- The Cameron number, as likewise documented in [_DOE_](https://doe.utoronto.ca/).
+- The Ker identifier (`<idno type="ker">`{.xml});
+- The identifier from Gneuss and Lapidge's _Anglo-Saxon Manuscripts_[@gneuss] where applicable (`<idno type="gneuss">`{.xml});
+- The [_Dictionary of Old English_](https://doe.utoronto.ca/)[@doe] "long" short title (`<idno type="doe">`{.xml});
+- The Cameron number, as likewise documented in [_DOE_](https://doe.utoronto.ca/) (`<idno type="cameron">`{.xml}).
 
 As the Cameron/_DOE_ taxonomy indexes texts rather than versions, these last two identifiers should be understood as "nearest text" approximations rather than exact matches to the ECHOE version. In addition to the choice of base text, textual boundaries may also differ. For texts edited by Napier and Bethurum in particular, we generally refer to Napier over Bethurum in cases where Bethurum departs from the textual boundaries established by Napier and followed by Ker.
 
 ## Motifs and Liturgical Occasion
 
-Each version's participation in a set of common motifs is recorded in a sequence of `<term>`{.xml} nodes under `profileDesc/textClass/keywords`{.xslt}. A master list of motifs may be obtained from the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/motifs.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter.
+Each version's participation in a set of common motifs is recorded in a series of `<term>`{.xml} nodes under `profileDesc/textClass/keywords`{.xslt}. A master list of motifs may be obtained from the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/motifs.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter.
 
 Insofar as may confidently be inferred from each version and/or its sources and peers, a text's intended (preaching) occasion is recorded under `profileDesc/settingDesc/setting`{.xslt}, and wherever such an occasion is noted, a broad categorization is supplied for `@ana` into one of the values `temporale`, `sanctorale`, and `other`, that last value covering such more broadly understood contexts as baptism, confession, the teaching of Creed and Paternoster, and church dedication sermons as well less clearly understood settings. In hagiographical prose not clearly centred on a specific feast day (e.g. a text on the Virgin Mary that is not primarily associated with one of Nativity, Purification, Annunciation, or Assumption), this field records just the name of the saint, and no header identifies Michaelmas or Martinmas specifically even though Blickling rubrics do. Of the Marian feast days, the Annunciation is grouped with the temporale, the remainder with the sanctorale.
 
@@ -194,15 +187,15 @@ For its entity declarations, ECHOE relies on [MUFI](https://mufi.info) recommend
 
 ## Abbreviation
 
-Abbreviations have been encoded using two pairs of parallel nodes as children of `<choice>`{.xml}: `<abbr>`{.xml} and `<expan>`{.xml} where the entire word is encoded as an abbreviation, or `<am>`{.xml} and `<ex>`{.xml} where a single contraction or suspension is so encoded. An `<abbr>`{.xml} enviroment will often contain `<am>`{.xml} as well, and `<expan>`{.xml} always contains `<ex>`{.xml}. An effort has been made to restrict the use of `<abbr>`{.xml}/`<expan>`{.xml} to the encoding of full words as per TEI recommendations, though there may be some inconsistency in this regard. None of the elements involved carry any attributes.
+Abbreviations have been encoded using two pairs of parallel nodes as children of `<choice>`{.xml}: `<abbr>`{.xml} and `<expan>`{.xml} where the entire word is encoded as an abbreviation, or `<am>`{.xml} and `<ex>`{.xml} where a subword contraction or suspension is so encoded. An `<abbr>`{.xml} enviroment will often contain `<am>`{.xml} as well, and `<expan>`{.xml} always contains `<ex>`{.xml}. An effort has been made to restrict the use of `<abbr>`{.xml}/`<expan>`{.xml} to the encoding of full words as per TEI recommendations, though there may be some inconsistency in this regard. None of the elements involved carry any attributes.
 
 ## Scribal Intervention
 
-Straightforward deletions and additions have been encoded as isolated `<del>`{.xml} and `<add>`{.xml} elements respectively, but with considerable metadata. Both identify the intervening hand as a value of `@hand`; `<del>`{.xml} furthermore has `@rend` to encode the manner of deletion with a value `erasure`, `expunction`, `lettermod`, `overwriting`, `strikethrough`, `underlining`, `unfinished`, or `unmarked`, whereas `<add>`{.xml} has `@type` with a value `augm`, `subst`, `altern`, or `gloss`, as well as `@place`, encoded as `above`, `below`, `inline`, `onerasure`, `lettermod`, `overwriting`, `tmargin`, `lmargin`, `rmargin`, `bmargin`, or `unfinished`. The element `<subst>`{.xml} is used without attributes to encode parallel pairs of `<add>`{.xml} and `<del>`{.xml} with attribute values to match. Where one or more letters have been deleted alongside a word, we have judged from context whether the deletion is to be considered part of the word or a separate element, as reflected in its `<w>`{.xml} assignment; thus even an illegible erasure at the end of a now uninflected adjective may be understood as a one-time inflectional ending if the syntax encourages such a reading.
+Straightforward deletions and additions have been encoded as isolated `<del>`{.xml} and `<add>`{.xml} nodes respectively, but with considerable metadata. Both identify the intervening hand as a value of `@hand`; `<del>`{.xml} furthermore has `@rend` to encode the manner of deletion with a value `erasure`, `expunction`, `lettermod`, `overwriting`, `strikethrough`, `underlining`, `unfinished`, or `unmarked`, whereas `<add>`{.xml} has `@type` with a value `augm`, `subst`, `altern`, or `gloss`, as well as `@place`, encoded as `above`, `below`, `inline`, `onerasure`, `lettermod`, `overwriting`, `tmargin`, `lmargin`, `rmargin`, `bmargin`, or `unfinished`. The element `<subst>`{.xml} is used without attributes to encode parallel pairs of `<add>`{.xml} and `<del>`{.xml} with attribute values to match. Where one or more letters have been deleted alongside a word, we have judged from context whether the deletion is to be considered part of the word or a separate element, as reflected in its `<w>`{.xml} assignment; thus even an illegible erasure at the end of a now uninflected adjective may be understood as a one-time inflectional ending if the syntax encourages such a reading.
 
-Where a scribe has added a word or phrase as a gloss or alternative to the antecedent reading, this has been encoded following TEI recommendations by giving each reading an identifier and populating a `<standOff>`{.xml} node at the end of the document with an `<altGrp>`{.xml} list of `<alt/>`{.xml} mappings identifying which readings belong together and by what weighting one is to be preferred over the other. We have defaulted to equal weighting for same-language alternatives but assigned the full weight to the original reading in case of (Latin) glosses. Where the original reading is a single word, the `@xml:id` attribute has been attached to `<w>`{.xml}, or else to an enclosing `<seg>`{.xml}; the new reading attaches the attribute to `<add>`{.xml}. In rare cases ([331.10c](https://echoe.uni-goettingen.de/#/versions/331.10c)), more than one alternative reading has been supplied. To facilitate processing these variants without necessarily accessing the `<alt>`{.xml} mappings registered in the `<standOff>`{.xml} environment, we have used identifiers containing a numeral for the series, followed by an alphabetical for each member of the series, so `alt2a alt2b alt2c` offer the textual lexeme and two variant readings for the same word, while `alt3a alt3b alt3c` compete for the reading of the next word so marked up. We have used identifiers like `gloss1a gloss1b` for (Latin) glosses that could not be substituted in for the glossed word. Since the original reading is always encoded as part of the main text and additionally given an identifier `alt` (or `gloss`) `+ [numeral] + a`, while later readings are identified as `<add type="altern">`{.xml} (or `<add type="gloss">`{.xml}) and given successive identifiers that start with the same sequence, both CSS and XSLT stylesheets may flexibly be employed to style or filter out these glosses without referring to the `<standOff>`{.xml} documentation (see [Notes for Further Processing] below).
+Where a scribe has added a word or phrase as a gloss or alternative to the antecedent reading, this has been encoded following TEI recommendations by giving each reading an identifier and populating a [`<standOff>`{.xml} tree](#the-standoff-tree) at the end of the document with an `<altGrp>`{.xml} list of `<alt/>`{.xml} mappings identifying which readings belong together and by what weighting one is to be preferred over the other. We have defaulted to equal weighting for same-language alternatives but assigned the full weight to the original reading in case of (Latin) glosses. Where the original reading is a single word, the `@xml:id` attribute has been attached to `<w>`{.xml}, or else to an enclosing `<seg>`{.xml}; the new reading attaches the attribute to `<add>`{.xml}. In rare cases ([331.10c](https://echoe.uni-goettingen.de/#/versions/331.10c)), more than one alternative reading has been supplied. To facilitate processing these variants without necessarily accessing the `<alt>`{.xml} mappings registered in the `<standOff>`{.xml} tree, we have used identifiers containing a numeral for the series, followed by an alphabetical for each member of the series, so `alt2a alt2b alt2c` offer the textual lexeme and two variant readings for the same word, while `alt3a alt3b alt3c` compete for the reading of the next word so marked up. We have used identifiers like `gloss1a gloss1b` for (Latin) glosses that could not be substituted in for the glossed word. Since the original reading is always encoded as part of the main text and additionally given an identifier `alt` (or `gloss`) `+ [numeral] + a`, while later readings are identified as `<add type="altern">`{.xml} (or `<add type="gloss">`{.xml}) and given successive identifiers that start with the same sequence, both CSS and XSLT stylesheets may flexibly be employed to style or filter out these glosses without referring to the `<standOff>`{.xml} documentation (see [Notes for Further Processing] below).
 
-TEI P5 accounts for the documentation and display of interventions aimed at the transposition of words, but not for reordering the affected elements at the transformation stage following the annotations of the intervening scribe. Hence while we have followed the TEI practice of documenting the revised order in a `<standOff>`{.xml} environment populated with references back to the affected elements by way of their identifiers, we have additionally facilitated the reordering of elements by (1) containing the group of affected elements in `<seg type="transpose">`{.xml} (with a `@hand` value attributing agency) and (2) giving each element an attribute `@ana` with a value like `pos1` for the intended position after transposition. This facilitates reordering in XSLT transformation (see [Notes for Further Processing] below).
+TEI P5 accounts for the documentation and display of interventions aimed at the transposition of words, but not for reordering the affected nodes at the transformation stage following the annotations of the intervening scribe. Hence while we have followed the TEI practice of documenting the revised order in a [`<standOff>`{.xml} tree](#the-standoff-tree) populated with references back to the affected nodes by way of their identifiers, we have additionally facilitated the reordering of nodes by (1) containing the group of affected nodes in `<seg type="transpose">`{.xml} (with a `@hand` value attributing agency) and (2) giving each node an attribute `@ana` with a value like `pos1` for the intended position after transposition. This facilitates reordering in XSLT transformation (see [Notes for Further Processing] below).
 
 ## Emendation and Conjecture
 
@@ -219,7 +212,7 @@ Conversely, following the principle expressed by Michael Lapidge that (to paraph
 Proper nouns and demonyms have been encoded in three categories:
 
 #. __Personal names__ have been tagged in the format `<persName key="Paul">`{.xml}. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/persnames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter. Please note that the titles _crist_, _antecrist_, and _farao_ have been included among personal names (the first of these identified as `@ref="Jesus"`), but such lexemes as _god_ and _hǣlend_ have not. Names of individuals recorded in [PASE](https://pase.ac.uk)[@pase] carry a `@ref` attribute pointing to what was once the URL of the relevant entry, but PASE has since disabled deeplinking, so a seamless integration of the two resources is not at present possible.
-#. __Place names__ have been tagged in the format `<placeName key="#Jerusalem">`{.xml}, with references to fuller descriptions (where necessary) and an approximate geolocation (where available) situated in the `<standOff>`{.xml} node at the end of the document. The place name category has been broadly interpreted, including rivers, cities, countries, and continents. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/placenames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides a discovery filter allowing the identification of versions mentioning any one particular place name.
+#. __Place names__ have been tagged in the format `<placeName key="#Jerusalem">`{.xml}, with references to fuller descriptions (where necessary) and an approximate geolocation (where available) situated in the [`<standOff>`{.xml} tree](#the-standoff-tree) at the end of the document. The place name category has been broadly interpreted, including rivers, cities, countries, and continents. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/placenames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides a discovery filter allowing the identification of versions mentioning any one particular place name.
 #. __Demonyms__ have been tagged in the format `<name type="demonym" key="Egyptian">`{.xml}. The category has been broadly interpreted, including associations with cities, countries, and sometimes families such as Pontius. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/demonyms.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter.
 
 Please note the following complications:
@@ -242,7 +235,7 @@ Some occurrences of numerals may have been overlooked, as this type of markup wa
 
 ## Script
 
-In the text body only (but not in rubrics), we distinguish between the scripts vernacular minuscule (`vernacMinusc`), Carolingian minuscule (`carolMinusc`), and hybrid (`hybrid`). The manuscripts also regularly contain Romanized Greek for (parts of) _āmen_ and of _nomina sacra_ that transliterate into "cr" (OE) or "chr" (Latin).^[We are aware of @chaplais but have, for the moment, decided that a corpus like ours is not the place to canonize bold inferences.] In the _nomina sacra_ these are always abbreviations and could thus be accommodated in parallel abbreviation environments by transcribing the abbreviation `xpc` and the expanded form `christus` (while additionally encoding abbreviation markers and expanded content). Only _āmen_ is not an abbreviation, and so we have dealt with this exceptional case by using a parallel `<choice>`{.xml} environment with Romanized Greek encoded as `<orig>`{.xml} and Latin transliteration in `<reg>`{.xml}. In addition, in both abbreviated content and for _āmen_ we have encoded the specific letter sequences that may be called Romanized Greek using `<seg type="romanizedGreek">`{.xml}:
+In the text body only (but not in rubrics), we distinguish between the scripts vernacular minuscule (`vernacMinusc`), Carolingian minuscule (`carolMinusc`), and hybrid (`hybrid`). The manuscripts also regularly contain Romanized Greek for (parts of) _āmen_ and of _nomina sacra_ that transliterate into "cr" (OE) or "chr" (Latin).^[We are aware of @chaplais but have, for the moment, decided that a corpus like ours is not the place to canonize bold inferences.] In the _nomina sacra_ these are always abbreviations and could thus be accommodated in parallel abbreviation nodes by transcribing the abbreviation `xpc` and the expanded form `christus` (while additionally encoding abbreviation markers and expanded content). Only _āmen_ is not an abbreviation, and so we have dealt with this exceptional case by using a `<choice>`{.xml} tree with Romanized Greek encoded as `<orig>`{.xml} and Latin transliteration in `<reg>`{.xml}. In addition, in both abbreviated content and for _āmen_ we have encoded the specific letter sequences that may be called Romanized Greek using `<seg type="romanizedGreek">`{.xml}:
 
 ```xml
 <w><choice>
@@ -271,7 +264,7 @@ Any content deemed to evince metrical qualities has been marked up as `<seg ana=
 
 ## Rhetorical Markup
 
-Within the ECHOE subset of Blickling, Vercelli, and their variant witnesses, we have striven to record the rhetorical structures of binomial pair and enumeration, while instances of audience address have been marked up throughout the corpus. These features have been recorded as `<seg>`{.xml} nodes with the attribute `@ana` carrying a value `binomial`, `enumeration`, or `audAddress`. (As noted under [Verse and Rhythmical Prose] above, the same element and attribute have been used with the value `verseLike` to set off metrical content. Where transposition elements extend beyond the word level, this too involves `<seg>`{.xml} elements with `@ana` attributes; these can be distinguished from rhetorical and metrical markup by their value `pos1`/`pos2`. Contrast uses of the same element with `@xml:id`, used to mark up sequences for which scribes have offered alternative readings or glosses, and `@type`, used to mark transposition sequences and Romanized Greek script.)
+Within the ECHOE subset of Blickling, Vercelli, and their variant witnesses, we have striven to record the rhetorical structures of binomial pair and enumeration, while instances of audience address have been marked up throughout the corpus. These features have been recorded as `<seg>`{.xml} nodes with the attribute `@ana` carrying a value `binomial`, `enumeration`, or `audAddress`. (As noted under [Verse and Rhythmical Prose] above, the same element and attribute have been used with the value `verseLike` to set off metrical content. Where transposition elements extend beyond the word level, this too involves `<seg>`{.xml} nodes with `@ana` attributes; these can be distinguished from rhetorical and metrical markup by their value `pos1`/`pos2`. Contrast uses of the same element with `@xml:id`, used to mark up sequences for which scribes have offered alternative readings or glosses, and `@type`, used to mark transposition sequences and Romanized Greek script.)
 
 ### Audience Address
 
@@ -325,9 +318,9 @@ Binomials within enumerations have only been marked up if they rhyme, alliterate
 -   "*on mǣgenþrymme and on mīhte* and on godcundnysse" ([394.24.3](https://echoe.uni-goettingen.de/#/versions/394.24#s394.24.3))
 -   "*ǣgðer ge on golde ge on seolfre* ge on fela ōðra dēorwurðra þinga" ([38.36.105](https://echoe.uni-goettingen.de/#/versions/38.36#s38.36.105))
 
-# The `<standOff>` Node
+# The `<standOff>` Tree
 
-☞ Where metadata were available that we could not accommodate in either header or text body, we have anchored a `<standOff>`{.xml} node at the end of the XML document. This section describes the information there encoded.
+☞ Where metadata were available that we could not accommodate in either header or text body, we have anchored a `<standOff>`{.xml} tree at the end of the XML document. This section describes the information there encoded.
 
 ## Glosses and Alternate Readings
 
@@ -362,7 +355,7 @@ Manuscript punctuation may serve a number of purposes and follow systems that ca
 #. All punctuation characters except intraword instances and abbreviation markers are encoded as `<pc>`{.xml}.
 #. All _punctus_ have been encoded as middle dots regardless of their distance from the baseline, as it would have been impracticable to distinguish between baseline dots and middle dots, let alone intermediate levels.
 #. All rhetorical/syntactic punctuation has been transcribed and encoded with a space on either side of the `<pc>`{.xml} node (but not at the end of a line of XML).
-#. Punctuation intended to set off numerals or one-letter words or abbreviations has been transcribed and encoded immediately adjacent to the element it was intended to isolate, without intervening space. (For most purposes, spacing between XML elements is irrelevant, but intraword punctuation cannot be encoded as its own punctuation element.)
+#. Punctuation intended to set off numerals or one-letter words or abbreviations has been transcribed and encoded immediately adjacent to the node it was intended to isolate, without intervening space. (For most purposes, spacing between XML nodes is irrelevant, but intraword punctuation cannot be encoded as its own punctuation node.)
 #. It is not ECHOE policy to record punctuation intended to indicate word separation between words written together, but a degree of inconsistency should be expected in this regard as this function cannot always easily be distinguished from rhetorical/syntactic markup.
 
 ## Sentences
@@ -384,7 +377,7 @@ A degree of inconsistency should be expected to result from these complex consid
 
 ## Tokenization
 
-Where a scribe has substituted one reading for another, we have tried to give each reading its own `<w>`{.xml}-tag where possible. Generally this means that if a full word was replaced with another full word, we will have tagged it twice so it could be lemmatized twice if we spotted it during manual review of the semiautomated tokenization process. However, where a modification of a substring of a word resulted in a new reading, it has been technically impractical to mark it up twice without encoding the entire word as having been deleted. The latter approach was nevertheless eventually adopted in the interest of future lemmatization in such cases where material is actually replaced, but not until a late stage in the project. Accordingly, such cases may be found to have been encoded in three distinct ways: (1) the whole word is marked as deleted even if only a substring was in fact altered, so that both words could be tokenized in full; (2) the deletion and substitution represent parallel word substrings (using `<w part="I">`{.xml} and `<w part="F">`{.xml}), so they could be separately processed while still accurately representing what letters were modified; (3) the original and new reading are enclosed in a single `<w>`{.xml} element, on the assumption that lexical processes will consider either the original or the revised form, not both. Words that have material added to turn them into different words, e.g. the addition of the prefix _un-_, are most frequently contained in a single `<w>`{.xml} element only and can accordingly not be twice processed on the basis of the XML corpus without relying on concatenated values such as the space-delimited lemmatization string `snotorlic unsnotorlic`.
+Where a scribe has substituted one reading for another, we have tried to give each reading its own `<w>`{.xml}-tag where possible. Generally this means that if a full word was replaced with another full word, we will have tagged it twice so it could be lemmatized twice if we spotted it during manual review of the semiautomated tokenization process. However, where a modification of a substring of a word resulted in a new reading, it has been technically impractical to mark it up twice without encoding the entire word as having been deleted. The latter approach was nevertheless eventually adopted in the interest of future lemmatization in such cases where material is actually replaced, but not until a late stage in the project. Accordingly, such cases may be found to have been encoded in three distinct ways: (1) the whole word is marked as deleted even if only a substring was in fact altered, so that both words could be tokenized in full; (2) the deletion and substitution represent parallel word substrings (using `<w part="I">`{.xml} and `<w part="F">`{.xml}), so they could be separately processed while still accurately representing what letters were modified; (3) the original and new reading are enclosed in a single `<w>`{.xml} node, on the assumption that lexical processes will consider either the original or the revised form, not both. Words that have material added to turn them into different words, e.g. the addition of the prefix _un-_, are most frequently contained in a single `<w>`{.xml} node only and can accordingly not be twice processed on the basis of the XML corpus without relying on concatenated values such as the space-delimited lemmatization string `snotorlic unsnotorlic`.
 
 ## Named Entities and Numerals
 
@@ -429,10 +422,10 @@ Variable				Effect
 ---------------------	--------------------------------------------------------
 `<sic>`{.xml}			When enabled, this element prints scribal errors as
 						encountered. Exclusively used in a `<choice>`{.xml}
-						environment with a sibling `<corr>`{.xml}.
+						tree with a sibling `<corr>`{.xml}.
 
 `<corr>`{.xml}			When enabled, this element prints editorial emendations.
-						Exclusively used in a `<choice>`{.xml} environment with
+						Exclusively used in a `<choice>`{.xml} tree with
 						a sibling `<sic>`{.xml}.
 
 `<surplus>`{.xml}		When enabled, this element prints scribal errors whose
@@ -443,13 +436,13 @@ Variable				Effect
 
 `<abbr>`{.xml}			When enabled, this element prints abbreviated forms as
 						encountered. Exclusively used in a `<choice>`{.xml}
-						environment with a sibling `<expan>`{.xml}. Toggle its
+						tree with a sibling `<expan>`{.xml}. Toggle its
 						inclusion in tandem with `<am>`{.xml}, and to the
 						exclusion of `<expan>`{.xml} and `<ex>`{.xml}.
 						
 `<expan>`{.xml}			When enabled, this element prints the editorially
 						reconstructed expansion of a scribal abbreviation.
-						Exclusively used in a `<choice>`{.xml} environment with
+						Exclusively used in a `<choice>`{.xml} tree with
 						a sibling `<abbr>`{.xml}, and a child `<ex>`{.xml}
 						that may be styled to display which part of the word
 						has been supplied by the editor.
@@ -477,7 +470,7 @@ Variable				Effect
 
 `<seg 					When left as is, transposed material is printed in its
 type="transpose">`{		original order. To adopt the reviser's intended order,
-.xml}					the elements contained must be sorted by value of
+.xml}					the nodes contained must be sorted by value of
 						`@ana` as described under [Scribal Interventions] below.
 
 Special characters		Special characters may be normalized using substitution
@@ -486,7 +479,7 @@ Special characters		Special characters may be normalized using substitution
 						&lt;ſ&gt;, and &lt;·&gt;, as well as such entities as
 						`&slongdes;` and `&punctelev;`. To filter out \yf\ 
 						(_f_-shaped _y_), simply rendering `<g>`{.xml}
-						elements suffices.
+						nodes suffices.
 
 Case					Inconsistencies in the distribution of uppercase
 						characters are best avoided by substituting lowercase
@@ -502,7 +495,7 @@ As should become clear from @tbl:formatting, a normalized rendering of an ECHOE 
 
 Individual letter modifications, including instant modifications in the main hand, have been recorded where we felt we could do so with some confidence.
 
-Elements marked for transposition may be rendered in whichever way is desired: they are encoded in their original order and thus will by default be so rendered, but the following XSLT template will reorder the elements as intended by the intervening scribe:
+Nodes marked for transposition may be rendered in whichever way is desired: they are encoded in their original order and thus will by default be so rendered, but the following XSLT template will reorder the nodes as intended by the intervening scribe:
 
 ```xslt
 <xsl:template match="tei:seg">
@@ -576,7 +569,7 @@ Biblical echoes				Identified using `<quote>`{.xml} with `@source`.
 
 Textual units				`<ab>`{.xml} (anonymous block) as suggested by content
 							and/or scribal annotation; `<s>`{.xml} (sentence-like
-							segment) elements informed by factors of syntax, length,
+							segment) nodes informed by factors of syntax, length,
 							content, direct speech, and Bible verse; see further
 							[above](#sentences).
 
@@ -614,7 +607,7 @@ Notably absent from ECHOE's transcription standard are the following palaeograph
 
 # Annotated Indices of Body Elements and Universal Attributes
 
-The alphabetical list of TEI elements in @tbl:elements offers notes on transcription and encoding policy within the `<body>`{.xml} environment on a per-element basis. Excluded are the TEI header and the `<standOff>`{.xml} node, for which see [here](#the-tei-header) and [here](#the-standoff-node) above.
+The alphabetical list of TEI elements in @tbl:elements offers notes on transcription and encoding policy within the `<body>`{.xml} tree on a per-element basis. Excluded are the TEI header and the `<standOff>`{.xml} tree, for which see [here](#the-tei-header) and [here](#the-standoff-tree) above.
 
 --------------------------------------------------------------------------------
 Element					Usage in ECHOE
@@ -634,12 +627,12 @@ Element					Usage in ECHOE
 
 `<cb/>`{.xml}			Marks the start of a column (limited to [310.82](https://echoe.uni-goettingen.de/#/versions/310.82)).
 
-`<choice>`{.xml}		Accommodates parallel environments; see under
+`<choice>`{.xml}		Accommodates parallel nodes; see under
 						[Abbreviation] above, and `<corr>`{.xml} in
 						this index.
 
 `<corr>`{.xml}			Where we have seen fit to emend, we have used parallel
-						`<sic>`{.xml} and `<corr>`{.xml} elements within
+						`<sic>`{.xml} and `<corr>`{.xml} nodes within
 						`<choice>`{.xml}, except where it has been more economical
 						to use `<surplus>`{.xml} or `<supplied>`{.xml}, which see.
 
@@ -704,11 +697,11 @@ Element					Usage in ECHOE
 						line breaks in marginal content are not counted except
 						in such items in which (as in CCCC 41) the complete version
 						is recorded in the margin. Where a line break falls within
-						a parallel environment, we have proceeded as follows: with
+						a parallel tree, we have proceeded as follows: with
 						mutually exclusive content (notably `<abbr>`{.xml} and
 						`<expan>`{.xml}), `<lb>`{.xml} is recorded twice with the
 						same value of `@n`; within `<subst>`{.xml}, whose parallel
-						contained elements may both be printed, it is recorded only
+						contained nodes may both be printed, it is recorded only
 						once (in `<add>`{.xml}, not `<del>`{.xml}). Runover content
 						(whether of rubrics or folio- or text-finally) has not been
 						marked as occupying an additional line.
@@ -751,7 +744,7 @@ Element					Usage in ECHOE
 
 `<orig>`{.xml}			Encodes the Romanized Greek manuscript form "AMHN", in
 						parallel with `<reg>`{.xml} in a `<choice>`{.xml}
-						environment.
+						tree.
 
 `<pb/>`{.xml}			Marks the start of a folio side, and gives the relevant
 						IIIF manifest and canvas index as a value of `@ref`.
@@ -772,7 +765,7 @@ Element					Usage in ECHOE
 						_England_, phrases like _engla land_ are doubly tagged with
 						the first word a demonym and the full phrase a place name
 						(cf. `<name>`{.xml} above). The `@key`{.xml} value points to
-						further detail in a `<standOff>`{.xml} environment, with
+						further detail in a `<standOff>`{.xml} tree, with
 						approximate geographical coordinates where applicable.
 
 `<quote>`{.xml}			Used to set off a Latin or Old English quotation, paraphrase,
@@ -800,7 +793,7 @@ Element					Usage in ECHOE
 
 `<reg>`{.xml}			Encodes the normalized form of Romanized Greek "AMHN", in
 						parallel with `<orig>`{.xml} in a `<choice>`{.xml}
-						environment.
+						tree.
 
 `<restore>`{.xml}		Encodes deletions that have been undone. Since such cases are
 						in our corpus typically caught up in a substitution operation,
@@ -838,7 +831,7 @@ Element					Usage in ECHOE
 
 `<surplus>`{.xml}		Dittography and other material deemed to harm the reading.
 
-`<text>`{.xml}			Each file contains a single `<text>`{.xml} element
+`<text>`{.xml}			Each file contains a single `<text>`{.xml} tree
 						accommodating the transcription of a single version.
 
 `<trailer>`{.xml}		Concluding rubric (rare), a counterpart to `<head>`{.xml}.
@@ -856,7 +849,7 @@ Element					Usage in ECHOE
 						typically a substitution or an addition. For
 						straightforward undeletions see `<restore>`{.xml}.
 						The element carries `@hand` and `@rend` in
-						addition to a `@target` pointer to the affected element.
+						addition to a `@target` pointer to the affected node.
 
 `<w>`{.xml}				Marks a word token following [_DOE_](https://doe.utoronto.ca)'s
 						headword list. We have attempted to enclose parallel content
@@ -889,7 +882,7 @@ Attribute				Application in ECHOE
 `@xml:id`				Used for the following purposes: __(1)__ sentence
 						identification, on `<s>`{.xml}; __(2)__ hand identification,
 						on `<handNote>`{.xml} in the TEI header; __(3)__ place name
-						identification in the `<standOff>`{.xml} environment; __(4)__
+						identification in the `<standOff>`{.xml} tree; __(4)__
 						identification of nodes marked for transposition or in
 						connection with `<undo>`{.xml} or `<redo>`{.xml}, or
 						to identify the members of a group of alternative readings
