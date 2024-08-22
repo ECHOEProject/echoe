@@ -62,7 +62,7 @@ At the time of initial release, acceptable images of London, British Library Cot
 
 ## Citing ECHOE
 
-Although any representation of an ECHOE version is derived from the underlying XML transcription, most users will want to cite the online edition. Please keep in mind that (1) the data are subject to rolling updates, lending relevance to the date of access; and (2) any one transcription may be rendered with different display settings, so that one and the same version or excerpt may be quoted in a range of realizations. We recommend users feed their citation managers the following values:
+Although any representation of an ECHOE version is derived from the underlying XML transcription, most users will want to cite the online edition. Please keep in mind that (1) the data are subject to rolling updates, lending relevance to the date of access; and (2) any one transcription may be rendered with different display settings, so that one and the same version or excerpt may be quoted in a range of realizations.^[We advise against quoting the text produced by the [sample CSS stylesheet](https://github.com/ECHOEProject/echoe/blob/main/misc/style.css) included in the XML corpus release, among other things because CSS is not equipped to render internode XML spacing.] We recommend users feed their citation managers the following values:
 
 ```bibtex
 @online{echoe,
@@ -132,7 +132,7 @@ The text itself was transcribed directly from digital manuscript images into XML
 
 Sentence segmentation and the cross-referencing of cognate clusters of sentences was likewise carried out manually by the senior revising editor in collaboration with the principal investigator. This work predates the development of our "echo<!-- surely this cannot be called ECHOE tool, that's confusing --> tool" for laying bare similarities between sentence-like segments across the corpus, so further connections may yet be discovered. However, segmentation is envisioned to remain unchanged after the initial release, as any subsequent changes to segmentation would render the scholarly citation of specific segments or their deeplinking by other resources unreliable. Accordingly, any cognate material within the corpus discovered in future will have to be cross-referenced with segment boundaries remaining as they are, even if parallel witnesses differ in their segmentation strategies and the similarity of the material may as a consequence remain somewhat obscured.
 
-Explicit word segmentation (tokenization) and the markup of names and numerals were carried out in an automated fashion and then manually corrected. TEI headers were proofread along with the text (i.e. several times), but global changes were repeatedly made to their structure both during and after revision, so not every part of the header has seen equal amounts of proofreading. Here, however, faulty metadata was typically quickly spotted in the proofing environment and corrected as needed. Rhetorical markup was conducted by hand in a separate stage.<!-- The entry of biblical source references was put on hold after the separate documentation of sources got underway, to avoid task duplication; but as source documentation remains incomplete, biblical references encoded in the XML are likewise incomplete.--> A range of cross-corpus structural changes to such matters as the encoding of transpositions and glosses, as well as the addition of such further metadata as geolocations, was carried out at a late stage with the help of scores of custom Python scripts.
+Explicit word segmentation (tokenization) and the markup of names and numerals were carried out in an automated fashion and then manually corrected. TEI headers were proofread along with the text (i.e. several times), but global changes were repeatedly made to their structure both during and after revision, so not every part of the header has seen equal amounts of proofreading. Here, however, faulty metadata was typically quickly spotted in the proofing environment and corrected as needed. Rhetorical markup was conducted by hand in a separate stage. The entry of biblical source references was put on hold after the separate documentation of sources got underway, to avoid task duplication; but as source documentation remains incomplete, biblical references encoded in the XML are likewise incomplete. A range of cross-corpus structural changes to such matters as the encoding of transpositions and glosses, as well as the addition of such further metadata as geolocations, was carried out at a late stage with the help of scores of custom Python scripts.
 
 The sequence of stages here laid out lacks a dedicated text-critical examination. Generally speaking, the transcription and first proofreading stages focused primarily on ensuring an accurate letter-for-letter representation of the manuscript text, whereas subsequent revision was carried out with more of an eye to ensuring readings are plausible and grammatical; but at every stage of proofreading the text-critical quality of the readings was only one among many points of attention. Whereas some of our transcribers and early-stage proofreaders worked with leading critical editions at hand, others did not, and final revision was carried out with reference to textual scholarship for suspect readings only. Time constraints in the face of the amount of text to be processed precluded a more thorough textual analysis, so that the text of ECHOE, though generally well considered, is not consistently as authoritative as that of leading editions. Having said that, we are confident that ECHOE improves on received readings in many places, particularly where text has been erased or the manuscript damaged. For more on our text-critical approach, see [Emendation and Conjecture] below.
 
@@ -332,7 +332,7 @@ We have followed TEI recommendations in indicating the intended order of transpo
 
 ## Named Entities and Geolocations
 
-A `<standOff>`{.xml} node may have up to two `<listPlace>`{.xml} children, differentiated by `@type="diegetic"` for places referenced in the text or `@type="origin"` for settlements discussed as places of origin and/or provenance in the TEI header. The latter type, and the former where possible, are accompanied by approximate latitude and longitude coordinates.
+An ECHOE `<standOff>`{.xml} node may have up to two `<listPlace>`{.xml} children, differentiated by `@type="diegetic"` for places referenced in the text or `@type="origin"` for settlements discussed as places of origin and/or provenance in the TEI header. The latter type, and the former where possible, are accompanied by approximate latitude and longitude coordinates.
 
 # Consistency
 
@@ -344,23 +344,23 @@ A particularly challenging part of revision has been to find a consistent line o
 
 ## Large Initials and Majuscule Letters
 
-While we have attempted to mark capitals as uppercase letters based on letter size and/or majuscule form, the former criterion in particular lacks a clear distinction. In rubrics, running titles, and _āmen_, majuscule and minuscule forms often appear side by side; in these cases we have transcribed uppercase or lowercase by majority principle. We have transcribed all Roman numerals in lowercase where they appear in the text body, while in rubrics we have determined their case from context or, where no preceding context is available, by their form. Due to repeated course changes, the treatment of slightly large or majuscule letters in places other than sentence- or name-initially is less than consistent. There are thus several distinct reasons for the [below](#capitalization) recommendation to case fold the corpus in processing.
+While we have attempted to encode capitals where so prompted by letter size and/or majuscule form, the former criterion in particular lacks a clear cutoff. In rubrics, running titles, and _āmen_, majuscule and minuscule forms often appear side by side; in these cases we have transcribed uppercase or lowercase by majority principle. We have transcribed all Roman numerals in lowercase where they appear in the text body, while in rubrics we have determined their case from context or, where no preceding context is available, by their form. Due to repeated course changes, the treatment of slightly large or majuscule letters in places other than sentence- or name-initially is less than consistent. There are thus several distinct reasons for the [below](#capitalization) recommendation to case fold the corpus in processing.
 
 ## Punctuation
 
-Punctuation has been reproduced to the point the [MUFI 4.0 character recommendation](https://folk.uib.no/hnooh/mufi/specs/MUFI-CodeChart-4-0.pdf) allows; in some cases one character or combination of characters stands in for one that was otherwise unavailable. We have attempted to discern what hand is responsible for what punctuation, but such attempts are necessarily tentative. That caveat is all the more emphatic for the specific business of describing when and how a main hand's punctuation was altered in a second hand, e.g. turning _punctus_ into _punctus elevati_.
+Punctuation has been reproduced to the point the [MUFI 4.0 character recommendation](https://folk.uib.no/hnooh/mufi/specs/MUFI-CodeChart-4-0.pdf) allows; in some cases one character or sequence of characters stands in for another that was unavailable. We have attempted to discern what hand is responsible for what punctuation, but such attempts are necessarily tentative. That caveat is all the more emphatic for the specific business of describing when and how a main hand's punctuation was altered in a second hand, e.g. turning _punctus_ into _punctus elevati_.
 
-Manuscript punctuation may serve a number of purposes and follow systems that cannot always be defined or predicted exactly. For the purposes of ECHOE, we may distinguish between the sort of punctuation that is typically found at the ends of clauses or phrases (generally thought of as serving a function on a spectrum between rhetorical and syntactic) and the sort of punctuation that serves to set off individual (part-)numerals and words, especially one-letter words and abbreviations such as _ā_ "always," _ǣ_ "law," and _ē_ for _est_, but occasionally employed to indicate word boundaries where words have been written together. In the transcription and encoding of punctuation, ECHOE adheres to the following policy:
+Manuscript punctuation may serve a number of purposes and follow systems that cannot always be defined or predicted exactly. For the purposes of ECHOE, we may distinguish between the sort of punctuation that is typically found at the ends of clauses or phrases (generally thought of as serving a function on a spectrum between rhetorical and syntactic, or sometimes metrical) and the sort of punctuation that serves to set off individual (part-)numerals and words, especially one-letter words and abbreviations such as _ā_ "always," _ǣ_ "law," and _ē_ for _est_, but occasionally employed to indicate word boundaries where words have been written together. In the transcription and encoding of punctuation, ECHOE adheres to the following policy:
 
 #. All punctuation characters except intraword instances and abbreviation markers are encoded as `<pc>`{.xml}.
 #. All _punctus_ have been encoded as middle dots regardless of their distance from the baseline, as it would have been impracticable to distinguish between baseline dots and middle dots, let alone intermediate levels.
-#. All rhetorical/syntactic punctuation has been transcribed and encoded with a space on either side of the `<pc>`{.xml} node (but not at the end of a line of XML).
-#. Punctuation intended to set off numerals or one-letter words or abbreviations has been transcribed and encoded immediately adjacent to the node it was intended to isolate, without intervening space. (For most purposes, spacing between XML nodes is irrelevant, but intraword punctuation cannot be encoded as its own punctuation node.)
-#. It is not ECHOE policy to record punctuation intended to indicate word separation between words written together, but a degree of inconsistency should be expected in this regard as this function cannot always easily be distinguished from rhetorical/syntactic markup.
+#. All rhetorical/syntactic punctuation has been transcribed and encoded with a space on either side of the `<pc>`{.xml} node (but not at the end of a line of code).
+#. Punctuation intended to set off numerals or one-letter words or abbreviations has been transcribed and encoded immediately adjacent to the node it was intended to isolate, without intervening space. (For most purposes other than CSS styling, spacing between XML nodes is irrelevant.)
+#. It is not ECHOE policy to record punctuation intended to indicate word separation between words written together, but a degree of inconsistency should be expected in this regard, as this function cannot always easily be distinguished from rhetorical/syntactic markup.
 
 ## Sentences
 
-Though the sentence may seem like a natural syntactic unit to readers who have grown up with predictable punctuation, edge cases may be produced in any language. The paratactic structure of much of the surviving corpus of Old English makes this problem substantially more complex. Moreover, if sentences could be objectively defined but turned out to be unwieldy for our purposes, then the resulting unit would be of limited value to ECHOE, which seeks to make shorter shorter segments available for comparison. Accordingly, the `<s>`{.xml}-unit employed by ECHOE is best understood as occupying a place between the levels of the clause and the sentence, and informed by the following kinds of information:
+Though the sentence may seem like a natural syntactic unit to readers who have grown up with predictable punctuation, edge cases may be produced in any language. The paratactic structure of much of the surviving corpus of Old English makes this problem substantially more complex. Moreover, if sentences could objectively be defined but turned out to be unwieldy for our purposes, then the resulting unit would be of limited value to ECHOE, which seeks to make shorter shorter segments available for comparison. Accordingly, the `<s>`{.xml}-unit employed by ECHOE is best understood as occupying a place between the levels of the clause and the sentence, and informed by the following kinds of information:
 
 - Syntax
 - Content
@@ -371,13 +371,13 @@ Though the sentence may seem like a natural syntactic unit to readers who have g
 - Manuscript punctuation
 - Manuscript majusculization
 
-A typical unit seeks to cover one syntactic clause or a short sentence. _Inquit_-clauses are set off from direct speech unless this results in very short units or syntactically incomplete sequences: thus "hē cwæð" is not left stranded, but "þā spræc hē and cwæð" has typically been assigned its own segment. The thinking here is that there are use cases for which it may be desirable to isolate direct speech. However, Bible verses as defined today typically include _inquit_-clauses and direct speech in the same verse, and such Bible formatting is typically mimicked in ECHOE so as to make it easier to compare multiple renderings and echoes of a given Bible verse. Conversely, the division of biblical books into verses sometimes violates conventional syntactical and content constraints either by including multiple speakers in a single verse or by separating subject and verb in the Latin in a way that would be undesirable in Old English, e.g. by starting a verse with "dicens" with the subject left stranded in the preceding verse. Wherever the biblical division is undesirable for these sorts of reasons, ECHOE reverts to its syntax-first approach and cites the appropriate verses in multiple units, or multiple verses in the appropriate units, where necessary, even if that means multiple verses have to be cross-referenced in the biblical source reference.
+A typical unit seeks to cover one syntactic clause or a short sentence. _Inquit_-clauses are set off from direct speech unless this results in very short units or syntactically incomplete sequences: thus "hē cwæð" is not normally left stranded, but "þā spræc hē and cwæð" has typically been assigned its own segment. The thinking here is that there are use cases for which it may be desirable to isolate direct speech. However, Bible verses as defined today typically include _inquit_-clauses and direct speech in the same verse, and such Bible formatting is typically mimicked in ECHOE so as to make it easier to compare multiple renderings and echoes of a given Bible verse. Conversely, the division of biblical books into verses sometimes violates conventional syntactic and content constraints either by including multiple speakers in a single verse or by separating subject and verb in the Latin in a way that would be undesirable in Old English, e.g. by starting a verse with "dicens" with the subject left stranded in the preceding verse. Wherever the biblical division is undesirable for these sorts of reasons, ECHOE reverts to its syntax-first approach and cites the appropriate verses in multiple units, or multiple verses in the appropriate units, where necessary, even if that means multiple verses have to be cross-referenced in the biblical source reference.
 
 A degree of inconsistency should be expected to result from these complex considerations, as well as from shifting insights over the seven years it took to define `<s>`{.xml}-units across the corpus and the difficulty of modifying segmentation after the fact once the source reports had begun referring explicitly to sentence identifiers already assigned. Hence the [below](#notes-for-further-processing) recommendation to rely on rolling context windows for analyses in which consistency of context window matters. In one case ([331.53](https://echoe.uni-goettingen.de/#/versions/331.53)), it has been necessary to define "Leofan men" as its own unit because manuscript markup marks the transition between [331.52](https://echoe.uni-goettingen.de/#/versions/331.52) and 331.53 as optional, and setting it off as such in the XML required that the `<s>`{.xml}-tree should terminate at that point.
 
 ## Tokenization
 
-Where a scribe has substituted one reading for another, we have tried to give each reading its own `<w>`{.xml}-tag where possible. Generally this means that if a full word was replaced with another full word, we will have tagged it twice so it could be lemmatized twice if we spotted it during manual review of the semiautomated tokenization process. However, where a modification of a substring of a word resulted in a new reading, it has been technically impractical to mark it up twice without encoding the entire word as having been deleted. The latter approach was nevertheless eventually adopted in the interest of future lemmatization in such cases where material is actually replaced, but not until a late stage in the project. Accordingly, such cases may be found to have been encoded in three distinct ways: (1) the whole word is marked as deleted even if only a substring was in fact altered, so that both words could be tokenized in full; (2) the deletion and substitution represent parallel word substrings (using `<w part="I">`{.xml} and `<w part="F">`{.xml}), so they could be separately processed while still accurately representing what letters were modified; (3) the original and new reading are enclosed in a single `<w>`{.xml} node, on the assumption that lexical processes will consider either the original or the revised form, not both. Words that have material added to turn them into different words, e.g. the addition of the prefix _un-_, are most frequently contained in a single `<w>`{.xml} node only and can accordingly not be twice processed on the basis of the XML corpus without relying on concatenated values such as the space-delimited lemmatization string `snotorlic unsnotorlic`.
+Where a scribe has substituted one reading for another, we have tried to give each reading its own `<w>`{.xml}-tag where possible. Generally this means that if a full word was replaced with another full word, we will have tagged it twice so it could be lemmatized twice if we spotted it during manual review of the semiautomated tokenization process. However, where a modification of a substring of a word resulted in a new reading, it has been technically impractical to mark it up twice without encoding the entire word as having been deleted. The latter approach was nevertheless eventually adopted in the interest of future lemmatization in such cases where material is actually replaced, but not until a late stage in the project. Accordingly, such cases may be found to have been encoded in three distinct ways: (1) the whole word is marked as deleted even if only a substring was in fact altered, so that both words could be tokenized in full; (2) the deletion and substitution represent parallel word substrings (using `<w part="I">`{.xml} and `<w part="F">`{.xml}), so they could be separately processed while still accurately representing what letters were modified; (3) the original and new reading are enclosed in a single `<w>`{.xml} node, on the assumption that lexical processes will consider either the original or the revised form, not both. Words that have material added to turn them into different words, e.g. the addition of the prefix _un-_, are most frequently contained in a single `<w>`{.xml} node only and can accordingly not be twice processed on the basis of the XML corpus without relying on concatenated values such as a space-delimited lemmatization string `snotorlic unsnotorlic`.
 
 ## Named Entities and Numerals
 
@@ -395,19 +395,19 @@ When the ransomware attack brought down BL services, we had recently completed f
 
 ## Biblical Source References
 
-In ECHOE's main drafting stage, the sources of biblical quotations and paraphrases were encoded on a running basis during drafting and/or proofreading. When the drafting of separate source reports (not included in this release) was begun, this earlier practice was put on hold in order to avoid the duplication of work, and it was decided that biblical sources could later be copied in from the source reports. Since source reports were completed for only a third of ECHOE versions by the time of this release, a small proportion of biblically sourced corpus segments continue to go unreferenced.
+In ECHOE's main drafting stage, the sources of biblical quotations and paraphrases were encoded on a running basis during drafting and/or proofreading. When the drafting of separate source reports (not included in this release) was begun, this earlier practice was put on hold in order to avoid the duplication of work, and it was decided that biblical sources could later be copied in from the source reports. Since source reports were completed for only a third of ECHOE versions by the time of this release, a small proportion of biblically sourced corpus segments continue to go unreferenced. We expected to address this shortcoming in the near future.
 
 ## Rhetorical Markup
 
-The markup of binomial pairs and enumerations was completed only for Blickling, Vercelli, and their manuscript variants.
+The markup of binomial pairs and enumerations was completed only for Blickling, Vercelli, and their manuscript variants. There are no plans to extend the range in future. The markup of audience address and metrical content has been completed for the full corpus, but rhetorical markup has not been subjected to a proofreading stage.
 
 ## Paragraphing
 
-An unsystematic start has been made dividing the XML corpus into paragraph-like `<ab>`{.xml} ("anonymous block")-segments. These are intended to facilitate reading e.g. in ebook format or in some other user-friendly transformation. Since we have hitherto been unable to allocate time for this task, however, the work remains far from complete and witnesses to the same text should not at this stage be expected to exhibit the same division.
+An unsystematic start has been made dividing the XML corpus into paragraph-like `<ab>`{.xml} ("anonymous block")-segments. These are intended to facilitate reading e.g. in ebook format or in some other user-friendly transformation. Since we have hitherto been unable to allocate time for this task, however, the work remains far from complete, and witnesses to the same text should not at this stage be expected to exhibit the same division.
 
 ## Lemmatization
 
-While lemmatization was never part of ECHOE's initial objective, we have long intended to undertake a follow-up project of this nature. In its anticipation, a very few `<w>`{.xml} nodes containing unusual forms have been manually marked up with lemmatization data merely to prevent their being incorrectly assigned in future. This manual accordingly does not document lemmatization markup.
+While lemmatization was never part of ECHOE's initial objective, we have long intended to undertake a follow-up project of this nature. In its anticipation, a very few `<w>`{.xml} nodes containing unusual forms have been manually marked up with lemmatization data merely to prevent their being incorrectly assigned in future. The present manual accordingly does not document lemmatization markup.
 
 # Notes for Further Processing
 
@@ -415,7 +415,7 @@ While lemmatization was never part of ECHOE's initial objective, we have long in
 
 ## General Principles
 
-In our encoding strategy, we have anticipated a range of desired outputs not by encoding normalized, semidiplomatic, and diplomatic transcriptions in parallel, but by enabling a range of renderings through a finer grain of processing instructions, some of which are demonstrated by the display sliders in [ECHOE Online](https://echoe.uni-goettingen.de). The most notable of the underlying variables are set out in @tbl:formatting.
+In our encoding strategy, we have anticipated a range of desired outputs not by encoding normalized, semidiplomatic, and diplomatic transcriptions in parallel nodes, but by enabling a range of renderings through a finer grain of processing instructions, some of which are demonstrated by the display sliders in [ECHOE Online](https://echoe.uni-goettingen.de). The most notable of the underlying variables are set out in @tbl:formatting.
 
 --------------------------------------------------------------------------------
 Variable				Effect
@@ -518,7 +518,7 @@ Punctuation has been encoded with hand attribution, but this is an uncertain bus
 
 ## Numerals
 
-Where possible, the markup of numerals in `<num>`{.xml} excludes such adverbial uses as _āna_ "only." Because this practice involves a grey zone, and many instances of _ān_ may functionally be understood as indefinite articles, you may choose to exclude `@n="1"` from analysis depending on your aims.
+Where possible, the markup of numerals as `<num>`{.xml} excludes such adverbial uses as _āna_ "only, alone." Because this practice involves a gray zone, and many instances of _ān_ may functionally be understood as indefinite articles, you may choose to exclude `@n="1"` from analysis depending on your aims.
 
 ## Named Entities
 
@@ -530,7 +530,7 @@ Since our scribes may use majuscules or large minuscules in unexpected places, a
 
 ## Style
 
-We have elected to refer our XML documents to a sample CSS stylesheet as a way of accommodating users desiring to use ECHOE as a reading corpus locally in a web browser. This stylesheet declaration should not be seen as a canonical part of the corpus, and may be disregarded in processing.
+We have elected to refer our XML documents to a [sample CSS stylesheet](https://github.com/ECHOEProject/echoe/blob/main/misc/style.css) as a way of accommodating users desiring to use ECHOE as a reading corpus locally in a web browser. This stylesheet declaration should not be seen as a canonical part of the corpus, and may be disregarded in processing.
 
 # Transcription and Metadata
 
@@ -542,7 +542,7 @@ Aspect						Specification
 Letter-forms				æ, , ð, ę, œ, ꝛ, ſ, , þ, , ƿ, ẏ, \yf, &amp;; other
 							characters normalized (but not ⁊ or punctuation, which see below).
 
-Manuscript leaves			`<pb/>`{.xml} (page beginning), including manifest reference
+Manuscript leaves			`<pb/>`{.xml} (page beginning), including IIIF manifest reference
 							and canvas index.
 
 Manuscript columns			`<cb/>`{.xml} (column beginning).
@@ -603,7 +603,7 @@ Notably absent from ECHOE's transcription standard are the following palaeograph
 - Manuscript damage not interfering with readings (e.g. holes predating the text)
 - Scribal word spacing (e.g. the separation of prefixes; the affixation of &lt;⁊&gt;)
 - Letter-forms beyond the ones specified in @tbl:metadata
-- Scribal performances postdating c. 1200 (notably absent is the Tremulous hand of Worcester)
+- Scribal performances postdating c. 1200 (notably absent is the tremulous hand of Worcester)
 
 # Annotated Indices of Body Elements and Universal Attributes
 
@@ -620,7 +620,7 @@ Element					Usage in ECHOE
 
 `<add>`{.xml}			Scribal addition; see [Scribal Intervention] above.
 
-`<am>`{.xml}			Abbreviations marker (typically a macron in Old
+`<am>`{.xml}			Abbreviation marker (typically a macron in Old
 						English contexts, even where the manuscript form is
 						more diverse; in Latin contexts we have retained
 						a wider spectrum of markers).
@@ -663,9 +663,10 @@ Element					Usage in ECHOE
 
 `<gap>`{.xml}			Lacuna due to damage, erasure, or modification. We
 						have confined ourselves to the `@unit` values `chars`,
-						`lines`, and `leaves`, while `@reason` may read `damage`,
-						`erasure`, `fading`, `reagent`, `trimming`, `binding`,
-						`lettermod`, `loss`, `unfinished`, `overwriting`, `omitted`.
+						`lines`, and `leaves`, while `@reason` may read `binding`,
+						`damage`, `erasure`, `fading`, `lettermod`, `loss`,
+						`omitted`, `overwriting`, `reagent`, `trimming`,
+						`unfinished`.
 
 `<handShift/>`{.xml}	Registers either the start of a new scribal hand (as a
 						value of `@new`) or a (temporary) shift
@@ -717,8 +718,8 @@ Element					Usage in ECHOE
 						the first word a demonym and the full phrase a place name
 						(cf. `<placeName>`{.xml} below).
 
-`<note>`{.xml}			Marginal content with a `@type` value of `marker`,
-						`commentary`, or `unrelated`. Most are cross-shaped
+`<note>`{.xml}			Marginal content with a `@type` value of `commentary`,
+						`marker`, or `unrelated`. Most are cross-shaped
 						markers. Contrast marginal additions, for which see
 						`<add>`{.xml}.
 
@@ -746,8 +747,9 @@ Element					Usage in ECHOE
 						parallel with `<reg>`{.xml} in a `<choice>`{.xml}
 						tree.
 
-`<pb/>`{.xml}			Marks the start of a folio side, and gives the relevant
-						IIIF manifest and canvas index as a value of `@ref`.
+`<pb/>`{.xml}			Marks the start of a folio side, which it identifies as a
+						value of `@n`, and gives the relevant IIIF manifest and
+						canvas index as a value of `@ref`.
 
 `<pc>`{.xml}			Marks punctuation except where _punctus_ have been encoded as
 						abbreviation markers, as TEI does not permit `<pc>`{.xml}
@@ -802,7 +804,7 @@ Element					Usage in ECHOE
 						latter with a value `erasure` (of the cancellation) or
 						`addition` (of the textual restoration).
 
-`<s>`{.xml}				Sentence-like segmentss, as defined using a weighted
+`<s>`{.xml}				Sentence-like segments, as defined using a weighted
 						consideration of the factors syntax, length, content, direct
 						speech, and Bible verse. Ideally, each unit comprises a longer
 						clause or a short sentence to facilitate the manual comparison
@@ -813,14 +815,17 @@ Element					Usage in ECHOE
 						other witnesses have been manually encoded by referencing all
 						known witnesses but one to the remaining witness as a value of
 						`@n` with a value starting `x`; thus e.g.  
-						`<s xml:id="s190A.b.1" n="x49B.1.1">`.
+						`<s xml:id="s190A.b.1" n="x49B.1.1">`. The prefix `s` or `x`
+						in this context serves to comply with XML validity constraints
+						only and should be excluded from human sentence referencing.
 
 `<seg>`{.xml}			Used for three purposes: __(1)__ to add identifiers to
 						sequences marked up for scribal revision (see `<alt>`{.xml},
 						and the discussion of transpositions under [Scribal Intervention]
 						above); __(2)__ to set off Romanized Greek script (see [Script]
-						above); __(3)__ for thematic markup, using the attribute `@ana` to
-						identify the motif (see [Rhetorical Markup] above).
+						above); __(3)__ for rhetorical and metrical markup, using the
+						attribute `@ana` to identify the motif or style
+						(see [Rhetorical Markup] above).
 
 `<sic>`{.xml}			Records an erroneous scribal reading; see `<corr>`{.xml}.
 
