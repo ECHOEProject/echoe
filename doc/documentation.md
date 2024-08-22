@@ -55,7 +55,7 @@ The definition of homiletic manuscript articles (hereafter "versions") follows N
 --------------------------------------------------------------------------------------
 **NOTE**
 
-ECHOE __file names__ use leading zeroes for both manuscript and article levels in the format `001.01.xml`, but no such leading zeroes are used in any other context, whether it be scholarly reference or `@xml:id`. Thus the ECHOE version contained in `049B.01.xml` is referenced as ECHOE 49B.1, while its sentences are encoded `s49B.1.1`. etc. and cited as ECHOE 49B.1.1 etc. The other discrepancy is in `336.02.xml`, which in fact covers manuscript articles 2 and 4 and accordingly is properly referenced as `336.2+4`, though its sentences are encoded `s336.2.1` etc. to comply with XML validity constraints.
+ECHOE __file names__ use leading zeroes for both manuscript and article levels in the format `001.01.xml`, but no such leading zeroes are used in any other context, whether it be scholarly reference or `@xml:id`. Thus the ECHOE version contained in `049B.01.xml` is referenced as ECHOE 49B.1, while its sentences are encoded `s49B.1.1` etc., and cited as ECHOE 49B.1.1 etc. The other discrepancy is in `336.02.xml`, which in fact covers manuscript articles 2 and 4 and accordingly is properly referenced as `336.2+4`, though its sentences are encoded `s336.2.1` etc. to comply with XML validity constraints.
 --------------------------------------------------------------------------------------
 
 At the time of initial release, acceptable images of London, British Library Cotton Otho A.\ viii, B.\ x, and Vitellius D.\ xvii were not available to us, so that the twelve Old English homiletic and hagiographical items therein contained are not at present included in ECHOE. Service disruptions at the British Library in 2020–2024 additionally prevented some final proofing of further London transcriptions.<!-- update as required -->
@@ -148,7 +148,7 @@ Multiple instances of `fileDesc/titleStmt/title`{.xslt} encode a range of receiv
 
 `fileDesc/sourceDesc/msDesc/physDesc/handDesc`{.xslt} identifies the scribal hands distinguished in the version as `<handNote>`{.xml} nodes, each of which provides (as a value of `@xml:id`) an identifier to which the transcription refers as different hands intervene, as well as a prose description of the hand in question. Where available, hand identifiers follow [DigiPal](https://digipal.eu/) (recognizable from identifiers beginning with `DP`), or else Scragg's _Conspectus of Scribal Hands Writing English, 960--1100_ (using the prefix `SC`); new identifiers may be recognized by the prefix `EC` (followed by a number referencing an adjacent DigiPal hand followed by an alphabetical suffix). Where DigiPal assigns a hand to a scribe, we have additionally supplied the attribute `@scribeRef` and used not DigiPal's scribal identifier intended for human processing but instead their database identifier: thus rather than give a value `G.108`, we supply `DP0078`, which may be transformed into <https://digital.eu/digipal/scribes/78/> to redirect to DigiPal's scribal entry for scribe G.108.^[This practice diverges slightly from TEI recommendations, which have `@scribeRef` point ["typically"](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.handFeatures.html#tei_att.scriptRef) to a document-internal description.] If a scribe's name is known (i.e. for Eadric, Wulfgeat, and Wulfstan), we have encoded it as a value of `@scribe`. In the running text, the attribute `@hand` is most notably found on the elements `<add>`{.xml} and `<del>`{.xml}. Uncertain hands are there marked `uncertain`, and lack corresponding header entries.
 
-Any palaeographical notes not on a specific hand are recorded as a `<p>`{.xml} node directly within `<physDesc>`{.xml}. As standard TEI schemas do not permit such a paragraph to follow the `<handDesc>`{.xml} tree, it precedes the descriptions of specific hands in the document tree.
+Any paleographical notes not on a specific hand are recorded as a `<p>`{.xml} node directly within `<physDesc>`{.xml}. As standard TEI schemas do not permit such a paragraph to follow the `<handDesc>`{.xml} tree, it precedes the descriptions of specific hands in the document tree.
 
 ## Dating, Origin, and Provenance
 
@@ -534,7 +534,7 @@ We have elected to refer our XML documents to a [sample CSS stylesheet](https://
 
 # Transcription and Metadata
 
-ECHOE adheres to a comparatively diplomatic standard of transcription. Included are the following palaeographical and interpretive data and metadata:
+ECHOE adheres to a comparatively diplomatic standard of transcription. Included are the following paleographical and interpretive data and metadata:
 
 ------------------------------------------------------------------------------------------
 Aspect						Specification
@@ -598,7 +598,7 @@ Marginal content			Encoded using `<note>`{.xml} or `<add>`{.xml} as appropriate.
 
 : ECHOE in-text metadata {#tbl:metadata}
 
-Notably absent from ECHOE's transcription standard are the following palaeographical and codicological data:
+Notably absent from ECHOE's transcription standard are the following paleographical and codicological data:
 
 - Manuscript damage not interfering with readings (e.g. holes predating the text)
 - Scribal word spacing (e.g. the separation of prefixes; the affixation of &lt;⁊&gt;)
