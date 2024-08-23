@@ -10,14 +10,14 @@ ECHOE is a text corpus encoding all extant witnesses to anonymous and Wulfstania
 
 | Folder      |	Description						   							               |
 | ----------- |	-------------------------------------------------------------------------- |
-| `data`      |	Selected JSON metadata 												       |
-| `doc`	      |	[User manual](doc/documentation.pdf)					           	       |
+| `data`      |	Selected corpus metadata											       |
+| `doc`	      |	[Corpus documentation](doc/documentation.pdf)			           	       |
 | `ebook`     |	EPUB release							   						           |
-| `misc`      |	Project ODD; schema customization file; sample transformation stylesheets  |
+| `misc`      |	Schema files; sample stylesheets 		 								   |
 | `plaintext` |	A plaintext rendering of the corpus					                       |
 | `xml`	      |	XML corpus							                                       |
 
-The plaintext corpus, included as a courtesy to the user, represents a normalized transformation that accepts the most recent scribal revision as well as all editorial emendations. The stylesheets included in `misc/` may be consulted or adapted for the purpose of custom transformation. The CSS is declared in the XML documents to enable local in-browser reading.
+The plaintext and ebook corpora, included as a courtesy to the user, represent a normalized transformation that accepts the most recent scribal revision as well as all editorial emendations. The stylesheets included in `misc/` may be consulted or adapted for the purpose of custom transformation. The CSS is declared in the XML documents to enable local in-browser reading.
 
 ## Contact
 
