@@ -28,6 +28,14 @@ urlcolor: burgundy
 linkcolor: burgundy
 ---
 
+--------------------------------------------------------------------------------------
+**NOTE**
+
+Any deeplinks to [ECHOE Online](https://echoe.uni-goettingen.de) in this
+documentation refer to the release candidate expected to go live in
+October 2024. They will not work until the alpha website is superseded.
+--------------------------------------------------------------------------------------
+
 # Front Matter
 
 ## License
@@ -44,7 +52,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 Please consult [ECHOE Online](https://echoe.uni-goettingen.de) for comprehensive acknowledgements of intellectual and financial support received.
 
-The typeface used in this user manual and sourced in the included CSS stylesheet is Junicode by Peter S. Baker, available at <https://github.com/psb1558/Junicode-font> and licensed under the [SIL Open Font License v. 1.1](https://openfontlicense.org/open-font-license-official-text/).
+The typeface used in this documentation and sourced in the included CSS stylesheet is Junicode by Peter S. Baker, available at <https://github.com/psb1558/Junicode-font> and licensed under the [SIL Open Font License v. 1.1](https://openfontlicense.org/open-font-license-official-text/).
 
 ## Corpus Definition and Taxonomy
 
@@ -58,7 +66,7 @@ The definition of homiletic manuscript articles (hereafter "versions") follows N
 ECHOE __file names__ use leading zeroes for both manuscript and article levels in the format `001.01.xml`, but no such leading zeroes are used in any other context, whether it be scholarly reference or `@xml:id`. Thus the ECHOE version contained in `049B.01.xml` is referenced as ECHOE 49B.1, while its sentences are encoded `s49B.1.1` etc., and cited as ECHOE 49B.1.1 etc. The other discrepancy is in `336.02.xml`, which in fact covers manuscript articles 2 and 4 and accordingly is properly referenced as `336.2+4`, though its sentences are encoded `s336.2.1` etc. to comply with XML validity constraints.
 --------------------------------------------------------------------------------------
 
-At the time of initial release, acceptable images of London, British Library Cotton Otho A.\ viii, B.\ x, and Vitellius D.\ xvii were not available to us, so that the twelve Old English homiletic and hagiographical items therein contained are not at present included in ECHOE. Service disruptions at the British Library in 2020–2024 additionally prevented some final proofing of further London transcriptions.<!-- update as required -->
+At the time of initial release, acceptable images of London, British Library Cotton Otho A.\ viii, B.\ x, and Vitellius D.\ xvii were not available to us, so that the twelve Old English homiletic and hagiographical items therein contained are not at present included in ECHOE. Service disruptions at the British Library in 2020–2024 additionally prevented some final proofing of further London transcriptions.
 
 ## Citing ECHOE
 
@@ -407,7 +415,7 @@ An unsystematic start has been made dividing the XML corpus into paragraph-like 
 
 ## Lemmatization
 
-While lemmatization was never part of ECHOE's initial objective, we have long intended to undertake a follow-up project of this nature. In its anticipation, a very few `<w>`{.xml} nodes containing unusual forms have been manually marked up with lemmatization data merely to prevent their being incorrectly assigned in future. The present manual accordingly does not document lemmatization markup.
+While lemmatization was never part of ECHOE's initial objective, we have long intended to undertake a follow-up project of this nature. In its anticipation, a very few `<w>`{.xml} nodes containing unusual forms have been manually marked up with lemmatization data merely to prevent their being incorrectly assigned in future. The present documentation accordingly does not describe lemmatization markup.
 
 # Notes for Further Processing
 
@@ -565,7 +573,6 @@ Script						Identified using `<handShift/>`{.xml}.
 Language					Identified using `@xml:lang`.
 
 Biblical echoes				Identified using `<quote>`{.xml} with `@source`.
-							<!-- Incompletely so! -->
 
 Textual units				`<ab>`{.xml} (anonymous block) as suggested by content
 							and/or scribal annotation; `<s>`{.xml} (sentence-like
