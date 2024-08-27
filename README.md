@@ -21,4 +21,4 @@ The plaintext and ebook corpora, included as a courtesy to the user, represent a
 
 ## Contact
 
-You may submit bug reports using GitHub's [issue tracker](https://github.com/ECHOEProject/echoe/issues), or contact [Paul Langeslag](mailto:planges@uni-goettingen.de) on technical matters. For strategic enquiries please get in touch with [Winfried Rudolf](mailto:winfried.rudolf@phil.uni-goettingen.de).
+You may submit bug reports using GitHub's [issue tracker](https://github.com/ECHOEProject/echoe/issues), or contact [Paul Langeslag](mailto:planges@uni-goettingen.de) on technical matters. For strategic inquiries please get in touch with [Winfried Rudolf](mailto:winfried.rudolf@phil.uni-goettingen.de).

@@ -104,11 +104,10 @@ We recommend that the distributed corpus (i.e. the [XML source code repository](
 ```bibtex
 @online{echoe-repo,
 	title = {ECHOE Repository},
-	editor = {Winfried Rudolf and Thomas N. Hall and Paul S. Langeslag and
-	Grant L. Simpson and Charles D. Wright and Susan Irvine and Julia Josfeld
-	and Ruby Wai Ying Ku and Hasan M. M. Aldhahi and Sergio Gonzalez Orjuela and
-	Julie Kraft and Esther M. Lemmerz and Bente Offereins-Gummelt and Sabine
-	Ines Rauch and Carolina Ruthenbürger and Melanie Vollbrecht and others},
+	editor = {Winfried Rudolf and Paul Langeslag and Sabine Ines Rauch and 
+	Esther M. Lemmerz and Julia Josfeld and Irina Rau and Melanie Vollbrecht
+	and Verena Klose and Bente Offereins-Gummelt and Carolina Ruthenbürger
+	and Anna-Lena Vogt and Christine Voth and Susan Irvine and others},
 	location = {Göttingen},
 	publisher = {ECHOE Project},
 	date = {2024/},
