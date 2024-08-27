@@ -46,7 +46,7 @@
   	 			<xsl:value-of select="tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title"/>
     		</title>
 			<xsl:if test="$proofing = 'true'">
-	  			<link rel ="stylesheet" href="style.css" type="text/css"/>
+				<link rel ="stylesheet" href="style.css" type="text/css"/>
 			</xsl:if>
    		</head>
 			<body>
@@ -267,19 +267,11 @@
                 <xsl:value-of select="@key"/>
             </xsl:attribute>
 			<!-- Prosopographical data if available: -->
-			<xsl:choose>
-				<xsl:when test="@ref">
-					<xsl:element name="a">
-		            	<xsl:attribute name="href">
-                			<xsl:value-of select="@ref"/>
-						</xsl:attribute>
-            			<xsl:apply-templates/>
-					</xsl:element>
-				</xsl:when>
-				<xsl:otherwise>
-            		<xsl:apply-templates/>
-				</xsl:otherwise>
-			</xsl:choose>
+			<xsl:if test="@ref">
+             	<xsl:attribute name="data-tei-ref">
+                 	<xsl:value-of select="@ref"/>
+             	</xsl:attribute>
+			</xsl:if>
         </span>
     </xsl:template>
 

@@ -219,7 +219,7 @@ Conversely, following the principle expressed by Michael Lapidge that (to paraph
 
 Proper nouns and demonyms have been encoded in three categories:
 
-#. __Personal names__ have been tagged in the format `<persName key="Paul">`{.xml}. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/persnames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter. Please note that the titles _crist_, _antecrist_, and _farao_ have been included among personal names (the first of these identified as `@ref="Jesus"`), but such lexemes as _god_ and _hǣlend_ have not. Names of individuals recorded in [PASE](https://pase.ac.uk)[@pase] carry a `@ref` attribute pointing to what was once the URL of the relevant entry, but PASE has since disabled deeplinking, so a seamless integration of the two resources is not at present possible.
+#. __Personal names__ have been tagged in the format `<persName key="Paul">`{.xml}. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/persnames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter. Please note that the titles _crist_, _antecrist_, and _farao_ have been included among personal names (the first of these identified as `@key="Jesus"`), but such lexemes as _god_ and _hǣlend_ have not. Names of individuals recorded in [PASE](https://pase.ac.uk)[@pase] carry a `@ref` attribute with a PASE `personKey` identifier, but since PASE disabled deeplinking in their 2024 update, a seamless integration between the two resources is no longer possible.<!-- For future reference, the URL format used to be https://pase.ac.uk/jsp/DisplayPerson.jsp?personKey=280 -->
 #. __Place names__ have been tagged in the format `<placeName key="#Jerusalem">`{.xml}, with references to fuller descriptions (where necessary) and an approximate geolocation (where available) situated in the [`<standOff>`{.xml} tree](#the-standoff-tree) at the end of the document. The place name category has been broadly interpreted, including rivers, cities, countries, and continents. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/placenames.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides a discovery filter allowing the identification of versions mentioning any one particular place name.
 #. __Demonyms__ have been tagged in the format `<name type="demonym" key="Egyptian">`{.xml}. The category has been broadly interpreted, including associations with cities, countries, and sometimes families such as Pontius. A list of keys may be found in the [project repository](https://github.com/ECHOEProject/echoe/blob/main/data/demonyms.json), while [ECHOE Online](https://echoe.uni-goettingen.de) provides the same as a discovery filter.
 
@@ -585,8 +585,9 @@ Linguistic data				`<w>`{.xml} (word), as yet without further specification
 							speech)	in future.
 
 Named entities				Identified using `<name>`{.xml}, `<persName>`{.xml},
-							`<placeName>`{.xml}, with since-broken `@ref` linking to
-							[PASE](https://pase.ac.uk) where applicable.
+							`<placeName>`{.xml}, and `@ref` for
+							[PASE](https://pase.ac.uk) `personKey` IDs where
+							available.
 
 Numerals					Identified using `<num>`{.xml}.
 
