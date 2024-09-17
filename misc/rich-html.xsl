@@ -223,6 +223,12 @@
             </xsl:attribute>
         </span>
     </xsl:template>
+
+	<xsl:template match="tei:g">
+		<span class="tei-g">
+			<xsl:apply-templates/>
+		</span>
+	</xsl:template>
     
     <xsl:template match="tei:num">
         <span class="tei-num">
