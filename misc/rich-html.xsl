@@ -251,7 +251,7 @@
     <xsl:template match="tei:quote">
         <span class="tei-quote">
             <xsl:attribute name="data-source">
-                <xsl:value-of select="@source"/>
+                <xsl:value-of select="functx:replace-multi(lower-case(@source),$abbreviations,$expansions)"/>
             </xsl:attribute>
 			<xsl:if test="@xml:lang">
             	<xsl:attribute name="xml-lang">
@@ -530,5 +530,8 @@
  <xsl:template match="text()">
      <xsl:value-of select="functx:replace-multi(.,$before,$after)"/>
  </xsl:template>
+ <!-- The following variables serve the expansion of @source abbreviations. Since the method of replacement is recursive and nonrobust in the absence of regex, values have been reordered to avoid chain replacements, while The Song of Solomon ("Ct"), Amos ("Am"), Micah ("Mi"), and Zephaniah ("So"), hitherto absent from corpus source references, have been left out for the same reason. -->
+ <xsl:variable name="abbreviations" select="('is', 'os', 'na', 'ex', 'lv', 'nm', 'idt', 'dt', 'ios', 'idc', 'rt', 'iism', 'ism', 'iiirg', 'ivrg', 'iipar', 'ipar', 'iiesr', 'iesr', 'tb', 'est', 'iob', 'ps', 'prv', 'ecl', 'sap', 'sir', 'gn', 'ier', 'lam', 'bar', 'ez', 'dn', 'ioel', 'abd', 'ion', 'hab', 'agg', 'za', 'mal', 'iimcc', 'imcc', 'mt', 'mc', 'lc', 'iiiio', 'iiio', 'iio', 'io', 'act', 'orman', 'rm', 'iicor', 'icor', 'gal', 'eph', 'phlm', 'phil', 'col', 'iith', 'ith', 'iitim', 'itim', 'tit', 'hbr', 'iac', 'iipt', 'ipt', 'iud', 'apc', 'iiiesr', 'ivesr', '\.')"/>
+ <xsl:variable name="expansions" select="('Isaiah ', 'Hosea ', 'Nahum ', 'Exodus ', 'Leviticus ', 'Numeri ', 'Judith ', 'Deuteronomy ', 'Joshua ', 'Judges ', 'Ruth ', '2 Samuel/II Regum ', '1 Samuel/I Regum ', '1 Kings/III Regum ', '2 Kings/IV Regum ', '2 Chronicles ', '1 Chronicles ', '2 Esdras ', '1 Esdras ', 'Tobias ', 'Esther ', 'Job ', 'Psalms ', 'Proverbs ', 'Ecclesiastes ', 'Wisdom ', 'Ecclesiasticus ', 'Genesis ', 'Jeremiah ', 'Lamentations ', 'Baruch ', 'Ezekiel ', 'Daniel ', 'Joel ', 'Obadiah ', 'Jonah ', 'Habakkuk ', 'Haggai ', 'Zechariah ', 'Malachi ', '2 Maccabees ', '1 Maccabees ', 'Matthew ', 'Mark ', 'Luke ', '3 John ', '2 John ', '1 John ', 'John ', 'Acts ', 'Prayer of Manasses ', 'Romans ', '2 Corinthians ', '1 Corinthians ', 'Galatians ', 'Ephesians ', 'Philemon ', 'Philippians ', 'Colossians ', '2 Thessalonians ', '1 Thessalonians ', '2 Timothy ', '1 Timothy ', 'Titus ', 'Hebrews ', 'James ', '2 Peter ', '1 Peter ', 'Jude ', 'Apocalypse ', '3 Esdras ', '4 Esdras ', ':')"/>
    
 </xsl:stylesheet>
