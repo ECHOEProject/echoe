@@ -192,7 +192,7 @@
     </xsl:template>
 
     <xsl:template match="tei:lb">
-		<xsl:if test="not(ancestor::tei:w)">
+		<xsl:if test="not(ancestor::tei:w) and not(following-sibling::tei:w[1][@part='F'] or following-sibling::tei:w[1][@part='M'])">
 		 <xsl:text> </xsl:text>
 		</xsl:if>
         <span class="tei-lb">
@@ -278,6 +278,7 @@
                  	<xsl:value-of select="@ref"/>
              	</xsl:attribute>
 			</xsl:if>
+            <xsl:apply-templates/>
         </span>
     </xsl:template>
 
