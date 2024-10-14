@@ -418,11 +418,14 @@
 				<xsl:attribute name="href">
 					<xsl:text>#</xsl:text><xsl:value-of select="@xml:id"/>
 				</xsl:attribute>
-				<span class="echoe-sentence-number">
+				<span class="data-echoe-sentence-number">
                		<xsl:value-of select="substring(@xml:id, 2)"/>
             	</span>
 			</a>
             <span class="echoe-sentence-content">
+				<xsl:attribute name="data-echoe-sentence-number">
+               		<xsl:value-of select="substring(@xml:id, 2)"/>
+				</xsl:attribute>
                 <xsl:apply-templates/>
             </span>
         </span>
