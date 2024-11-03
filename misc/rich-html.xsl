@@ -411,6 +411,7 @@
         	    	</xsl:attribute>
 				</xsl:otherwise>
 			</xsl:choose>
+			<!--
 				<a>
 				<xsl:attribute name="id">
 					<xsl:value-of select="@xml:id"/>
@@ -422,6 +423,10 @@
                		<xsl:value-of select="substring(@xml:id, 2)"/>
             	</span>
 			</a>
+			-->
+			<span class="echoe-sentence-number">
+             	<xsl:value-of select="substring(@xml:id, 2)"/>
+           	</span>
             <span class="echoe-sentence-content">
 				<xsl:attribute name="data-echoe-sentence-number">
                		<xsl:value-of select="substring(@xml:id, 2)"/>
