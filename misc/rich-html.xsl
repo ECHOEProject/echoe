@@ -87,10 +87,19 @@
         	    </xsl:attribute>
 			</xsl:if>
             <xsl:choose>
-				<xsl:when test="@xml:lang = 'la|hbo|grc' or ancestor::*[@xml:lang] = 'la|hbo|grc'">
-					<span class="data-xml-lang">
-                    	<xsl:apply-templates/>
-					</span>
+				<xsl:when test="@xml:lang">
+					<xsl:element name="span">
+						<xsl:attribute name="class" select="'tei-foreign'"/>
+						<xsl:attribute name="data-xml-lang" select="@xml:lang"/>
+                    		<xsl:apply-templates/>
+					</xsl:element>
+				</xsl:when>
+				<xsl:when test="(ancestor::*[@xml:lang])[1][@xml:lang != 'ang']">
+					<xsl:element name="span">
+						<xsl:attribute name="class" select="'tei-foreign'"/>
+						<xsl:attribute name="data-xml-lang" select="(ancestor::*/@xml:lang)[1]"/>
+                    		<xsl:apply-templates/>
+					</xsl:element>
 				</xsl:when>
                 <xsl:otherwise>
                     <xsl:apply-templates/>
