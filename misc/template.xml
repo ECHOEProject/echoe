@@ -1,0 +1,115 @@
+<!DOCTYPE TEI 
+[
+<!-- Entity declarations following MUFI allocation of Private Use Area code points (https://mufi.info): -->
+<!-- Copy in further entities from https://www.menota.org/menota-entities.txt as required -->
+<!ENTITY thornbarslash "&#xF149;">		<!-- LATIN SMALL LETTER THORN WITH DIAGONAL STROKE -->
+<!ENTITY et "&#x204A;">		<!-- TIRONIAN SIGN ET -->
+<!ENTITY ET "&#x2E52;">		<!-- TIRONIAN SIGN CAPITAL ET -->
+<!ENTITY lbar "&#x019A;">		<!-- LATIN SMALL LETTER L WITH BAR -->
+<!ENTITY slongdes "&#xF127;">		<!-- LATIN SMALL LETTER LONG S DESCENDING -->
+<!ENTITY bar "&#x0305;">		<!-- COMBINING ABBREVIATION MARK BAR ABOVE -->
+<!ENTITY punctvers "&#xF1EA;">		<!-- PUNCTUS VERSUS -->
+<!ENTITY combmacr "&#x0304;">		<!-- COMBINING MACRON -->
+<!ENTITY ndash "&#x2013;">		<!-- EN DASH -->
+]>
+<?xml-model href="../misc/echoe.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="../misc/style.css" type="text/css"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:ech="http://echoe.uni-goettingen.de/ns/1.0">
+ <teiHeader xml:lang="eng">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">Conventional Title</title>
+	<!--<title type="alt"></title>--><!-- Uncomment and duplicate as required -->
+    <respStmt>
+     <resp>Transcription by </resp>
+     <name type="person">Your Name Goes Here</name>
+    </respStmt>
+    <respStmt>
+     <resp>Encoded by </resp>
+     <name type="person">Your Name Goes Here</name>
+    </respStmt>
+    <respStmt>
+     <resp>Proofread by </resp>
+     <name type="person"></name>
+    </respStmt>
+   </titleStmt>
+   <publicationStmt>
+    <authority>Division of Medieval Studies, Department of English, University of Göttingen</authority>
+	<idno type="echoe">0.0</idno><!-- Ker reference; see documentation.pdf -->
+	<availability>
+	 <licence target="https://www.gnu.org/licenses/gpl-3.0.en.html">
+      <p>ECHOE: Electronic Corpus of Anonymous Homilies in Old English. Copyright (C) 2024 ECHOE Project.</p>
+      <p>This corpus is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+      <p>This corpus is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+      <p>You should have received a copy of the GNU General Public License along with this corpus. If not, see https://www.gnu.org/licenses/.</p>
+     </licence>
+    </availability>
+   </publicationStmt>
+   <sourceDesc>
+    <msDesc>
+     <msIdentifier>
+		 <settlement></settlement><!-- e.g. Cambridge/London/Oxford -->
+		 <repository></repository><!-- e.g. British Library -->
+		 <collection></collection><!-- if applicable; e.g. Cotton -->
+		 <idno type="ms"></idno><!-- e.g. Vitellius A. xv -->
+		 <idno type="siglum" xml:id=""></idno><!-- If in Scragg's Vercelli Homilies -->
+		 <msName></msName><!-- short reference; e.g. Hatton 113; Vitellius A.xv -->
+     </msIdentifier>
+     <msContents>
+		 <msItem n="" defective="false"><!-- Ker article again; damage? -->
+		  <locus from="" to=""/><!-- folio/page range -->
+          <filiation></filiation>
+		  <textLang mainLang="ang" otherLangs="la"/><!-- delete otherLangs if N/A -->
+      	 </msItem>
+     </msContents>
+     <physDesc>
+      <handDesc>
+		  <handNote xml:id="DP0000"><p></p></handNote><!-- Brief characterization of the main hand; duplicate for additional hands -->
+      </handDesc>
+     </physDesc>
+     <history>
+	  <origin>
+	   <origDate notBefore="" notAfter=""></origDate><!-- Ker dating as interpreted by Leneghan, unless better dating has come to light; enter as attribute values *and* text node -->
+	   <origPlace cert="high"></origPlace>
+	  </origin>
+      <provenance cert="high"></provenance>
+     </history>
+	 <msPart><!-- cut this tree if N/A -->
+      <msIdentifier>
+       <idno></idno>
+      </msIdentifier>	
+     </msPart>
+    </msDesc>
+    <bibl>
+     Ker item <idno type="ker">0, art. 0</idno>; 
+     Gneuss–Lapidge number <idno type="gneuss"></idno>; 
+     cf. DOE short title <idno type="doe"></idno>; 
+     cf. Cameron number <idno type="cameron"></idno>. 
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+  <profileDesc>
+   <textClass>
+	<keywords><!-- Don't add keywords here manually; update the Google Sheet instead -->
+    </keywords>
+   </textClass>
+   <settingDesc>
+	   <setting ana="temporale"><!-- temporale/sanctorale/other -->
+		<p>Unspecified</p><!-- Liturgical occasion -->
+    </setting>
+   </settingDesc>
+  </profileDesc>
+  <revisionDesc status="draft">
+	  <change n="0.1" when="2020-00-00" who="">wrote first draft</change>
+  </revisionDesc>
+ </teiHeader>
+ <text xml:lang="ang">
+  <body>
+   <pb n="999r"/>
+   <!--<lb/><head></head>--><!-- uncomment this line in case of a rubric -->
+   <ab>
+	   <lb/><handShift new="#DP0000"/><s><w>Transcription</w> <w>starts</w> <w>here</w></s>
+   </ab>
+  </body>
+ </text>
+</TEI>
